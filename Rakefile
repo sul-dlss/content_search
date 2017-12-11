@@ -18,5 +18,14 @@ end
 
 # remove default rspec task
 task(:default).clear
+task default: %i[rubocop ci]
 
-task default: %i[rubocop spec]
+task ci: [:environment] do
+  SolrWrapper.wrap(port: '8983') do |solr|
+    solr.with_collection(name: 'content_search-dev',
+                         dir: File.join(__dir__, 'solr', 'config')) do
+      # run the tests
+      Rake::Task['spec'].invoke
+    end
+  end
+end

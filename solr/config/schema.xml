@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema name="IiiifContentSearch" version="1.5">
+  <!-- NOTE: various comments and unused configuration possibilities have been purged
+     from this file.  Please refer to http://wiki.apache.org/solr/SchemaXml,
+     as well as the default schema file included with Solr -->
+
+  <uniqueKey>id</uniqueKey>
+
+  <fields>
+    <field name="id" type="string" stored="true" indexed="true" multiValued="false" required="true"/>
+    <field name="_version_" type="long"     indexed="true"  stored="true"/>
+    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW" multiValued="false"/>
+
+    <field name="pid" type="string" stored="true" indexed="true" multiValued="false"/>
+    <field name="canvas" type="string" stored="true" indexed="true" multiValued="false"/>
+    <field name="ocrtext" type="string" stored="true" indexed="true" multiValued="true"/>
+  </fields>
+
+  <!-- Above, multiple source fields are copied to the [text] field.
+      Another way to map multiple source fields to the same
+      destination field is to use the dynamic field syntax.
+      copyField also supports a maxChars to copy setting.  -->
+
+  <types>
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+    <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
+    <fieldType name="rand" class="solr.RandomSortField" omitNorms="true"/>
+
+    <!-- Default numeric field types.  -->
+    <fieldType name="int" class="solr.TrieIntField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="float" class="solr.TrieFloatField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="date" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0"/>
+  </types>
+
+</schema>
