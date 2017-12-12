@@ -45,3 +45,4 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'rsolr'
+gem 'nokogiri'

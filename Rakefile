@@ -22,7 +22,7 @@ task default: %i[rubocop ci]
 
 task ci: [:environment] do
   SolrWrapper.wrap(port: '8983') do |solr|
-    solr.with_collection(name: 'content_search-dev',
+    solr.with_collection(name: 'content_search',
                          dir: File.join(__dir__, 'solr', 'config')) do
       # run the tests
       Rake::Task['spec'].invoke

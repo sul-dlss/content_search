@@ -12,8 +12,8 @@
     <field name="timestamp" type="date" indexed="true" stored="true" default="NOW" multiValued="false"/>
 
     <field name="pid" type="string" stored="true" indexed="true" multiValued="false"/>
-    <field name="canvas" type="string" stored="true" indexed="true" multiValued="false"/>
-    <field name="ocrtext" type="string" stored="true" indexed="true" multiValued="true"/>
+    <field name="resource_id" type="string" stored="true" indexed="true" multiValued="false"/>
+    <field name="ocrtext" type="text_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true"/>
   </fields>
 
   <!-- Above, multiple source fields are copied to the [text] field.
@@ -32,6 +32,17 @@
     <fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
     <fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" positionIncrementGap="0"/>
     <fieldType name="date" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0"/>
+
+    <fieldType name="text_with_delimited_ocr_position" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.EnglishPossessiveFilterFactory"/>
+        <filter class="solr.EnglishMinimalStemFilterFactory"/>
+        <filter class="solr.TrimFilterFactory"/>
+      </analyzer>
+    </fieldType>
   </types>
 
 </schema>
