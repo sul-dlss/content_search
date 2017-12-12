@@ -22,3 +22,10 @@ Style/Documentation:
     - 'spec/**/*'
     - 'test/**/*'
     - 'config/application.rb'
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/routing/**/*'
+
+RSpec/ExampleLength:
+  Max: 10
