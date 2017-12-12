@@ -1,0 +1,7 @@
+purl:
+  canvas_url: 'http://purl.stanford.edu/%{druid}/iiif/canvas/%{resource}'
+
+
+solr:
+  url: 'http://127.0.0.1:8983/solr/content_search'
+  path: 'select'
