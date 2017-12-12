@@ -1,7 +1,9 @@
 purl:
   canvas_url: 'http://purl.stanford.edu/%{druid}/iiif/canvas/%{resource}'
+  public_xml_url: 'https://purl.stanford.edu/%{druid}.xml'
 
-
+stacks:
+  file_url: 'https://stacks.stanford.edu/file/%{druid}/%{filename}'
 solr:
   url: 'http://127.0.0.1:8983/solr/content_search'
   path: 'select'
