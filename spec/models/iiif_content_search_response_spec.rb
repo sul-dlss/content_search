@@ -16,14 +16,14 @@ RSpec.describe IiifContentSearchResponse do
     end
 
     it 'has resources for each highlight' do
-      expect(response.as_json).to include resources: include("@id": 'http://purl.stanford.edu/x/iiif/canvas/y/text/at/633,129,85,597',
+      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,129,85,597',
                                                              "@type": 'oa:Annotation',
                                                              "motivation": 'sc:painting',
                                                              "resource": {
                                                                "@type": 'cnt:ContentAsText',
                                                                "chars": 'George Stirling’s'
                                                              },
-                                                             "on": 'http://purl.stanford.edu/x/iiif/canvas/y#xywh=633,129,85,597')
+                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=633,129,85,597')
     end
   end
 end

@@ -1,5 +1,5 @@
 purl:
-  canvas_url: 'http://purl.stanford.edu/%{druid}/iiif/canvas/%{resource}'
+  canvas_url: 'https://purl.stanford.edu/%{druid}/iiif/canvas/%{resource}'
   public_xml_url: 'https://purl.stanford.edu/%{druid}.xml'
 
 stacks:
