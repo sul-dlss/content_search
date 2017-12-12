@@ -6,7 +6,7 @@ RSpec.describe AltoPayloadDelimitedTransformer do
 
   describe '#output' do
     it 'returns a payload-delimited string' do
-      expect(subject.output).to start_with 'George☞639,129,79,243 Stirling’s☞633,426,84,300 Heritage☞632,789,84,291'
+      expect(subject.output.first).to start_with 'George☞639,129,79,243 Stirling’s☞633,426,84,300 Heritage☞632,789,84,291'
     end
   end
 end
