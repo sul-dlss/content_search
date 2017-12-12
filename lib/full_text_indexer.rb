@@ -2,8 +2,8 @@
 
 require 'alto_payload_delimited_transformer'
 
-# Index Alto documents for full-text hit highlighting
-class AltoIndexer
+# Index full text documents for full-text hit highlighting
+class FullTextIndexer
   attr_reader :druid, :resource_id, :content
 
   def initialize(druid, resource_id, content)

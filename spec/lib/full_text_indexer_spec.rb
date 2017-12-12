@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'alto_indexer'
+require 'full_text_indexer'
 
-RSpec.describe AltoIndexer do
+RSpec.describe FullTextIndexer do
   subject(:indexer) { described_class.new('x', 'y', File.read('spec/fixtures/bb018zb8894_04_0009.xml')) }
 
   describe '#to_solr' do
