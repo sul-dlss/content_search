@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'alto_payload_delimited_transformer'
 
+# Index Alto documents for full-text hit highlighting
 class AltoIndexer
   attr_reader :druid, :resource_id, :content
 

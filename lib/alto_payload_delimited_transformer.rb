@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'nokogiri'
 
+# Transform Alto XML to payload-delimited strings for solr
 class AltoPayloadDelimitedTransformer
   attr_reader :content, :ns
 
@@ -18,7 +21,7 @@ class AltoPayloadDelimitedTransformer
   def output
     text_blocks.map do |block|
       block.xpath('.//alto:String', namespaces).map do |el|
-        "#{el['CONTENT']}☞#{['VPOS', 'HPOS', 'HEIGHT', 'WIDTH'].map { |k| el[k] }.join(',')}"
+        "#{el['CONTENT']}☞#{%w[VPOS HPOS HEIGHT WIDTH].map { |k| el[k] }.join(',')}"
       end.join(' ')
     end
   end
