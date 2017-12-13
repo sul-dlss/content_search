@@ -24,11 +24,15 @@ class FullTextIndexer
     }
   end
 
+  def alto?
+    content =~ /<alto/
+  end
+
   private
 
   def ocr_text_transformer
     case mimetype
-    when 'application/xml'
+    when 'application/xml', 'application/alto+xml'
       AltoPayloadDelimitedTransformer.new(content)
     when 'text/plain'
       PlainTextPayloadDelimitedTransformer.new(content)

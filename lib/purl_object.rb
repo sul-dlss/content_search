@@ -22,9 +22,13 @@ class PurlObject
   def to_solr
     return to_enum(:to_solr) unless block_given?
     resources.each do |r|
-      r.xpath('file[@mimetype="application/alto+xml" or @mimetype="text/plain"]').each do |file|
+      r.xpath('file[@mimetype="application/xml" or @mimetype="application/alto+xml" or @mimetype="text/plain"]').each do |file|
         f = PurlObject::File.new(druid, file)
-        yield FullTextIndexer.new(f).to_solr
+        indexer = FullTextIndexer.new(f)
+
+        next if file['mimetype'] == 'application/xml' && !indexer.alto?
+
+        yield indexer.to_solr
       end
     end
   end
