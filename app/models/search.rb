@@ -28,8 +28,9 @@ class Search
                                           rows: 10000,
                                           fl: 'id',
                                           hl: true,
+                                          'hl.snippets' => 10,
                                           'hl.fl' => 'ocrtext',
-                                          'hl.method' => 'unified'
+                                          'hl.method' => 'fastVector'
                                         })
   end
 end
