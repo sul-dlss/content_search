@@ -19,16 +19,13 @@ class PurlObject
     public_xml.xpath('//contentMetadata/resource')
   end
 
-  def ocr_resources
-    resources.select { |r| r.xpath('file[@mimetype="application/alto+xml"]') }
-  end
-
   def to_solr
-    ocr_resources.map do |r|
-      resource_id = r['id']
-      filename = r.xpath('file[@mimetype="application/alto+xml"]').first&.attr('id')
-      ocr_url = format(Settings.stacks.file_url, druid: druid, filename: filename)
-      FullTextIndexer.new(druid, resource_id, fetch(ocr_url)).to_solr
+    return to_enum(:to_solr) unless block_given?
+    resources.each do |r|
+      r.xpath('file[@mimetype="application/alto+xml" or @mimetype="text/plain"]').each do |file|
+        f = PurlObject::File.new(druid, file)
+        yield FullTextIndexer.new(f).to_solr
+      end
     end
   end
 
@@ -43,6 +40,42 @@ class PurlObject
   end
 
   def public_xml_body
-    self.class.client.get(format(Settings.purl.public_xml_url, druid: druid)).body
+    fetch(format(Settings.purl.public_xml_url, druid: druid))
+  end
+
+  # File object within a PURL document
+  class File
+    attr_reader :druid, :file_xml_fragment
+
+    def initialize(druid, file_xml_fragment)
+      @druid = druid
+      @file_xml_fragment = file_xml_fragment
+    end
+
+    def resource_id
+      file_xml_fragment.xpath('..').first.attr('id')
+    end
+
+    def filename
+      file_xml_fragment.attr('id')
+    end
+
+    def mimetype
+      file_xml_fragment.attr('mimetype')
+    end
+
+    def file_url
+      format(Settings.stacks.file_url, druid: druid, filename: filename)
+    end
+
+    def content
+      fetch(file_url)
+    end
+
+    private
+
+    def fetch(url)
+      PurlObject.client.get(url).body
+    end
   end
 end

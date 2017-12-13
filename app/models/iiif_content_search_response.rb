@@ -59,7 +59,7 @@ class IiifContentSearchResponse
     end
 
     def resource_id
-      id.split('/', 2).last
+      id.split('/', 2).last.split('/', 2).first
     end
 
     def annotation_url
