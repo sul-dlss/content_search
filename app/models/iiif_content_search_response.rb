@@ -9,7 +9,7 @@ class IiifContentSearchResponse
     @url = url
   end
 
-  def as_json
+  def as_json(*_args)
     {
       "@context": 'http://iiif.io/api/presentation/2/context.json',
       "@id": url,

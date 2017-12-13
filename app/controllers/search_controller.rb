@@ -2,17 +2,15 @@
 
 class SearchController < ApplicationController #:nodoc:
   def search
-    @search = Search.new(search_params)
+    @search = Search.new(params[:id], params[:q])
 
-    respond_to do
-      format.json { render json: IiifContentSearchResponse.new(@search, current_url) }
-    end
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    render json: IiifContentSearchResponse.new(@search, request.original_url)
   end
 
   private
 
   def search_params
-    params.permit(:id)
-    params.permit(:q)
+    params.permit(:id, :q)
   end
 end

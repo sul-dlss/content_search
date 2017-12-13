@@ -8,7 +8,7 @@ class Search
     RSolr.connect(url: Settings.solr.url)
   end
 
-  def initialize(id:, q:)
+  def initialize(id, q)
     @id = id
     @q = q
   end
@@ -25,7 +25,8 @@ class Search
     @response ||= self.class.client.get(Settings.solr.path, params: {
                                           q: q,
                                           fq: ["druid:#{id}"],
-                                          rows: 0,
+                                          rows: 10000,
+                                          fl: 'id',
                                           hl: true,
                                           'hl.fl' => 'ocrtext',
                                           'hl.method' => 'unified'

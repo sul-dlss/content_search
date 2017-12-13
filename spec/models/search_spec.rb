@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Search do
-  subject(:search) { described_class.new(id: 'x', q: 'y') }
+  subject(:search) { described_class.new('x', 'y') }
 
   describe '#highlights' do
     it 'transforms Solr responses into a hash' do
