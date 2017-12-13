@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   root to: 'search#search'
   get '/:id/search', to: 'search#search'
+
+  # discovery dispatcher API uses subtargets; we could care less, so make them optional.
+  put '/items/:druid/(*subtargets)', to: 'items#update'
+  delete '/items/:druid/(*subtargets)', to: 'items#destroy'
 end
