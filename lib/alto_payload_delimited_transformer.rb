@@ -21,7 +21,7 @@ class AltoPayloadDelimitedTransformer
   def output
     text_blocks.map do |block|
       block.xpath('.//alto:String', namespaces).map do |el|
-        "#{el['CONTENT']}☞#{%w[VPOS HPOS HEIGHT WIDTH].map { |k| el[k] }.join(',')}"
+        "#{el['CONTENT']}☞#{%w[HPOS VPOS WIDTH HEIGHT].map { |k| el[k] }.join(',')}"
       end.join(' ')
     end
   end
