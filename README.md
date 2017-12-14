@@ -5,12 +5,9 @@
 [![Dependency Status](https://gemnasium.com/sul-dlss/content_search.svg)](https://gemnasium.com/sul-dlss/content_search)
 [![GitHub version](https://badge.fury.io/gh/sul-dlss%2Fcontent_search.svg)](https://badge.fury.io/gh/sul-dlss%2Fcontent_search)
 
-# PURL
+# Content Search
 
-PURL service is a URL resolver that translates a reference to a digital object (in the form of a `druid`), into a full content representation of that object as available in public access environment
-
-
-Please create a github release before deploying.
+Content Search provides a IIIF Content Search 0.9 API endpoint for "search-within" or "highlights-in-context" for digital object OCR.
 
 ## Requirements
 
