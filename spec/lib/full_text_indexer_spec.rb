@@ -24,4 +24,24 @@ RSpec.describe FullTextIndexer do
                                          ocrtext: include(start_with('George'))
     end
   end
+
+  context 'with a plain text file' do
+    let(:file) do
+      instance_double(PurlObject::File, druid: 'x',
+                                        resource_id: 'y',
+                                        filename: 'z',
+                                        mimetype: 'text/plain',
+                                        content: File.read('spec/fixtures/00003167_0003.txt'))
+    end
+
+    describe '#to_solr' do
+      it 'creates a solr document for indexing' do
+        expect(indexer.to_solr).to include id: 'x/y/z',
+                                           druid: 'x',
+                                           resource_id: 'y',
+                                           filename: 'z',
+                                           ocrtext: include(start_with('MEMBERS OF THE COUNCIL'))
+      end
+    end
+  end
 end
