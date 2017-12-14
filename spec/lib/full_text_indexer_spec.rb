@@ -25,6 +25,12 @@ RSpec.describe FullTextIndexer do
     end
   end
 
+  describe '#alto?' do
+    it 'checks if the content looks like ALTO xml' do
+      expect(indexer.alto?).to eq true
+    end
+  end
+
   context 'with a plain text file' do
     let(:file) do
       instance_double(PurlObject::File, druid: 'x',
@@ -41,6 +47,12 @@ RSpec.describe FullTextIndexer do
                                            resource_id: 'y',
                                            filename: 'z',
                                            ocrtext: include(start_with('MEMBERS OF THE COUNCIL'))
+      end
+    end
+
+    describe '#alto?' do
+      it 'checks if the content looks like ALTO xml' do
+        expect(indexer.alto?).to eq false
       end
     end
   end

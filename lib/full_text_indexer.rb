@@ -25,7 +25,7 @@ class FullTextIndexer
   end
 
   def alto?
-    content =~ /<alto/
+    content.match?(/<alto/)
   end
 
   private

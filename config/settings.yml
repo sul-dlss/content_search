@@ -5,5 +5,5 @@ purl:
 stacks:
   file_url: 'https://stacks.stanford.edu/file/%{druid}/%{filename}'
 solr:
-  url: 'http://127.0.0.1:8983/solr/content_search'
+  url: 'http://127.0.0.1:8983/solr/content_search/'
   path: 'select'
