@@ -53,6 +53,14 @@ The specs can be run without RuboCop style enforcement
 The RuboCop style enforcement can be run without running the tests
 
     $ bundle exec rubocop
+    
+## Running Solr
+
+In a new terminal window:
+
+```bash
+$ bundle exec solr_wrapper
+```
 
 ## Indexing content
 
