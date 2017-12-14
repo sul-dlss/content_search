@@ -32,10 +32,10 @@ class IiifContentSearchResponse
 
   # Transform individual search highlights into IIIF resource annotations
   class Resource
-    attr_reader :id, :highlight
+    attr_reader :druid, :resource_id, :filename, :highlight
 
     def initialize(id, highlight)
-      @id = id
+      @druid, @resource_id, @filename = id.split('/')
       @highlight = highlight
     end
 
@@ -53,14 +53,6 @@ class IiifContentSearchResponse
     end
 
     private
-
-    def druid
-      id.split('/', 2).first
-    end
-
-    def resource_id
-      id.split('/', 2).last.split('/', 2).first
-    end
 
     def annotation_url
       "#{canvas_url}/text/at/#{fragment_xywh}"
