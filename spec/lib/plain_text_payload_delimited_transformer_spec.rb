@@ -8,7 +8,7 @@ RSpec.describe PlainTextPayloadDelimitedTransformer do
 
   describe '#output' do
     it 'returns a payload-delimited string' do
-      expect(transformer.output.first).to start_with 'MEMBERS☞0,0,0,0 OF☞0,0,0,0 THE☞0,0,0,0 COUNCIL☞0,0,0,0'
+      expect(transformer.output.first).to start_with 'MEMBERS OF THE COUNCIL'
     end
   end
 end

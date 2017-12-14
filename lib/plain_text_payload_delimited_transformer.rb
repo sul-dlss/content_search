@@ -9,6 +9,6 @@ class PlainTextPayloadDelimitedTransformer
   end
 
   def output
-    [content.split.map { |v| "#{v}☞0,0,0,0" }.join(' ')]
+    [content]
   end
 end

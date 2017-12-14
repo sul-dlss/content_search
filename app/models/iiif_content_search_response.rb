@@ -73,15 +73,23 @@ class IiifContentSearchResponse
     end
 
     def chars
-      text.split.map { |x| x.split('☞') }.map(&:first).join(' ')
+      text.split.map { |x| split_word_and_payload(x) }.map(&:first).join(' ')
     end
 
     def word_bboxes
       @word_bboxes ||= begin
-        text.split.map { |x| x.split('☞') }.map(&:last).compact.map do |xywh|
+        text.split.map { |x| split_word_and_payload(x) }.map(&:last).compact.map do |xywh|
           x, y, w, h = xywh.split(',').map(&:to_i)
           [[x, y], [x + w, y + h]]
         end
+      end
+    end
+
+    def split_word_and_payload(x)
+      if x.match?(/☞/)
+        x.split('☞')
+      else
+        [x, '0,0,0,0']
       end
     end
 

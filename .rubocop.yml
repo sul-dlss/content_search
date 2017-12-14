@@ -32,3 +32,7 @@ RSpec/ExampleLength:
 
 Style/NumericLiterals:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
