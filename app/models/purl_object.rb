@@ -33,11 +33,11 @@ class PurlObject
     end
   end
 
+  private
+
   def fetch(url)
     self.class.client.get(url).body
   end
-
-  private
 
   def public_xml
     Nokogiri::XML.parse(public_xml_body)
