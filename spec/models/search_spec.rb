@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Search do
-  subject(:search) { described_class.new('x', 'y') }
+  subject(:search) { described_class.new('x', q: 'y') }
 
   describe '.client' do
     it 'returns an RSolr client' do
@@ -20,6 +20,14 @@ RSpec.describe Search do
       client = instance_double(RSolr::Client, get: { 'highlighting' => { 'x' => { 'ocrtext' => %w[1 2] } } })
       allow(described_class).to receive(:client).and_return(client)
       expect(search.highlights).to include 'x' => match_array(%w[1 2])
+    end
+  end
+
+  describe '#num_found' do
+    it 'gets the number of hits from the solr response' do
+      client = instance_double(RSolr::Client, get: { 'response' => { 'numFound' => 15 } })
+      allow(described_class).to receive(:client).and_return(client)
+      expect(search.num_found).to eq 15
     end
   end
 end

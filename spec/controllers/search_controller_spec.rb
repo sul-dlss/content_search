@@ -3,11 +3,17 @@
 require 'rails_helper'
 
 RSpec.describe SearchController do
-  let(:search) { instance_double(Search, highlights: { 'x/y/z' => ['some <em>highlighted</em> text'] }) }
+  let(:search) do
+    instance_double(Search, id: 'x',
+                            num_found: 10,
+                            rows: 10,
+                            start: 0,
+                            highlights: { 'x/y/z' => ['some <em>highlighted</em> text'] })
+  end
 
   describe 'GET search' do
     before do
-      allow(Search).to receive(:new).with('x', 'y').and_return(search)
+      allow(Search).to receive(:new).with('x', q: 'y').and_return(search)
     end
 
     it 'executes a search and transforms it into a content search response' do
