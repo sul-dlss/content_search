@@ -2,23 +2,59 @@
 
 # Transforming search highlighting results into IIIF Content Search API responses
 class IiifContentSearchResponse
-  attr_reader :search, :url
+  attr_reader :search, :controller
 
-  def initialize(search, url)
+  delegate :request, to: :controller
+
+  def initialize(search, controller)
     @search = search
-    @url = url
+    @controller = controller
   end
 
   def as_json(*_args)
     {
       "@context": 'http://iiif.io/api/presentation/2/context.json',
-      "@id": url,
+      "@id": request.original_url,
       "@type": 'sc:AnnotationList',
       "resources": resources.map(&:as_json)
-    }
+    }.merge(pagination_as_json)
   end
 
   private
+
+  def pagination_as_json
+    hash = {
+      within: {
+        '@type': 'sc:Layer',
+        first: first_page_url,
+        last: last_page_url
+      }
+    }
+    hash[:next] = next_page_url if next_page?
+    hash
+  end
+
+  def first_page_url
+    controller.iiif_content_search_url(id: search.id, start: 0)
+  end
+
+  def next_page_url
+    controller.iiif_content_search_url(id: search.id, start: search.start + search.rows)
+  end
+
+  def last_page_url
+    start = 0 if search.num_found <= search.rows
+    start ||= last_page
+    controller.iiif_content_search_url(id: search.id, start: start)
+  end
+
+  def last_page
+    search.num_found - (search.num_found % search.rows)
+  end
+
+  def next_page?
+    search.num_found >= (search.start + search.rows)
+  end
 
   def resources
     return to_enum(:resources) unless block_given?
@@ -32,10 +68,10 @@ class IiifContentSearchResponse
 
   # Transform individual search highlights into IIIF resource annotations
   class Resource
-    attr_reader :id, :highlight
+    attr_reader :druid, :resource_id, :filename, :highlight
 
     def initialize(id, highlight)
-      @id = id
+      @druid, @resource_id, @filename = id.split('/')
       @highlight = highlight
     end
 
@@ -53,14 +89,6 @@ class IiifContentSearchResponse
     end
 
     private
-
-    def druid
-      id.split('/', 2).first
-    end
-
-    def resource_id
-      id.split('/', 2).last.split('/', 2).first
-    end
 
     def annotation_url
       "#{canvas_url}/text/at/#{fragment_xywh}"
