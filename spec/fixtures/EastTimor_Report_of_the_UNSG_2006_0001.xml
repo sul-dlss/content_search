@@ -1,0 +1,827 @@
+<?xml version='1.0' encoding='utf-8'?>
+<alto xmlns="http://www.loc.gov/standards/alto/ns-v3#">
+  <!--Created by Innodata R.E.D. Nuremberg tool (ver 20160602-39): 2017-12-01 16:27:47.437829-->
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>EastTimor_Report_of_the_UNSG_2006_0001.tif</fileName>
+    </sourceImageInformation>
+  </Description>
+  <Layout>
+    <Page HEIGHT="3300.00" ID="PG_1" PHYSICAL_IMG_NR="1" WIDTH="2550.00">
+      <PrintSpace HEIGHT="3300.00" HPOS="0" ID="PS_1" VPOS="0" WIDTH="2550.00">
+        <TextBlock HEIGHT="42.00" HPOS="514.00" ID="BL_1.1" VPOS="229.00" WIDTH="344.00">
+          <TextLine HEIGHT="42.00" HPOS="514.00" ID="TL_1.1.1" VPOS="229.00" WIDTH="344.00">
+            <String CONTENT="United" HEIGHT="42.00" HPOS="514.00" ID="ST_1.1.1.1" VPOS="229.00" WIDTH="147.43"/>
+            <SP HPOS="661.43" ID="SP_1.1.1.2" VPOS="229.00" WIDTH="24.57"/>
+            <String CONTENT="Nations" HEIGHT="42.00" HPOS="686.00" ID="ST_1.1.1.3" VPOS="229.00" WIDTH="172.00"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="57.00" HPOS="2108.00" ID="BL_1.2" VPOS="209.00" WIDTH="201.00">
+          <TextLine HEIGHT="57.00" HPOS="2108.00" ID="TL_1.2.1" VPOS="209.00" WIDTH="201.00">
+            <String CONTENT="S/2006/24" HEIGHT="57.00" HPOS="2108.00" ID="ST_1.2.1.1" VPOS="209.00" WIDTH="201.00"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="74.00" HPOS="518.00" ID="BL_1.3" VPOS="333.00" WIDTH="565.00">
+          <TextLine HEIGHT="74.00" HPOS="518.00" ID="TL_1.3.1" VPOS="333.00" WIDTH="565.00">
+            <String CONTENT="Security" HEIGHT="74.00" HPOS="518.00" ID="ST_1.3.1.1" VPOS="333.00" WIDTH="282.50"/>
+            <SP HPOS="800.50" ID="SP_1.3.1.2" VPOS="333.00" WIDTH="35.31"/>
+            <String CONTENT="Council" HEIGHT="74.00" HPOS="835.81" ID="ST_1.3.1.3" VPOS="333.00" WIDTH="247.19"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="87.00" HPOS="1654.00" ID="BL_1.4" VPOS="363.00" WIDTH="294.00">
+          <TextLine HEIGHT="29.00" HPOS="1654.00" ID="TL_1.4.1" VPOS="363.00" WIDTH="294.00">
+            <String CONTENT="Distr.:" HEIGHT="29.00" HPOS="1654.00" ID="ST_1.4.1.1" VPOS="363.00" WIDTH="137.20"/>
+            <SP HPOS="1791.20" ID="SP_1.4.1.2" VPOS="363.00" WIDTH="19.60"/>
+            <String CONTENT="General" HEIGHT="29.00" HPOS="1810.80" ID="ST_1.4.1.3" VPOS="363.00" WIDTH="137.20"/>
+          </TextLine>
+          <TextLine HEIGHT="29.00" HPOS="1654.00" ID="TL_1.4.2" VPOS="421.00" WIDTH="294.00">
+            <String CONTENT="17" HEIGHT="29.00" HPOS="1654.00" ID="ST_1.4.2.1" VPOS="421.00" WIDTH="39.20"/>
+            <SP HPOS="1693.20" ID="SP_1.4.2.2" VPOS="421.00" WIDTH="19.60"/>
+            <String CONTENT="January" HEIGHT="29.00" HPOS="1712.80" ID="ST_1.4.2.3" VPOS="421.00" WIDTH="137.20"/>
+            <SP HPOS="1850.00" ID="SP_1.4.2.4" VPOS="421.00" WIDTH="19.60"/>
+            <String CONTENT="2006" HEIGHT="29.00" HPOS="1869.60" ID="ST_1.4.2.5" VPOS="421.00" WIDTH="78.40"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="38.00" HPOS="1656.00" ID="BL_1.5" VPOS="512.00" WIDTH="307.00">
+          <TextLine HEIGHT="38.00" HPOS="1656.00" ID="TL_1.5.1" VPOS="512.00" WIDTH="307.00">
+            <String CONTENT="Original:" HEIGHT="38.00" HPOS="1656.00" ID="ST_1.5.1.1" VPOS="512.00" WIDTH="162.53"/>
+            <SP HPOS="1818.53" ID="SP_1.5.1.2" VPOS="512.00" WIDTH="18.06"/>
+            <String CONTENT="English" HEIGHT="38.00" HPOS="1836.59" ID="ST_1.5.1.3" VPOS="512.00" WIDTH="126.41"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="104.00" HPOS="514.00" ID="BL_1.6" VPOS="935.00" WIDTH="1197.00">
+          <TextLine HEIGHT="34.67" HPOS="514.00" ID="TL_1.6.1" VPOS="935.00" WIDTH="1197.00">
+            <String CONTENT="Progress" HEIGHT="34.67" HPOS="514.00" ID="ST_1.6.1.1" VPOS="935.00" WIDTH="203.74"/>
+            <SP HPOS="717.74" ID="SP_1.6.1.2" VPOS="935.00" WIDTH="25.47"/>
+            <String CONTENT="report" HEIGHT="34.67" HPOS="743.21" ID="ST_1.6.1.3" VPOS="935.00" WIDTH="152.81"/>
+            <SP HPOS="896.02" ID="SP_1.6.1.4" VPOS="935.00" WIDTH="25.47"/>
+            <String CONTENT="of" HEIGHT="34.67" HPOS="921.49" ID="ST_1.6.1.5" VPOS="935.00" WIDTH="50.94"/>
+            <SP HPOS="972.43" ID="SP_1.6.1.6" VPOS="935.00" WIDTH="25.47"/>
+            <String CONTENT="the" HEIGHT="34.67" HPOS="997.89" ID="ST_1.6.1.7" VPOS="935.00" WIDTH="76.40"/>
+            <SP HPOS="1074.30" ID="SP_1.6.1.8" VPOS="935.00" WIDTH="25.47"/>
+            <String CONTENT="Secretary-General" HEIGHT="34.67" HPOS="1099.77" ID="ST_1.6.1.9" VPOS="935.00" WIDTH="432.96"/>
+            <SP HPOS="1532.72" ID="SP_1.6.1.10" VPOS="935.00" WIDTH="25.47"/>
+            <String CONTENT="on" HEIGHT="34.67" HPOS="1558.19" ID="ST_1.6.1.11" VPOS="935.00" WIDTH="50.94"/>
+            <SP HPOS="1609.13" ID="SP_1.6.1.12" VPOS="935.00" WIDTH="25.47"/>
+            <String CONTENT="the" HEIGHT="34.67" HPOS="1634.60" ID="ST_1.6.1.13" VPOS="935.00" WIDTH="76.40"/>
+          </TextLine>
+          <TextLine HEIGHT="34.67" HPOS="514.00" ID="TL_1.6.2" VPOS="1004.33" WIDTH="916.85">
+            <String CONTENT="United" HEIGHT="34.67" HPOS="514.00" ID="ST_1.6.2.1" VPOS="1004.33" WIDTH="152.81"/>
+            <SP HPOS="666.81" ID="SP_1.6.2.2" VPOS="1004.33" WIDTH="25.47"/>
+            <String CONTENT="Nations" HEIGHT="34.67" HPOS="692.28" ID="ST_1.6.2.3" VPOS="1004.33" WIDTH="178.28"/>
+            <SP HPOS="870.55" ID="SP_1.6.2.4" VPOS="1004.33" WIDTH="25.47"/>
+            <String CONTENT="Office" HEIGHT="34.67" HPOS="896.02" ID="ST_1.6.2.5" VPOS="1004.33" WIDTH="152.81"/>
+            <SP HPOS="1048.83" ID="SP_1.6.2.6" VPOS="1004.33" WIDTH="25.47"/>
+            <String CONTENT="in" HEIGHT="34.67" HPOS="1074.30" ID="ST_1.6.2.7" VPOS="1004.33" WIDTH="50.94"/>
+            <SP HPOS="1125.23" ID="SP_1.6.2.8" VPOS="1004.33" WIDTH="25.47"/>
+            <String CONTENT="Timor-Leste" HEIGHT="34.67" HPOS="1150.70" ID="ST_1.6.2.9" VPOS="1004.33" WIDTH="280.15"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="37.00" HPOS="515.00" ID="BL_1.7" VPOS="1112.00" WIDTH="946.00">
+          <TextLine HEIGHT="37.00" HPOS="515.00" ID="TL_1.7.1" VPOS="1112.00" WIDTH="946.00">
+            <String CONTENT="(for" HEIGHT="37.00" HPOS="515.00" ID="ST_1.7.1.1" VPOS="1112.00" WIDTH="75.68"/>
+            <SP HPOS="590.68" ID="SP_1.7.1.2" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="the" HEIGHT="37.00" HPOS="609.60" ID="ST_1.7.1.3" VPOS="1112.00" WIDTH="56.76"/>
+            <SP HPOS="666.36" ID="SP_1.7.1.4" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="period" HEIGHT="37.00" HPOS="685.28" ID="ST_1.7.1.5" VPOS="1112.00" WIDTH="113.52"/>
+            <SP HPOS="798.80" ID="SP_1.7.1.6" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="16" HEIGHT="37.00" HPOS="817.72" ID="ST_1.7.1.7" VPOS="1112.00" WIDTH="37.84"/>
+            <SP HPOS="855.56" ID="SP_1.7.1.8" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="August" HEIGHT="37.00" HPOS="874.48" ID="ST_1.7.1.9" VPOS="1112.00" WIDTH="113.52"/>
+            <SP HPOS="988.00" ID="SP_1.7.1.10" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="2005" HEIGHT="37.00" HPOS="1006.92" ID="ST_1.7.1.11" VPOS="1112.00" WIDTH="75.68"/>
+            <SP HPOS="1082.60" ID="SP_1.7.1.12" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="to" HEIGHT="37.00" HPOS="1101.52" ID="ST_1.7.1.13" VPOS="1112.00" WIDTH="37.84"/>
+            <SP HPOS="1139.36" ID="SP_1.7.1.14" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="13" HEIGHT="37.00" HPOS="1158.28" ID="ST_1.7.1.15" VPOS="1112.00" WIDTH="37.84"/>
+            <SP HPOS="1196.12" ID="SP_1.7.1.16" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="January" HEIGHT="37.00" HPOS="1215.04" ID="ST_1.7.1.17" VPOS="1112.00" WIDTH="132.44"/>
+            <SP HPOS="1347.48" ID="SP_1.7.1.18" VPOS="1112.00" WIDTH="18.92"/>
+            <String CONTENT="2006)" HEIGHT="37.00" HPOS="1366.40" ID="ST_1.7.1.19" VPOS="1112.00" WIDTH="94.60"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="41.00" HPOS="427.00" ID="BL_1.8" VPOS="1210.00" WIDTH="403.00">
+          <TextLine HEIGHT="41.00" HPOS="427.00" ID="TL_1.8.1" VPOS="1210.00" WIDTH="403.00">
+            <String CONTENT="I." HEIGHT="41.00" HPOS="427.00" ID="ST_1.8.1.1" VPOS="1210.00" WIDTH="47.41"/>
+            <SP HPOS="474.41" ID="SP_1.8.1.2" VPOS="1210.00" WIDTH="71.12"/>
+            <String CONTENT="Introduction" HEIGHT="41.00" HPOS="545.53" ID="ST_1.8.1.3" VPOS="1210.00" WIDTH="284.47"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="487.00" HPOS="513.00" ID="BL_1.9" VPOS="1324.00" WIDTH="1525.00">
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.1" VPOS="1324.00" WIDTH="1525.00">
+            <String CONTENT="1." HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.1.1" VPOS="1324.00" WIDTH="37.65"/>
+            <SP HPOS="550.65" ID="SP_1.9.1.2" VPOS="1324.00" WIDTH="56.48"/>
+            <String CONTENT="The" HEIGHT="25.63" HPOS="607.14" ID="ST_1.9.1.3" VPOS="1324.00" WIDTH="56.48"/>
+            <SP HPOS="663.62" ID="SP_1.9.1.4" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="present" HEIGHT="25.63" HPOS="682.44" ID="ST_1.9.1.5" VPOS="1324.00" WIDTH="131.79"/>
+            <SP HPOS="814.23" ID="SP_1.9.1.6" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="report" HEIGHT="25.63" HPOS="833.06" ID="ST_1.9.1.7" VPOS="1324.00" WIDTH="112.96"/>
+            <SP HPOS="946.02" ID="SP_1.9.1.8" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="is" HEIGHT="25.63" HPOS="964.85" ID="ST_1.9.1.9" VPOS="1324.00" WIDTH="37.65"/>
+            <SP HPOS="1002.51" ID="SP_1.9.1.10" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="submitted" HEIGHT="25.63" HPOS="1021.33" ID="ST_1.9.1.11" VPOS="1324.00" WIDTH="169.44"/>
+            <SP HPOS="1190.78" ID="SP_1.9.1.12" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="pursuant" HEIGHT="25.63" HPOS="1209.60" ID="ST_1.9.1.13" VPOS="1324.00" WIDTH="150.62"/>
+            <SP HPOS="1360.22" ID="SP_1.9.1.14" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="to" HEIGHT="25.63" HPOS="1379.05" ID="ST_1.9.1.15" VPOS="1324.00" WIDTH="37.65"/>
+            <SP HPOS="1416.70" ID="SP_1.9.1.16" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="Security" HEIGHT="25.63" HPOS="1435.53" ID="ST_1.9.1.17" VPOS="1324.00" WIDTH="150.62"/>
+            <SP HPOS="1586.15" ID="SP_1.9.1.18" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="Council" HEIGHT="25.63" HPOS="1604.98" ID="ST_1.9.1.19" VPOS="1324.00" WIDTH="131.79"/>
+            <SP HPOS="1736.77" ID="SP_1.9.1.20" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="resolution" HEIGHT="25.63" HPOS="1755.59" ID="ST_1.9.1.21" VPOS="1324.00" WIDTH="188.27"/>
+            <SP HPOS="1943.86" ID="SP_1.9.1.22" VPOS="1324.00" WIDTH="18.83"/>
+            <String CONTENT="1599" HEIGHT="25.63" HPOS="1962.69" ID="ST_1.9.1.23" VPOS="1324.00" WIDTH="75.31"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.2" VPOS="1375.26" WIDTH="1506.17">
+            <String CONTENT="(2005)" HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.2.1" VPOS="1375.26" WIDTH="112.96"/>
+            <SP HPOS="625.96" ID="SP_1.9.2.2" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="of" HEIGHT="25.63" HPOS="644.79" ID="ST_1.9.2.3" VPOS="1375.26" WIDTH="37.65"/>
+            <SP HPOS="682.44" ID="SP_1.9.2.4" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="28" HEIGHT="25.63" HPOS="701.27" ID="ST_1.9.2.5" VPOS="1375.26" WIDTH="37.65"/>
+            <SP HPOS="738.93" ID="SP_1.9.2.6" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="April" HEIGHT="25.63" HPOS="757.75" ID="ST_1.9.2.7" VPOS="1375.26" WIDTH="94.14"/>
+            <SP HPOS="851.89" ID="SP_1.9.2.8" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="2005," HEIGHT="25.63" HPOS="870.72" ID="ST_1.9.2.9" VPOS="1375.26" WIDTH="94.14"/>
+            <SP HPOS="964.85" ID="SP_1.9.2.10" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="in" HEIGHT="25.63" HPOS="983.68" ID="ST_1.9.2.11" VPOS="1375.26" WIDTH="37.65"/>
+            <SP HPOS="1021.33" ID="SP_1.9.2.12" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="which" HEIGHT="25.63" HPOS="1040.16" ID="ST_1.9.2.13" VPOS="1375.26" WIDTH="94.14"/>
+            <SP HPOS="1134.30" ID="SP_1.9.2.14" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="1153.12" ID="ST_1.9.2.15" VPOS="1375.26" WIDTH="56.48"/>
+            <SP HPOS="1209.60" ID="SP_1.9.2.16" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="Council" HEIGHT="25.63" HPOS="1228.43" ID="ST_1.9.2.17" VPOS="1375.26" WIDTH="131.79"/>
+            <SP HPOS="1360.22" ID="SP_1.9.2.18" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="decided" HEIGHT="25.63" HPOS="1379.05" ID="ST_1.9.2.19" VPOS="1375.26" WIDTH="131.79"/>
+            <SP HPOS="1510.84" ID="SP_1.9.2.20" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="to" HEIGHT="25.63" HPOS="1529.67" ID="ST_1.9.2.21" VPOS="1375.26" WIDTH="37.65"/>
+            <SP HPOS="1567.32" ID="SP_1.9.2.22" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="establish," HEIGHT="25.63" HPOS="1586.15" ID="ST_1.9.2.23" VPOS="1375.26" WIDTH="188.27"/>
+            <SP HPOS="1774.42" ID="SP_1.9.2.24" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="as" HEIGHT="25.63" HPOS="1793.25" ID="ST_1.9.2.25" VPOS="1375.26" WIDTH="37.65"/>
+            <SP HPOS="1830.90" ID="SP_1.9.2.26" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="of" HEIGHT="25.63" HPOS="1849.73" ID="ST_1.9.2.27" VPOS="1375.26" WIDTH="37.65"/>
+            <SP HPOS="1887.38" ID="SP_1.9.2.28" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="21" HEIGHT="25.63" HPOS="1906.21" ID="ST_1.9.2.29" VPOS="1375.26" WIDTH="37.65"/>
+            <SP HPOS="1943.86" ID="SP_1.9.2.30" VPOS="1375.26" WIDTH="18.83"/>
+            <String CONTENT="May" HEIGHT="25.63" HPOS="1962.69" ID="ST_1.9.2.31" VPOS="1375.26" WIDTH="56.48"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.3" VPOS="1426.53" WIDTH="1525.00">
+            <String CONTENT="2005," HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.3.1" VPOS="1426.53" WIDTH="94.14"/>
+            <SP HPOS="607.14" ID="SP_1.9.3.2" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="625.96" ID="ST_1.9.3.3" VPOS="1426.53" WIDTH="56.48"/>
+            <SP HPOS="682.44" ID="SP_1.9.3.4" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="United" HEIGHT="25.63" HPOS="701.27" ID="ST_1.9.3.5" VPOS="1426.53" WIDTH="112.96"/>
+            <SP HPOS="814.23" ID="SP_1.9.3.6" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="Nations" HEIGHT="25.63" HPOS="833.06" ID="ST_1.9.3.7" VPOS="1426.53" WIDTH="131.79"/>
+            <SP HPOS="964.85" ID="SP_1.9.3.8" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="Office" HEIGHT="25.63" HPOS="983.68" ID="ST_1.9.3.9" VPOS="1426.53" WIDTH="112.96"/>
+            <SP HPOS="1096.64" ID="SP_1.9.3.10" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="in" HEIGHT="25.63" HPOS="1115.47" ID="ST_1.9.3.11" VPOS="1426.53" WIDTH="37.65"/>
+            <SP HPOS="1153.12" ID="SP_1.9.3.12" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="Timor-Leste" HEIGHT="25.63" HPOS="1171.95" ID="ST_1.9.3.13" VPOS="1426.53" WIDTH="207.10"/>
+            <SP HPOS="1379.05" ID="SP_1.9.3.14" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="(UNOTIL)" HEIGHT="25.63" HPOS="1397.88" ID="ST_1.9.3.15" VPOS="1426.53" WIDTH="150.62"/>
+            <SP HPOS="1548.49" ID="SP_1.9.3.16" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="for" HEIGHT="25.63" HPOS="1567.32" ID="ST_1.9.3.17" VPOS="1426.53" WIDTH="56.48"/>
+            <SP HPOS="1623.80" ID="SP_1.9.3.18" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="a" HEIGHT="25.63" HPOS="1642.63" ID="ST_1.9.3.19" VPOS="1426.53" WIDTH="18.83"/>
+            <SP HPOS="1661.46" ID="SP_1.9.3.20" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="period" HEIGHT="25.63" HPOS="1680.28" ID="ST_1.9.3.21" VPOS="1426.53" WIDTH="112.96"/>
+            <SP HPOS="1793.25" ID="SP_1.9.3.22" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="of" HEIGHT="25.63" HPOS="1812.07" ID="ST_1.9.3.23" VPOS="1426.53" WIDTH="37.65"/>
+            <SP HPOS="1849.73" ID="SP_1.9.3.24" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="one" HEIGHT="25.63" HPOS="1868.56" ID="ST_1.9.3.25" VPOS="1426.53" WIDTH="56.48"/>
+            <SP HPOS="1925.04" ID="SP_1.9.3.26" VPOS="1426.53" WIDTH="18.83"/>
+            <String CONTENT="year." HEIGHT="25.63" HPOS="1943.86" ID="ST_1.9.3.27" VPOS="1426.53" WIDTH="94.14"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.4" VPOS="1477.79" WIDTH="1468.52">
+            <String CONTENT="In" HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.4.1" VPOS="1477.79" WIDTH="37.65"/>
+            <SP HPOS="550.65" ID="SP_1.9.4.2" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="paragraph" HEIGHT="25.63" HPOS="569.48" ID="ST_1.9.4.3" VPOS="1477.79" WIDTH="169.44"/>
+            <SP HPOS="738.93" ID="SP_1.9.4.4" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="10" HEIGHT="25.63" HPOS="757.75" ID="ST_1.9.4.5" VPOS="1477.79" WIDTH="37.65"/>
+            <SP HPOS="795.41" ID="SP_1.9.4.6" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="of" HEIGHT="25.63" HPOS="814.23" ID="ST_1.9.4.7" VPOS="1477.79" WIDTH="37.65"/>
+            <SP HPOS="851.89" ID="SP_1.9.4.8" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="that" HEIGHT="25.63" HPOS="870.72" ID="ST_1.9.4.9" VPOS="1477.79" WIDTH="75.31"/>
+            <SP HPOS="946.02" ID="SP_1.9.4.10" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="resolution," HEIGHT="25.63" HPOS="964.85" ID="ST_1.9.4.11" VPOS="1477.79" WIDTH="207.10"/>
+            <SP HPOS="1171.95" ID="SP_1.9.4.12" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="1190.78" ID="ST_1.9.4.13" VPOS="1477.79" WIDTH="56.48"/>
+            <SP HPOS="1247.26" ID="SP_1.9.4.14" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="Council" HEIGHT="25.63" HPOS="1266.09" ID="ST_1.9.4.15" VPOS="1477.79" WIDTH="131.79"/>
+            <SP HPOS="1397.88" ID="SP_1.9.4.16" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="requested" HEIGHT="25.63" HPOS="1416.70" ID="ST_1.9.4.17" VPOS="1477.79" WIDTH="169.44"/>
+            <SP HPOS="1586.15" ID="SP_1.9.4.18" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="that" HEIGHT="25.63" HPOS="1604.98" ID="ST_1.9.4.19" VPOS="1477.79" WIDTH="75.31"/>
+            <SP HPOS="1680.28" ID="SP_1.9.4.20" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="it" HEIGHT="25.63" HPOS="1699.11" ID="ST_1.9.4.21" VPOS="1477.79" WIDTH="37.65"/>
+            <SP HPOS="1736.77" ID="SP_1.9.4.22" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="be" HEIGHT="25.63" HPOS="1755.59" ID="ST_1.9.4.23" VPOS="1477.79" WIDTH="37.65"/>
+            <SP HPOS="1793.25" ID="SP_1.9.4.24" VPOS="1477.79" WIDTH="18.83"/>
+            <String CONTENT="regularly" HEIGHT="25.63" HPOS="1812.07" ID="ST_1.9.4.25" VPOS="1477.79" WIDTH="169.44"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.5" VPOS="1529.05" WIDTH="1430.86">
+            <String CONTENT="informed" HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.5.1" VPOS="1529.05" WIDTH="150.62"/>
+            <SP HPOS="663.62" ID="SP_1.9.5.2" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="of" HEIGHT="25.63" HPOS="682.44" ID="ST_1.9.5.3" VPOS="1529.05" WIDTH="37.65"/>
+            <SP HPOS="720.10" ID="SP_1.9.5.4" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="developments" HEIGHT="25.63" HPOS="738.93" ID="ST_1.9.5.5" VPOS="1529.05" WIDTH="225.93"/>
+            <SP HPOS="964.85" ID="SP_1.9.5.6" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="on" HEIGHT="25.63" HPOS="983.68" ID="ST_1.9.5.7" VPOS="1529.05" WIDTH="37.65"/>
+            <SP HPOS="1021.33" ID="SP_1.9.5.8" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="1040.16" ID="ST_1.9.5.9" VPOS="1529.05" WIDTH="56.48"/>
+            <SP HPOS="1096.64" ID="SP_1.9.5.10" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="ground," HEIGHT="25.63" HPOS="1115.47" ID="ST_1.9.5.11" VPOS="1529.05" WIDTH="131.79"/>
+            <SP HPOS="1247.26" ID="SP_1.9.5.12" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="1266.09" ID="ST_1.9.5.13" VPOS="1529.05" WIDTH="56.48"/>
+            <SP HPOS="1322.57" ID="SP_1.9.5.14" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="implementation" HEIGHT="25.63" HPOS="1341.40" ID="ST_1.9.5.15" VPOS="1529.05" WIDTH="263.58"/>
+            <SP HPOS="1604.98" ID="SP_1.9.5.16" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="of" HEIGHT="25.63" HPOS="1623.80" ID="ST_1.9.5.17" VPOS="1529.05" WIDTH="37.65"/>
+            <SP HPOS="1661.46" ID="SP_1.9.5.18" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="1680.28" ID="ST_1.9.5.19" VPOS="1529.05" WIDTH="56.48"/>
+            <SP HPOS="1736.77" ID="SP_1.9.5.20" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="mandate" HEIGHT="25.63" HPOS="1755.59" ID="ST_1.9.5.21" VPOS="1529.05" WIDTH="131.79"/>
+            <SP HPOS="1887.38" ID="SP_1.9.5.22" VPOS="1529.05" WIDTH="18.83"/>
+            <String CONTENT="of" HEIGHT="25.63" HPOS="1906.21" ID="ST_1.9.5.23" VPOS="1529.05" WIDTH="37.65"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.6" VPOS="1580.32" WIDTH="1506.17">
+            <String CONTENT="UNOTIL" HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.6.1" VPOS="1580.32" WIDTH="112.96"/>
+            <SP HPOS="625.96" ID="SP_1.9.6.2" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="and" HEIGHT="25.63" HPOS="644.79" ID="ST_1.9.6.3" VPOS="1580.32" WIDTH="56.48"/>
+            <SP HPOS="701.27" ID="SP_1.9.6.4" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="720.10" ID="ST_1.9.6.5" VPOS="1580.32" WIDTH="56.48"/>
+            <SP HPOS="776.58" ID="SP_1.9.6.6" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="planning" HEIGHT="25.63" HPOS="795.41" ID="ST_1.9.6.7" VPOS="1580.32" WIDTH="150.62"/>
+            <SP HPOS="946.02" ID="SP_1.9.6.8" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="for" HEIGHT="25.63" HPOS="964.85" ID="ST_1.9.6.9" VPOS="1580.32" WIDTH="56.48"/>
+            <SP HPOS="1021.33" ID="SP_1.9.6.10" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="a" HEIGHT="25.63" HPOS="1040.16" ID="ST_1.9.6.11" VPOS="1580.32" WIDTH="18.83"/>
+            <SP HPOS="1058.99" ID="SP_1.9.6.12" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="transition" HEIGHT="25.63" HPOS="1077.81" ID="ST_1.9.6.13" VPOS="1580.32" WIDTH="188.27"/>
+            <SP HPOS="1266.09" ID="SP_1.9.6.14" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="to" HEIGHT="25.63" HPOS="1284.91" ID="ST_1.9.6.15" VPOS="1580.32" WIDTH="37.65"/>
+            <SP HPOS="1322.57" ID="SP_1.9.6.16" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="a" HEIGHT="25.63" HPOS="1341.40" ID="ST_1.9.6.17" VPOS="1580.32" WIDTH="18.83"/>
+            <SP HPOS="1360.22" ID="SP_1.9.6.18" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="sustainable" HEIGHT="25.63" HPOS="1379.05" ID="ST_1.9.6.19" VPOS="1580.32" WIDTH="207.10"/>
+            <SP HPOS="1586.15" ID="SP_1.9.6.20" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="development" HEIGHT="25.63" HPOS="1604.98" ID="ST_1.9.6.21" VPOS="1580.32" WIDTH="207.10"/>
+            <SP HPOS="1812.07" ID="SP_1.9.6.22" VPOS="1580.32" WIDTH="18.83"/>
+            <String CONTENT="assistance" HEIGHT="25.63" HPOS="1830.90" ID="ST_1.9.6.23" VPOS="1580.32" WIDTH="188.27"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.7" VPOS="1631.58" WIDTH="1430.86">
+            <String CONTENT="framework" HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.7.1" VPOS="1631.58" WIDTH="169.44"/>
+            <SP HPOS="682.44" ID="SP_1.9.7.2" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="and" HEIGHT="25.63" HPOS="701.27" ID="ST_1.9.7.3" VPOS="1631.58" WIDTH="56.48"/>
+            <SP HPOS="757.75" ID="SP_1.9.7.4" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="requested" HEIGHT="25.63" HPOS="776.58" ID="ST_1.9.7.5" VPOS="1631.58" WIDTH="169.44"/>
+            <SP HPOS="946.02" ID="SP_1.9.7.6" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="me" HEIGHT="25.63" HPOS="964.85" ID="ST_1.9.7.7" VPOS="1631.58" WIDTH="37.65"/>
+            <SP HPOS="1002.51" ID="SP_1.9.7.8" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="to" HEIGHT="25.63" HPOS="1021.33" ID="ST_1.9.7.9" VPOS="1631.58" WIDTH="37.65"/>
+            <SP HPOS="1058.99" ID="SP_1.9.7.10" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="submit" HEIGHT="25.63" HPOS="1077.81" ID="ST_1.9.7.11" VPOS="1631.58" WIDTH="112.96"/>
+            <SP HPOS="1190.78" ID="SP_1.9.7.12" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="a" HEIGHT="25.63" HPOS="1209.60" ID="ST_1.9.7.13" VPOS="1631.58" WIDTH="18.83"/>
+            <SP HPOS="1228.43" ID="SP_1.9.7.14" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="report" HEIGHT="25.63" HPOS="1247.26" ID="ST_1.9.7.15" VPOS="1631.58" WIDTH="112.96"/>
+            <SP HPOS="1360.22" ID="SP_1.9.7.16" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="every" HEIGHT="25.63" HPOS="1379.05" ID="ST_1.9.7.17" VPOS="1631.58" WIDTH="94.14"/>
+            <SP HPOS="1473.19" ID="SP_1.9.7.18" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="four" HEIGHT="25.63" HPOS="1492.01" ID="ST_1.9.7.19" VPOS="1631.58" WIDTH="75.31"/>
+            <SP HPOS="1567.32" ID="SP_1.9.7.20" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="months." HEIGHT="25.63" HPOS="1586.15" ID="ST_1.9.7.21" VPOS="1631.58" WIDTH="131.79"/>
+            <SP HPOS="1717.94" ID="SP_1.9.7.22" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="The" HEIGHT="25.63" HPOS="1736.77" ID="ST_1.9.7.23" VPOS="1631.58" WIDTH="56.48"/>
+            <SP HPOS="1793.25" ID="SP_1.9.7.24" VPOS="1631.58" WIDTH="18.83"/>
+            <String CONTENT="present" HEIGHT="25.63" HPOS="1812.07" ID="ST_1.9.7.25" VPOS="1631.58" WIDTH="131.79"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.8" VPOS="1682.84" WIDTH="1412.04">
+            <String CONTENT="report" HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.8.1" VPOS="1682.84" WIDTH="112.96"/>
+            <SP HPOS="625.96" ID="SP_1.9.8.2" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="covers" HEIGHT="25.63" HPOS="644.79" ID="ST_1.9.8.3" VPOS="1682.84" WIDTH="112.96"/>
+            <SP HPOS="757.75" ID="SP_1.9.8.4" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="major" HEIGHT="25.63" HPOS="776.58" ID="ST_1.9.8.5" VPOS="1682.84" WIDTH="94.14"/>
+            <SP HPOS="870.72" ID="SP_1.9.8.6" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="developments" HEIGHT="25.63" HPOS="889.54" ID="ST_1.9.8.7" VPOS="1682.84" WIDTH="225.93"/>
+            <SP HPOS="1115.47" ID="SP_1.9.8.8" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="since" HEIGHT="25.63" HPOS="1134.30" ID="ST_1.9.8.9" VPOS="1682.84" WIDTH="94.14"/>
+            <SP HPOS="1228.43" ID="SP_1.9.8.10" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="my" HEIGHT="25.63" HPOS="1247.26" ID="ST_1.9.8.11" VPOS="1682.84" WIDTH="37.65"/>
+            <SP HPOS="1284.91" ID="SP_1.9.8.12" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="progress" HEIGHT="25.63" HPOS="1303.74" ID="ST_1.9.8.13" VPOS="1682.84" WIDTH="150.62"/>
+            <SP HPOS="1454.36" ID="SP_1.9.8.14" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="report" HEIGHT="25.63" HPOS="1473.19" ID="ST_1.9.8.15" VPOS="1682.84" WIDTH="112.96"/>
+            <SP HPOS="1586.15" ID="SP_1.9.8.16" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="of" HEIGHT="25.63" HPOS="1604.98" ID="ST_1.9.8.17" VPOS="1682.84" WIDTH="37.65"/>
+            <SP HPOS="1642.63" ID="SP_1.9.8.18" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="18" HEIGHT="25.63" HPOS="1661.46" ID="ST_1.9.8.19" VPOS="1682.84" WIDTH="37.65"/>
+            <SP HPOS="1699.11" ID="SP_1.9.8.20" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="August" HEIGHT="25.63" HPOS="1717.94" ID="ST_1.9.8.21" VPOS="1682.84" WIDTH="112.96"/>
+            <SP HPOS="1830.90" ID="SP_1.9.8.22" VPOS="1682.84" WIDTH="18.83"/>
+            <String CONTENT="2005" HEIGHT="25.63" HPOS="1849.73" ID="ST_1.9.8.23" VPOS="1682.84" WIDTH="75.31"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.9" VPOS="1734.11" WIDTH="1506.17">
+            <String CONTENT="(S/2005/533)," HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.9.1" VPOS="1734.11" WIDTH="244.75"/>
+            <SP HPOS="757.75" ID="SP_1.9.9.2" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="and" HEIGHT="25.63" HPOS="776.58" ID="ST_1.9.9.3" VPOS="1734.11" WIDTH="56.48"/>
+            <SP HPOS="833.06" ID="SP_1.9.9.4" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="outlines" HEIGHT="25.63" HPOS="851.89" ID="ST_1.9.9.5" VPOS="1734.11" WIDTH="150.62"/>
+            <SP HPOS="1002.51" ID="SP_1.9.9.6" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="1021.33" ID="ST_1.9.9.7" VPOS="1734.11" WIDTH="56.48"/>
+            <SP HPOS="1077.81" ID="SP_1.9.9.8" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="ongoing" HEIGHT="25.63" HPOS="1096.64" ID="ST_1.9.9.9" VPOS="1734.11" WIDTH="131.79"/>
+            <SP HPOS="1228.43" ID="SP_1.9.9.10" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="plans" HEIGHT="25.63" HPOS="1247.26" ID="ST_1.9.9.11" VPOS="1734.11" WIDTH="94.14"/>
+            <SP HPOS="1341.40" ID="SP_1.9.9.12" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="for" HEIGHT="25.63" HPOS="1360.22" ID="ST_1.9.9.13" VPOS="1734.11" WIDTH="56.48"/>
+            <SP HPOS="1416.70" ID="SP_1.9.9.14" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="the" HEIGHT="25.63" HPOS="1435.53" ID="ST_1.9.9.15" VPOS="1734.11" WIDTH="56.48"/>
+            <SP HPOS="1492.01" ID="SP_1.9.9.16" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="transition" HEIGHT="25.63" HPOS="1510.84" ID="ST_1.9.9.17" VPOS="1734.11" WIDTH="188.27"/>
+            <SP HPOS="1699.11" ID="SP_1.9.9.18" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="from" HEIGHT="25.63" HPOS="1717.94" ID="ST_1.9.9.19" VPOS="1734.11" WIDTH="75.31"/>
+            <SP HPOS="1793.25" ID="SP_1.9.9.20" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="UNOTIL" HEIGHT="25.63" HPOS="1812.07" ID="ST_1.9.9.21" VPOS="1734.11" WIDTH="112.96"/>
+            <SP HPOS="1925.04" ID="SP_1.9.9.22" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="to" HEIGHT="25.63" HPOS="1943.86" ID="ST_1.9.9.23" VPOS="1734.11" WIDTH="37.65"/>
+            <SP HPOS="1981.52" ID="SP_1.9.9.24" VPOS="1734.11" WIDTH="18.83"/>
+            <String CONTENT="a" HEIGHT="25.63" HPOS="2000.35" ID="ST_1.9.9.25" VPOS="1734.11" WIDTH="18.83"/>
+          </TextLine>
+          <TextLine HEIGHT="25.63" HPOS="513.00" ID="TL_1.9.10" VPOS="1785.37" WIDTH="640.12">
+            <String CONTENT="sustainable" HEIGHT="25.63" HPOS="513.00" ID="ST_1.9.10.1" VPOS="1785.37" WIDTH="207.10"/>
+            <SP HPOS="720.10" ID="SP_1.9.10.2" VPOS="1785.37" WIDTH="18.83"/>
+            <String CONTENT="development" HEIGHT="25.63" HPOS="738.93" ID="ST_1.9.10.3" VPOS="1785.37" WIDTH="207.10"/>
+            <SP HPOS="946.02" ID="SP_1.9.10.4" VPOS="1785.37" WIDTH="18.83"/>
+            <String CONTENT="framework." HEIGHT="25.63" HPOS="964.85" ID="ST_1.9.10.5" VPOS="1785.37" WIDTH="188.27"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="52.00" HPOS="404.00" ID="BL_1.10" VPOS="1898.00" WIDTH="1571.00">
+          <TextLine HEIGHT="52.00" HPOS="404.00" ID="TL_1.10.1" VPOS="1898.00" WIDTH="1571.00">
+            <String CONTENT="II." HEIGHT="52.00" HPOS="404.00" ID="ST_1.10.1.1" VPOS="1898.00" WIDTH="74.81"/>
+            <SP HPOS="478.81" ID="SP_1.10.1.2" VPOS="1898.00" WIDTH="74.81"/>
+            <String CONTENT="Recent" HEIGHT="52.00" HPOS="553.62" ID="ST_1.10.1.3" VPOS="1898.00" WIDTH="149.62"/>
+            <SP HPOS="703.24" ID="SP_1.10.1.4" VPOS="1898.00" WIDTH="24.94"/>
+            <String CONTENT="political" HEIGHT="52.00" HPOS="728.17" ID="ST_1.10.1.5" VPOS="1898.00" WIDTH="224.43"/>
+            <SP HPOS="952.60" ID="SP_1.10.1.6" VPOS="1898.00" WIDTH="24.94"/>
+            <String CONTENT="and" HEIGHT="52.00" HPOS="977.54" ID="ST_1.10.1.7" VPOS="1898.00" WIDTH="74.81"/>
+            <SP HPOS="1052.35" ID="SP_1.10.1.8" VPOS="1898.00" WIDTH="24.94"/>
+            <String CONTENT="security" HEIGHT="52.00" HPOS="1077.29" ID="ST_1.10.1.9" VPOS="1898.00" WIDTH="199.49"/>
+            <SP HPOS="1276.78" ID="SP_1.10.1.10" VPOS="1898.00" WIDTH="24.94"/>
+            <String CONTENT="developments" HEIGHT="52.00" HPOS="1301.71" ID="ST_1.10.1.11" VPOS="1898.00" WIDTH="299.24"/>
+            <SP HPOS="1600.95" ID="SP_1.10.1.12" VPOS="1898.00" WIDTH="24.94"/>
+            <String CONTENT="in" HEIGHT="52.00" HPOS="1625.89" ID="ST_1.10.1.13" VPOS="1898.00" WIDTH="49.87"/>
+            <SP HPOS="1675.76" ID="SP_1.10.1.14" VPOS="1898.00" WIDTH="24.94"/>
+            <String CONTENT="Timor-Leste" HEIGHT="52.00" HPOS="1700.70" ID="ST_1.10.1.15" VPOS="1898.00" WIDTH="274.30"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="288.00" HPOS="513.00" ID="BL_1.11" VPOS="2011.00" WIDTH="1521.00">
+          <TextLine HEIGHT="26.18" HPOS="513.00" ID="TL_1.11.1" VPOS="2011.00" WIDTH="1381.14">
+            <String CONTENT="2." HEIGHT="26.18" HPOS="513.00" ID="ST_1.11.1.1" VPOS="2011.00" WIDTH="34.97"/>
+            <SP HPOS="547.97" ID="SP_1.11.1.2" VPOS="2011.00" WIDTH="52.45"/>
+            <String CONTENT="During" HEIGHT="26.18" HPOS="600.41" ID="ST_1.11.1.3" VPOS="2011.00" WIDTH="104.90"/>
+            <SP HPOS="705.31" ID="SP_1.11.1.4" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="the" HEIGHT="26.18" HPOS="722.79" ID="ST_1.11.1.5" VPOS="2011.00" WIDTH="52.45"/>
+            <SP HPOS="775.24" ID="SP_1.11.1.6" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="reporting" HEIGHT="26.18" HPOS="792.72" ID="ST_1.11.1.7" VPOS="2011.00" WIDTH="157.34"/>
+            <SP HPOS="950.07" ID="SP_1.11.1.8" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="period," HEIGHT="26.18" HPOS="967.55" ID="ST_1.11.1.9" VPOS="2011.00" WIDTH="122.38"/>
+            <SP HPOS="1089.93" ID="SP_1.11.1.10" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="the" HEIGHT="26.18" HPOS="1107.41" ID="ST_1.11.1.11" VPOS="2011.00" WIDTH="52.45"/>
+            <SP HPOS="1159.86" ID="SP_1.11.1.12" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="overall" HEIGHT="26.18" HPOS="1177.34" ID="ST_1.11.1.13" VPOS="2011.00" WIDTH="122.38"/>
+            <SP HPOS="1299.72" ID="SP_1.11.1.14" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="situation" HEIGHT="26.18" HPOS="1317.21" ID="ST_1.11.1.15" VPOS="2011.00" WIDTH="157.34"/>
+            <SP HPOS="1474.55" ID="SP_1.11.1.16" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="in" HEIGHT="26.18" HPOS="1492.03" ID="ST_1.11.1.17" VPOS="2011.00" WIDTH="34.97"/>
+            <SP HPOS="1527.00" ID="SP_1.11.1.18" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="Timor-Leste" HEIGHT="26.18" HPOS="1544.48" ID="ST_1.11.1.19" VPOS="2011.00" WIDTH="192.31"/>
+            <SP HPOS="1736.79" ID="SP_1.11.1.20" VPOS="2011.00" WIDTH="17.48"/>
+            <String CONTENT="remained" HEIGHT="26.18" HPOS="1754.28" ID="ST_1.11.1.21" VPOS="2011.00" WIDTH="139.86"/>
+          </TextLine>
+          <TextLine HEIGHT="26.18" HPOS="513.00" ID="TL_1.11.2" VPOS="2063.36" WIDTH="1468.55">
+            <String CONTENT="calm," HEIGHT="26.18" HPOS="513.00" ID="ST_1.11.2.1" VPOS="2063.36" WIDTH="87.41"/>
+            <SP HPOS="600.41" ID="SP_1.11.2.2" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="except" HEIGHT="26.18" HPOS="617.90" ID="ST_1.11.2.3" VPOS="2063.36" WIDTH="104.90"/>
+            <SP HPOS="722.79" ID="SP_1.11.2.4" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="for" HEIGHT="26.18" HPOS="740.28" ID="ST_1.11.2.5" VPOS="2063.36" WIDTH="52.45"/>
+            <SP HPOS="792.72" ID="SP_1.11.2.6" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="a" HEIGHT="26.18" HPOS="810.21" ID="ST_1.11.2.7" VPOS="2063.36" WIDTH="17.48"/>
+            <SP HPOS="827.69" ID="SP_1.11.2.8" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="few" HEIGHT="26.18" HPOS="845.17" ID="ST_1.11.2.9" VPOS="2063.36" WIDTH="52.45"/>
+            <SP HPOS="897.62" ID="SP_1.11.2.10" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="isolated" HEIGHT="26.18" HPOS="915.10" ID="ST_1.11.2.11" VPOS="2063.36" WIDTH="139.86"/>
+            <SP HPOS="1054.97" ID="SP_1.11.2.12" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="incidents" HEIGHT="26.18" HPOS="1072.45" ID="ST_1.11.2.13" VPOS="2063.36" WIDTH="157.34"/>
+            <SP HPOS="1229.79" ID="SP_1.11.2.14" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="involving" HEIGHT="26.18" HPOS="1247.28" ID="ST_1.11.2.15" VPOS="2063.36" WIDTH="157.34"/>
+            <SP HPOS="1404.62" ID="SP_1.11.2.16" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="the" HEIGHT="26.18" HPOS="1422.10" ID="ST_1.11.2.17" VPOS="2063.36" WIDTH="52.45"/>
+            <SP HPOS="1474.55" ID="SP_1.11.2.18" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="incursion" HEIGHT="26.18" HPOS="1492.03" ID="ST_1.11.2.19" VPOS="2063.36" WIDTH="157.34"/>
+            <SP HPOS="1649.38" ID="SP_1.11.2.20" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="of" HEIGHT="26.18" HPOS="1666.86" ID="ST_1.11.2.21" VPOS="2063.36" WIDTH="34.97"/>
+            <SP HPOS="1701.83" ID="SP_1.11.2.22" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="former" HEIGHT="26.18" HPOS="1719.31" ID="ST_1.11.2.23" VPOS="2063.36" WIDTH="104.90"/>
+            <SP HPOS="1824.21" ID="SP_1.11.2.24" VPOS="2063.36" WIDTH="17.48"/>
+            <String CONTENT="militias" HEIGHT="26.18" HPOS="1841.69" ID="ST_1.11.2.25" VPOS="2063.36" WIDTH="139.86"/>
+          </TextLine>
+          <TextLine HEIGHT="26.18" HPOS="513.00" ID="TL_1.11.3" VPOS="2115.73" WIDTH="1451.07">
+            <String CONTENT="in" HEIGHT="26.18" HPOS="513.00" ID="ST_1.11.3.1" VPOS="2115.73" WIDTH="34.97"/>
+            <SP HPOS="547.97" ID="SP_1.11.3.2" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="the" HEIGHT="26.18" HPOS="565.45" ID="ST_1.11.3.3" VPOS="2115.73" WIDTH="52.45"/>
+            <SP HPOS="617.90" ID="SP_1.11.3.4" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="Bobonaro" HEIGHT="26.18" HPOS="635.38" ID="ST_1.11.3.5" VPOS="2115.73" WIDTH="139.86"/>
+            <SP HPOS="775.24" ID="SP_1.11.3.6" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="District," HEIGHT="26.18" HPOS="792.72" ID="ST_1.11.3.7" VPOS="2115.73" WIDTH="157.34"/>
+            <SP HPOS="950.07" ID="SP_1.11.3.8" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="which" HEIGHT="26.18" HPOS="967.55" ID="ST_1.11.3.9" VPOS="2115.73" WIDTH="87.41"/>
+            <SP HPOS="1054.97" ID="SP_1.11.3.10" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="led" HEIGHT="26.18" HPOS="1072.45" ID="ST_1.11.3.11" VPOS="2115.73" WIDTH="52.45"/>
+            <SP HPOS="1124.90" ID="SP_1.11.3.12" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="to" HEIGHT="26.18" HPOS="1142.38" ID="ST_1.11.3.13" VPOS="2115.73" WIDTH="34.97"/>
+            <SP HPOS="1177.34" ID="SP_1.11.3.14" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="a" HEIGHT="26.18" HPOS="1194.83" ID="ST_1.11.3.15" VPOS="2115.73" WIDTH="17.48"/>
+            <SP HPOS="1212.31" ID="SP_1.11.3.16" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="number" HEIGHT="26.18" HPOS="1229.79" ID="ST_1.11.3.17" VPOS="2115.73" WIDTH="104.90"/>
+            <SP HPOS="1334.69" ID="SP_1.11.3.18" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="of" HEIGHT="26.18" HPOS="1352.17" ID="ST_1.11.3.19" VPOS="2115.73" WIDTH="34.97"/>
+            <SP HPOS="1387.14" ID="SP_1.11.3.20" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="arrests" HEIGHT="26.18" HPOS="1404.62" ID="ST_1.11.3.21" VPOS="2115.73" WIDTH="122.38"/>
+            <SP HPOS="1527.00" ID="SP_1.11.3.22" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="by" HEIGHT="26.18" HPOS="1544.48" ID="ST_1.11.3.23" VPOS="2115.73" WIDTH="34.97"/>
+            <SP HPOS="1579.45" ID="SP_1.11.3.24" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="the" HEIGHT="26.18" HPOS="1596.93" ID="ST_1.11.3.25" VPOS="2115.73" WIDTH="52.45"/>
+            <SP HPOS="1649.38" ID="SP_1.11.3.26" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="Timorese" HEIGHT="26.18" HPOS="1666.86" ID="ST_1.11.3.27" VPOS="2115.73" WIDTH="139.86"/>
+            <SP HPOS="1806.72" ID="SP_1.11.3.28" VPOS="2115.73" WIDTH="17.48"/>
+            <String CONTENT="national" HEIGHT="26.18" HPOS="1824.21" ID="ST_1.11.3.29" VPOS="2115.73" WIDTH="139.86"/>
+          </TextLine>
+          <TextLine HEIGHT="26.18" HPOS="513.00" ID="TL_1.11.4" VPOS="2168.09" WIDTH="1433.59">
+            <String CONTENT="police." HEIGHT="26.18" HPOS="513.00" ID="ST_1.11.4.1" VPOS="2168.09" WIDTH="122.38"/>
+            <SP HPOS="635.38" ID="SP_1.11.4.2" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="The" HEIGHT="26.18" HPOS="652.86" ID="ST_1.11.4.3" VPOS="2168.09" WIDTH="52.45"/>
+            <SP HPOS="705.31" ID="SP_1.11.4.4" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="most" HEIGHT="26.18" HPOS="722.79" ID="ST_1.11.4.5" VPOS="2168.09" WIDTH="69.93"/>
+            <SP HPOS="792.72" ID="SP_1.11.4.6" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="serious" HEIGHT="26.18" HPOS="810.21" ID="ST_1.11.4.7" VPOS="2168.09" WIDTH="122.38"/>
+            <SP HPOS="932.59" ID="SP_1.11.4.8" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="border" HEIGHT="26.18" HPOS="950.07" ID="ST_1.11.4.9" VPOS="2168.09" WIDTH="104.90"/>
+            <SP HPOS="1054.97" ID="SP_1.11.4.10" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="incident" HEIGHT="26.18" HPOS="1072.45" ID="ST_1.11.4.11" VPOS="2168.09" WIDTH="139.86"/>
+            <SP HPOS="1212.31" ID="SP_1.11.4.12" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="took" HEIGHT="26.18" HPOS="1229.79" ID="ST_1.11.4.13" VPOS="2168.09" WIDTH="69.93"/>
+            <SP HPOS="1299.72" ID="SP_1.11.4.14" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="place" HEIGHT="26.18" HPOS="1317.21" ID="ST_1.11.4.15" VPOS="2168.09" WIDTH="87.41"/>
+            <SP HPOS="1404.62" ID="SP_1.11.4.16" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="on" HEIGHT="26.18" HPOS="1422.10" ID="ST_1.11.4.17" VPOS="2168.09" WIDTH="34.97"/>
+            <SP HPOS="1457.07" ID="SP_1.11.4.18" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="6" HEIGHT="26.18" HPOS="1474.55" ID="ST_1.11.4.19" VPOS="2168.09" WIDTH="17.48"/>
+            <SP HPOS="1492.03" ID="SP_1.11.4.20" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="January" HEIGHT="26.18" HPOS="1509.52" ID="ST_1.11.4.21" VPOS="2168.09" WIDTH="122.38"/>
+            <SP HPOS="1631.90" ID="SP_1.11.4.22" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="2006" HEIGHT="26.18" HPOS="1649.38" ID="ST_1.11.4.23" VPOS="2168.09" WIDTH="69.93"/>
+            <SP HPOS="1719.31" ID="SP_1.11.4.24" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="and" HEIGHT="26.18" HPOS="1736.79" ID="ST_1.11.4.25" VPOS="2168.09" WIDTH="52.45"/>
+            <SP HPOS="1789.24" ID="SP_1.11.4.26" VPOS="2168.09" WIDTH="17.48"/>
+            <String CONTENT="resulted" HEIGHT="26.18" HPOS="1806.72" ID="ST_1.11.4.27" VPOS="2168.09" WIDTH="139.86"/>
+          </TextLine>
+          <TextLine HEIGHT="26.18" HPOS="513.00" ID="TL_1.11.5" VPOS="2220.45" WIDTH="1521.00">
+            <String CONTENT="in" HEIGHT="26.18" HPOS="513.00" ID="ST_1.11.5.1" VPOS="2220.45" WIDTH="34.97"/>
+            <SP HPOS="547.97" ID="SP_1.11.5.2" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="the" HEIGHT="26.18" HPOS="565.45" ID="ST_1.11.5.3" VPOS="2220.45" WIDTH="52.45"/>
+            <SP HPOS="617.90" ID="SP_1.11.5.4" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="death" HEIGHT="26.18" HPOS="635.38" ID="ST_1.11.5.5" VPOS="2220.45" WIDTH="87.41"/>
+            <SP HPOS="722.79" ID="SP_1.11.5.6" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="of" HEIGHT="26.18" HPOS="740.28" ID="ST_1.11.5.7" VPOS="2220.45" WIDTH="34.97"/>
+            <SP HPOS="775.24" ID="SP_1.11.5.8" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="three" HEIGHT="26.18" HPOS="792.72" ID="ST_1.11.5.9" VPOS="2220.45" WIDTH="87.41"/>
+            <SP HPOS="880.14" ID="SP_1.11.5.10" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="infiltrators" HEIGHT="26.18" HPOS="897.62" ID="ST_1.11.5.11" VPOS="2220.45" WIDTH="209.79"/>
+            <SP HPOS="1107.41" ID="SP_1.11.5.12" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="into" HEIGHT="26.18" HPOS="1124.90" ID="ST_1.11.5.13" VPOS="2220.45" WIDTH="69.93"/>
+            <SP HPOS="1194.83" ID="SP_1.11.5.14" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="Timor-Leste." HEIGHT="26.18" HPOS="1212.31" ID="ST_1.11.5.15" VPOS="2220.45" WIDTH="209.79"/>
+            <SP HPOS="1422.10" ID="SP_1.11.5.16" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="The" HEIGHT="26.18" HPOS="1439.59" ID="ST_1.11.5.17" VPOS="2220.45" WIDTH="52.45"/>
+            <SP HPOS="1492.03" ID="SP_1.11.5.18" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="incident" HEIGHT="26.18" HPOS="1509.52" ID="ST_1.11.5.19" VPOS="2220.45" WIDTH="139.86"/>
+            <SP HPOS="1649.38" ID="SP_1.11.5.20" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="is" HEIGHT="26.18" HPOS="1666.86" ID="ST_1.11.5.21" VPOS="2220.45" WIDTH="34.97"/>
+            <SP HPOS="1701.83" ID="SP_1.11.5.22" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="being" HEIGHT="26.18" HPOS="1719.31" ID="ST_1.11.5.23" VPOS="2220.45" WIDTH="87.41"/>
+            <SP HPOS="1806.72" ID="SP_1.11.5.24" VPOS="2220.45" WIDTH="17.48"/>
+            <String CONTENT="investigated" HEIGHT="26.18" HPOS="1824.21" ID="ST_1.11.5.25" VPOS="2220.45" WIDTH="209.79"/>
+          </TextLine>
+          <TextLine HEIGHT="26.18" HPOS="513.00" ID="TL_1.11.6" VPOS="2272.82" WIDTH="489.52">
+            <String CONTENT="by" HEIGHT="26.18" HPOS="513.00" ID="ST_1.11.6.1" VPOS="2272.82" WIDTH="34.97"/>
+            <SP HPOS="547.97" ID="SP_1.11.6.2" VPOS="2272.82" WIDTH="17.48"/>
+            <String CONTENT="the" HEIGHT="26.18" HPOS="565.45" ID="ST_1.11.6.3" VPOS="2272.82" WIDTH="52.45"/>
+            <SP HPOS="617.90" ID="SP_1.11.6.4" VPOS="2272.82" WIDTH="17.48"/>
+            <String CONTENT="Timorese" HEIGHT="26.18" HPOS="635.38" ID="ST_1.11.6.5" VPOS="2272.82" WIDTH="139.86"/>
+            <SP HPOS="775.24" ID="SP_1.11.6.6" VPOS="2272.82" WIDTH="17.48"/>
+            <String CONTENT="authorities." HEIGHT="26.18" HPOS="792.72" ID="ST_1.11.6.7" VPOS="2272.82" WIDTH="209.79"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="488.00" HPOS="512.00" ID="BL_1.12" VPOS="2336.00" WIDTH="1523.00">
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.1" VPOS="2336.00" WIDTH="1467.95">
+            <String CONTENT="3." HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.1.1" VPOS="2336.00" WIDTH="36.70"/>
+            <SP HPOS="548.70" ID="SP_1.12.1.2" VPOS="2336.00" WIDTH="55.05"/>
+            <String CONTENT="Further" HEIGHT="25.68" HPOS="603.75" ID="ST_1.12.1.3" VPOS="2336.00" WIDTH="128.45"/>
+            <SP HPOS="732.19" ID="SP_1.12.1.4" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="progress" HEIGHT="25.68" HPOS="750.54" ID="ST_1.12.1.5" VPOS="2336.00" WIDTH="146.80"/>
+            <SP HPOS="897.34" ID="SP_1.12.1.6" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="was" HEIGHT="25.68" HPOS="915.69" ID="ST_1.12.1.7" VPOS="2336.00" WIDTH="55.05"/>
+            <SP HPOS="970.73" ID="SP_1.12.1.8" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="achieved" HEIGHT="25.68" HPOS="989.08" ID="ST_1.12.1.9" VPOS="2336.00" WIDTH="146.80"/>
+            <SP HPOS="1135.88" ID="SP_1.12.1.10" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="in" HEIGHT="25.68" HPOS="1154.23" ID="ST_1.12.1.11" VPOS="2336.00" WIDTH="36.70"/>
+            <SP HPOS="1190.93" ID="SP_1.12.1.12" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="delineating" HEIGHT="25.68" HPOS="1209.28" ID="ST_1.12.1.13" VPOS="2336.00" WIDTH="201.84"/>
+            <SP HPOS="1411.12" ID="SP_1.12.1.14" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1429.47" ID="ST_1.12.1.15" VPOS="2336.00" WIDTH="55.05"/>
+            <SP HPOS="1484.52" ID="SP_1.12.1.16" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="land" HEIGHT="25.68" HPOS="1502.87" ID="ST_1.12.1.17" VPOS="2336.00" WIDTH="73.40"/>
+            <SP HPOS="1576.27" ID="SP_1.12.1.18" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="border" HEIGHT="25.68" HPOS="1594.61" ID="ST_1.12.1.19" VPOS="2336.00" WIDTH="110.10"/>
+            <SP HPOS="1704.71" ID="SP_1.12.1.20" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="between" HEIGHT="25.68" HPOS="1723.06" ID="ST_1.12.1.21" VPOS="2336.00" WIDTH="128.45"/>
+            <SP HPOS="1851.51" ID="SP_1.12.1.22" VPOS="2336.00" WIDTH="18.35"/>
+            <String CONTENT="Timor-" HEIGHT="25.68" HPOS="1869.86" ID="ST_1.12.1.23" VPOS="2336.00" WIDTH="110.10"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.2" VPOS="2387.37" WIDTH="1467.95">
+            <String CONTENT="Leste" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.2.1" VPOS="2387.37" WIDTH="91.75"/>
+            <SP HPOS="603.75" ID="SP_1.12.2.2" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="and" HEIGHT="25.68" HPOS="622.10" ID="ST_1.12.2.3" VPOS="2387.37" WIDTH="55.05"/>
+            <SP HPOS="677.14" ID="SP_1.12.2.4" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="Indonesia." HEIGHT="25.68" HPOS="695.49" ID="ST_1.12.2.5" VPOS="2387.37" WIDTH="183.49"/>
+            <SP HPOS="878.99" ID="SP_1.12.2.6" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="On" HEIGHT="25.68" HPOS="897.34" ID="ST_1.12.2.7" VPOS="2387.37" WIDTH="36.70"/>
+            <SP HPOS="934.04" ID="SP_1.12.2.8" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="30" HEIGHT="25.68" HPOS="952.39" ID="ST_1.12.2.9" VPOS="2387.37" WIDTH="36.70"/>
+            <SP HPOS="989.08" ID="SP_1.12.2.10" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="August" HEIGHT="25.68" HPOS="1007.43" ID="ST_1.12.2.11" VPOS="2387.37" WIDTH="110.10"/>
+            <SP HPOS="1117.53" ID="SP_1.12.2.12" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="2005," HEIGHT="25.68" HPOS="1135.88" ID="ST_1.12.2.13" VPOS="2387.37" WIDTH="91.75"/>
+            <SP HPOS="1227.63" ID="SP_1.12.2.14" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1245.98" ID="ST_1.12.2.15" VPOS="2387.37" WIDTH="55.05"/>
+            <SP HPOS="1301.02" ID="SP_1.12.2.16" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="foreign" HEIGHT="25.68" HPOS="1319.37" ID="ST_1.12.2.17" VPOS="2387.37" WIDTH="128.45"/>
+            <SP HPOS="1447.82" ID="SP_1.12.2.18" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="ministers" HEIGHT="25.68" HPOS="1466.17" ID="ST_1.12.2.19" VPOS="2387.37" WIDTH="165.14"/>
+            <SP HPOS="1631.31" ID="SP_1.12.2.20" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="1649.66" ID="ST_1.12.2.21" VPOS="2387.37" WIDTH="36.70"/>
+            <SP HPOS="1686.36" ID="SP_1.12.2.22" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="Timor-Leste" HEIGHT="25.68" HPOS="1704.71" ID="ST_1.12.2.23" VPOS="2387.37" WIDTH="201.84"/>
+            <SP HPOS="1906.55" ID="SP_1.12.2.24" VPOS="2387.37" WIDTH="18.35"/>
+            <String CONTENT="and" HEIGHT="25.68" HPOS="1924.90" ID="ST_1.12.2.25" VPOS="2387.37" WIDTH="55.05"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.3" VPOS="2438.74" WIDTH="1486.30">
+            <String CONTENT="Indonesia" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.3.1" VPOS="2438.74" WIDTH="165.14"/>
+            <SP HPOS="677.14" ID="SP_1.12.3.2" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="presided" HEIGHT="25.68" HPOS="695.49" ID="ST_1.12.3.3" VPOS="2438.74" WIDTH="146.80"/>
+            <SP HPOS="842.29" ID="SP_1.12.3.4" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="over" HEIGHT="25.68" HPOS="860.64" ID="ST_1.12.3.5" VPOS="2438.74" WIDTH="73.40"/>
+            <SP HPOS="934.04" ID="SP_1.12.3.6" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="a" HEIGHT="25.68" HPOS="952.39" ID="ST_1.12.3.7" VPOS="2438.74" WIDTH="18.35"/>
+            <SP HPOS="970.73" ID="SP_1.12.3.8" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="ceremony" HEIGHT="25.68" HPOS="989.08" ID="ST_1.12.3.9" VPOS="2438.74" WIDTH="146.80"/>
+            <SP HPOS="1135.88" ID="SP_1.12.3.10" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="held" HEIGHT="25.68" HPOS="1154.23" ID="ST_1.12.3.11" VPOS="2438.74" WIDTH="73.40"/>
+            <SP HPOS="1227.63" ID="SP_1.12.3.12" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="at" HEIGHT="25.68" HPOS="1245.98" ID="ST_1.12.3.13" VPOS="2438.74" WIDTH="36.70"/>
+            <SP HPOS="1282.67" ID="SP_1.12.3.14" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1301.02" ID="ST_1.12.3.15" VPOS="2438.74" WIDTH="55.05"/>
+            <SP HPOS="1356.07" ID="SP_1.12.3.16" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="border" HEIGHT="25.68" HPOS="1374.42" ID="ST_1.12.3.17" VPOS="2438.74" WIDTH="110.10"/>
+            <SP HPOS="1484.52" ID="SP_1.12.3.18" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="village" HEIGHT="25.68" HPOS="1502.87" ID="ST_1.12.3.19" VPOS="2438.74" WIDTH="128.45"/>
+            <SP HPOS="1631.31" ID="SP_1.12.3.20" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="1649.66" ID="ST_1.12.3.21" VPOS="2438.74" WIDTH="36.70"/>
+            <SP HPOS="1686.36" ID="SP_1.12.3.22" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="Mota'ain" HEIGHT="25.68" HPOS="1704.71" ID="ST_1.12.3.23" VPOS="2438.74" WIDTH="146.80"/>
+            <SP HPOS="1851.51" ID="SP_1.12.3.24" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="to" HEIGHT="25.68" HPOS="1869.86" ID="ST_1.12.3.25" VPOS="2438.74" WIDTH="36.70"/>
+            <SP HPOS="1906.55" ID="SP_1.12.3.26" VPOS="2438.74" WIDTH="18.35"/>
+            <String CONTENT="mark" HEIGHT="25.68" HPOS="1924.90" ID="ST_1.12.3.27" VPOS="2438.74" WIDTH="73.40"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.4" VPOS="2490.11" WIDTH="1467.95">
+            <String CONTENT="the" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.4.1" VPOS="2490.11" WIDTH="55.05"/>
+            <SP HPOS="567.05" ID="SP_1.12.4.2" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="placement" HEIGHT="25.68" HPOS="585.40" ID="ST_1.12.4.3" VPOS="2490.11" WIDTH="165.14"/>
+            <SP HPOS="750.54" ID="SP_1.12.4.4" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="768.89" ID="ST_1.12.4.5" VPOS="2490.11" WIDTH="36.70"/>
+            <SP HPOS="805.59" ID="SP_1.12.4.6" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="823.94" ID="ST_1.12.4.7" VPOS="2490.11" WIDTH="55.05"/>
+            <SP HPOS="878.99" ID="SP_1.12.4.8" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="first" HEIGHT="25.68" HPOS="897.34" ID="ST_1.12.4.9" VPOS="2490.11" WIDTH="91.75"/>
+            <SP HPOS="989.08" ID="SP_1.12.4.10" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="marker" HEIGHT="25.68" HPOS="1007.43" ID="ST_1.12.4.11" VPOS="2490.11" WIDTH="110.10"/>
+            <SP HPOS="1117.53" ID="SP_1.12.4.12" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="along" HEIGHT="25.68" HPOS="1135.88" ID="ST_1.12.4.13" VPOS="2490.11" WIDTH="91.75"/>
+            <SP HPOS="1227.63" ID="SP_1.12.4.14" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="their" HEIGHT="25.68" HPOS="1245.98" ID="ST_1.12.4.15" VPOS="2490.11" WIDTH="91.75"/>
+            <SP HPOS="1337.72" ID="SP_1.12.4.16" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="common" HEIGHT="25.68" HPOS="1356.07" ID="ST_1.12.4.17" VPOS="2490.11" WIDTH="110.10"/>
+            <SP HPOS="1466.17" ID="SP_1.12.4.18" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="land" HEIGHT="25.68" HPOS="1484.52" ID="ST_1.12.4.19" VPOS="2490.11" WIDTH="73.40"/>
+            <SP HPOS="1557.92" ID="SP_1.12.4.20" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="border," HEIGHT="25.68" HPOS="1576.27" ID="ST_1.12.4.21" VPOS="2490.11" WIDTH="128.45"/>
+            <SP HPOS="1704.71" ID="SP_1.12.4.22" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="commencing" HEIGHT="25.68" HPOS="1723.06" ID="ST_1.12.4.23" VPOS="2490.11" WIDTH="183.49"/>
+            <SP HPOS="1906.55" ID="SP_1.12.4.24" VPOS="2490.11" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1924.90" ID="ST_1.12.4.25" VPOS="2490.11" WIDTH="55.05"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.5" VPOS="2541.47" WIDTH="1412.90">
+            <String CONTENT="process" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.5.1" VPOS="2541.47" WIDTH="128.45"/>
+            <SP HPOS="640.45" ID="SP_1.12.5.2" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="658.80" ID="ST_1.12.5.3" VPOS="2541.47" WIDTH="36.70"/>
+            <SP HPOS="695.49" ID="SP_1.12.5.4" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="demarcation" HEIGHT="25.68" HPOS="713.84" ID="ST_1.12.5.5" VPOS="2541.47" WIDTH="201.84"/>
+            <SP HPOS="915.69" ID="SP_1.12.5.6" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="934.04" ID="ST_1.12.5.7" VPOS="2541.47" WIDTH="36.70"/>
+            <SP HPOS="970.73" ID="SP_1.12.5.8" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="989.08" ID="ST_1.12.5.9" VPOS="2541.47" WIDTH="55.05"/>
+            <SP HPOS="1044.13" ID="SP_1.12.5.10" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="96" HEIGHT="25.68" HPOS="1062.48" ID="ST_1.12.5.11" VPOS="2541.47" WIDTH="36.70"/>
+            <SP HPOS="1099.18" ID="SP_1.12.5.12" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="per" HEIGHT="25.68" HPOS="1117.53" ID="ST_1.12.5.13" VPOS="2541.47" WIDTH="55.05"/>
+            <SP HPOS="1172.58" ID="SP_1.12.5.14" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="cent" HEIGHT="25.68" HPOS="1190.93" ID="ST_1.12.5.15" VPOS="2541.47" WIDTH="73.40"/>
+            <SP HPOS="1264.33" ID="SP_1.12.5.16" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="1282.67" ID="ST_1.12.5.17" VPOS="2541.47" WIDTH="36.70"/>
+            <SP HPOS="1319.37" ID="SP_1.12.5.18" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1337.72" ID="ST_1.12.5.19" VPOS="2541.47" WIDTH="55.05"/>
+            <SP HPOS="1392.77" ID="SP_1.12.5.20" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="land" HEIGHT="25.68" HPOS="1411.12" ID="ST_1.12.5.21" VPOS="2541.47" WIDTH="73.40"/>
+            <SP HPOS="1484.52" ID="SP_1.12.5.22" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="border" HEIGHT="25.68" HPOS="1502.87" ID="ST_1.12.5.23" VPOS="2541.47" WIDTH="110.10"/>
+            <SP HPOS="1612.96" ID="SP_1.12.5.24" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="agreed" HEIGHT="25.68" HPOS="1631.31" ID="ST_1.12.5.25" VPOS="2541.47" WIDTH="110.10"/>
+            <SP HPOS="1741.41" ID="SP_1.12.5.26" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="to" HEIGHT="25.68" HPOS="1759.76" ID="ST_1.12.5.27" VPOS="2541.47" WIDTH="36.70"/>
+            <SP HPOS="1796.46" ID="SP_1.12.5.28" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="in" HEIGHT="25.68" HPOS="1814.81" ID="ST_1.12.5.29" VPOS="2541.47" WIDTH="36.70"/>
+            <SP HPOS="1851.51" ID="SP_1.12.5.30" VPOS="2541.47" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1869.86" ID="ST_1.12.5.31" VPOS="2541.47" WIDTH="55.05"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.6" VPOS="2592.84" WIDTH="1431.25">
+            <String CONTENT="Provisional" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.6.1" VPOS="2592.84" WIDTH="201.84"/>
+            <SP HPOS="713.84" ID="SP_1.12.6.2" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="Agreement" HEIGHT="25.68" HPOS="732.19" ID="ST_1.12.6.3" VPOS="2592.84" WIDTH="165.14"/>
+            <SP HPOS="897.34" ID="SP_1.12.6.4" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="on" HEIGHT="25.68" HPOS="915.69" ID="ST_1.12.6.5" VPOS="2592.84" WIDTH="36.70"/>
+            <SP HPOS="952.39" ID="SP_1.12.6.6" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="970.73" ID="ST_1.12.6.7" VPOS="2592.84" WIDTH="55.05"/>
+            <SP HPOS="1025.78" ID="SP_1.12.6.8" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="Borderline" HEIGHT="25.68" HPOS="1044.13" ID="ST_1.12.6.9" VPOS="2592.84" WIDTH="183.49"/>
+            <SP HPOS="1227.63" ID="SP_1.12.6.10" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="signed" HEIGHT="25.68" HPOS="1245.98" ID="ST_1.12.6.11" VPOS="2592.84" WIDTH="110.10"/>
+            <SP HPOS="1356.07" ID="SP_1.12.6.12" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="by" HEIGHT="25.68" HPOS="1374.42" ID="ST_1.12.6.13" VPOS="2592.84" WIDTH="36.70"/>
+            <SP HPOS="1411.12" ID="SP_1.12.6.14" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1429.47" ID="ST_1.12.6.15" VPOS="2592.84" WIDTH="55.05"/>
+            <SP HPOS="1484.52" ID="SP_1.12.6.16" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="two" HEIGHT="25.68" HPOS="1502.87" ID="ST_1.12.6.17" VPOS="2592.84" WIDTH="55.05"/>
+            <SP HPOS="1557.92" ID="SP_1.12.6.18" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="ministers" HEIGHT="25.68" HPOS="1576.27" ID="ST_1.12.6.19" VPOS="2592.84" WIDTH="165.14"/>
+            <SP HPOS="1741.41" ID="SP_1.12.6.20" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="in" HEIGHT="25.68" HPOS="1759.76" ID="ST_1.12.6.21" VPOS="2592.84" WIDTH="36.70"/>
+            <SP HPOS="1796.46" ID="SP_1.12.6.22" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="Dili" HEIGHT="25.68" HPOS="1814.81" ID="ST_1.12.6.23" VPOS="2592.84" WIDTH="73.40"/>
+            <SP HPOS="1888.20" ID="SP_1.12.6.24" VPOS="2592.84" WIDTH="18.35"/>
+            <String CONTENT="in" HEIGHT="25.68" HPOS="1906.55" ID="ST_1.12.6.25" VPOS="2592.84" WIDTH="36.70"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.7" VPOS="2644.21" WIDTH="1504.65">
+            <String CONTENT="April" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.7.1" VPOS="2644.21" WIDTH="91.75"/>
+            <SP HPOS="603.75" ID="SP_1.12.7.2" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="2005." HEIGHT="25.68" HPOS="622.10" ID="ST_1.12.7.3" VPOS="2644.21" WIDTH="91.75"/>
+            <SP HPOS="713.84" ID="SP_1.12.7.4" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="In" HEIGHT="25.68" HPOS="732.19" ID="ST_1.12.7.5" VPOS="2644.21" WIDTH="36.70"/>
+            <SP HPOS="768.89" ID="SP_1.12.7.6" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="December," HEIGHT="25.68" HPOS="787.24" ID="ST_1.12.7.7" VPOS="2644.21" WIDTH="165.14"/>
+            <SP HPOS="952.39" ID="SP_1.12.7.8" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="significant" HEIGHT="25.68" HPOS="970.73" ID="ST_1.12.7.9" VPOS="2644.21" WIDTH="201.84"/>
+            <SP HPOS="1172.58" ID="SP_1.12.7.10" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="progress" HEIGHT="25.68" HPOS="1190.93" ID="ST_1.12.7.11" VPOS="2644.21" WIDTH="146.80"/>
+            <SP HPOS="1337.72" ID="SP_1.12.7.12" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="was" HEIGHT="25.68" HPOS="1356.07" ID="ST_1.12.7.13" VPOS="2644.21" WIDTH="55.05"/>
+            <SP HPOS="1411.12" ID="SP_1.12.7.14" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="made" HEIGHT="25.68" HPOS="1429.47" ID="ST_1.12.7.15" VPOS="2644.21" WIDTH="73.40"/>
+            <SP HPOS="1502.87" ID="SP_1.12.7.16" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="in" HEIGHT="25.68" HPOS="1521.22" ID="ST_1.12.7.17" VPOS="2644.21" WIDTH="36.70"/>
+            <SP HPOS="1557.92" ID="SP_1.12.7.18" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="negotiations" HEIGHT="25.68" HPOS="1576.27" ID="ST_1.12.7.19" VPOS="2644.21" WIDTH="220.19"/>
+            <SP HPOS="1796.46" ID="SP_1.12.7.20" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="between" HEIGHT="25.68" HPOS="1814.81" ID="ST_1.12.7.21" VPOS="2644.21" WIDTH="128.45"/>
+            <SP HPOS="1943.25" ID="SP_1.12.7.22" VPOS="2644.21" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1961.60" ID="ST_1.12.7.23" VPOS="2644.21" WIDTH="55.05"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.8" VPOS="2695.58" WIDTH="1523.00">
+            <String CONTENT="two" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.8.1" VPOS="2695.58" WIDTH="55.05"/>
+            <SP HPOS="567.05" ID="SP_1.12.8.2" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="sides" HEIGHT="25.68" HPOS="585.40" ID="ST_1.12.8.3" VPOS="2695.58" WIDTH="91.75"/>
+            <SP HPOS="677.14" ID="SP_1.12.8.4" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="on" HEIGHT="25.68" HPOS="695.49" ID="ST_1.12.8.5" VPOS="2695.58" WIDTH="36.70"/>
+            <SP HPOS="732.19" ID="SP_1.12.8.6" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="750.54" ID="ST_1.12.8.7" VPOS="2695.58" WIDTH="55.05"/>
+            <SP HPOS="805.59" ID="SP_1.12.8.8" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="remaining" HEIGHT="25.68" HPOS="823.94" ID="ST_1.12.8.9" VPOS="2695.58" WIDTH="165.14"/>
+            <SP HPOS="989.08" ID="SP_1.12.8.10" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="4" HEIGHT="25.68" HPOS="1007.43" ID="ST_1.12.8.11" VPOS="2695.58" WIDTH="18.35"/>
+            <SP HPOS="1025.78" ID="SP_1.12.8.12" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="per" HEIGHT="25.68" HPOS="1044.13" ID="ST_1.12.8.13" VPOS="2695.58" WIDTH="55.05"/>
+            <SP HPOS="1099.18" ID="SP_1.12.8.14" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="cent" HEIGHT="25.68" HPOS="1117.53" ID="ST_1.12.8.15" VPOS="2695.58" WIDTH="73.40"/>
+            <SP HPOS="1190.93" ID="SP_1.12.8.16" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="1209.28" ID="ST_1.12.8.17" VPOS="2695.58" WIDTH="36.70"/>
+            <SP HPOS="1245.98" ID="SP_1.12.8.18" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1264.33" ID="ST_1.12.8.19" VPOS="2695.58" WIDTH="55.05"/>
+            <SP HPOS="1319.37" ID="SP_1.12.8.20" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="border." HEIGHT="25.68" HPOS="1337.72" ID="ST_1.12.8.21" VPOS="2695.58" WIDTH="128.45"/>
+            <SP HPOS="1466.17" ID="SP_1.12.8.22" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="It" HEIGHT="25.68" HPOS="1484.52" ID="ST_1.12.8.23" VPOS="2695.58" WIDTH="36.70"/>
+            <SP HPOS="1521.22" ID="SP_1.12.8.24" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="is" HEIGHT="25.68" HPOS="1539.57" ID="ST_1.12.8.25" VPOS="2695.58" WIDTH="36.70"/>
+            <SP HPOS="1576.27" ID="SP_1.12.8.26" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="hoped" HEIGHT="25.68" HPOS="1594.61" ID="ST_1.12.8.27" VPOS="2695.58" WIDTH="91.75"/>
+            <SP HPOS="1686.36" ID="SP_1.12.8.28" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="that" HEIGHT="25.68" HPOS="1704.71" ID="ST_1.12.8.29" VPOS="2695.58" WIDTH="73.40"/>
+            <SP HPOS="1778.11" ID="SP_1.12.8.30" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="more" HEIGHT="25.68" HPOS="1796.46" ID="ST_1.12.8.31" VPOS="2695.58" WIDTH="73.40"/>
+            <SP HPOS="1869.86" ID="SP_1.12.8.32" VPOS="2695.58" WIDTH="18.35"/>
+            <String CONTENT="progress" HEIGHT="25.68" HPOS="1888.20" ID="ST_1.12.8.33" VPOS="2695.58" WIDTH="146.80"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.9" VPOS="2746.95" WIDTH="1449.60">
+            <String CONTENT="will" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.9.1" VPOS="2746.95" WIDTH="73.40"/>
+            <SP HPOS="585.40" ID="SP_1.12.9.2" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="be" HEIGHT="25.68" HPOS="603.75" ID="ST_1.12.9.3" VPOS="2746.95" WIDTH="36.70"/>
+            <SP HPOS="640.45" ID="SP_1.12.9.4" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="achieved" HEIGHT="25.68" HPOS="658.80" ID="ST_1.12.9.5" VPOS="2746.95" WIDTH="146.80"/>
+            <SP HPOS="805.59" ID="SP_1.12.9.6" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="in" HEIGHT="25.68" HPOS="823.94" ID="ST_1.12.9.7" VPOS="2746.95" WIDTH="36.70"/>
+            <SP HPOS="860.64" ID="SP_1.12.9.8" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="878.99" ID="ST_1.12.9.9" VPOS="2746.95" WIDTH="55.05"/>
+            <SP HPOS="934.04" ID="SP_1.12.9.10" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="coming" HEIGHT="25.68" HPOS="952.39" ID="ST_1.12.9.11" VPOS="2746.95" WIDTH="110.10"/>
+            <SP HPOS="1062.48" ID="SP_1.12.9.12" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="weeks," HEIGHT="25.68" HPOS="1080.83" ID="ST_1.12.9.13" VPOS="2746.95" WIDTH="110.10"/>
+            <SP HPOS="1190.93" ID="SP_1.12.9.14" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="so" HEIGHT="25.68" HPOS="1209.28" ID="ST_1.12.9.15" VPOS="2746.95" WIDTH="36.70"/>
+            <SP HPOS="1245.98" ID="SP_1.12.9.16" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="that" HEIGHT="25.68" HPOS="1264.33" ID="ST_1.12.9.17" VPOS="2746.95" WIDTH="73.40"/>
+            <SP HPOS="1337.72" ID="SP_1.12.9.18" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1356.07" ID="ST_1.12.9.19" VPOS="2746.95" WIDTH="55.05"/>
+            <SP HPOS="1411.12" ID="SP_1.12.9.20" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="delineation" HEIGHT="25.68" HPOS="1429.47" ID="ST_1.12.9.21" VPOS="2746.95" WIDTH="201.84"/>
+            <SP HPOS="1631.31" ID="SP_1.12.9.22" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="1649.66" ID="ST_1.12.9.23" VPOS="2746.95" WIDTH="36.70"/>
+            <SP HPOS="1686.36" ID="SP_1.12.9.24" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="the" HEIGHT="25.68" HPOS="1704.71" ID="ST_1.12.9.25" VPOS="2746.95" WIDTH="55.05"/>
+            <SP HPOS="1759.76" ID="SP_1.12.9.26" VPOS="2746.95" WIDTH="18.35"/>
+            <String CONTENT="unresolved" HEIGHT="25.68" HPOS="1778.11" ID="ST_1.12.9.27" VPOS="2746.95" WIDTH="183.49"/>
+          </TextLine>
+          <TextLine HEIGHT="25.68" HPOS="512.00" ID="TL_1.12.10" VPOS="2798.32" WIDTH="899.12">
+            <String CONTENT="segments" HEIGHT="25.68" HPOS="512.00" ID="ST_1.12.10.1" VPOS="2798.32" WIDTH="146.80"/>
+            <SP HPOS="658.80" ID="SP_1.12.10.2" VPOS="2798.32" WIDTH="18.35"/>
+            <String CONTENT="of" HEIGHT="25.68" HPOS="677.14" ID="ST_1.12.10.3" VPOS="2798.32" WIDTH="36.70"/>
+            <SP HPOS="713.84" ID="SP_1.12.10.4" VPOS="2798.32" WIDTH="18.35"/>
+            <String CONTENT="their" HEIGHT="25.68" HPOS="732.19" ID="ST_1.12.10.5" VPOS="2798.32" WIDTH="91.75"/>
+            <SP HPOS="823.94" ID="SP_1.12.10.6" VPOS="2798.32" WIDTH="18.35"/>
+            <String CONTENT="common" HEIGHT="25.68" HPOS="842.29" ID="ST_1.12.10.7" VPOS="2798.32" WIDTH="110.10"/>
+            <SP HPOS="952.39" ID="SP_1.12.10.8" VPOS="2798.32" WIDTH="18.35"/>
+            <String CONTENT="border" HEIGHT="25.68" HPOS="970.73" ID="ST_1.12.10.9" VPOS="2798.32" WIDTH="110.10"/>
+            <SP HPOS="1080.83" ID="SP_1.12.10.10" VPOS="2798.32" WIDTH="18.35"/>
+            <String CONTENT="can" HEIGHT="25.68" HPOS="1099.18" ID="ST_1.12.10.11" VPOS="2798.32" WIDTH="55.05"/>
+            <SP HPOS="1154.23" ID="SP_1.12.10.12" VPOS="2798.32" WIDTH="18.35"/>
+            <String CONTENT="be" HEIGHT="25.68" HPOS="1172.58" ID="ST_1.12.10.13" VPOS="2798.32" WIDTH="36.70"/>
+            <SP HPOS="1209.28" ID="SP_1.12.10.14" VPOS="2798.32" WIDTH="18.35"/>
+            <String CONTENT="completed." HEIGHT="25.68" HPOS="1227.63" ID="ST_1.12.10.15" VPOS="2798.32" WIDTH="183.49"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="35.00" HPOS="250.00" ID="BL_1.13" VPOS="2972.00" WIDTH="387.00">
+          <TextLine HEIGHT="35.00" HPOS="250.00" ID="TL_1.13.1" VPOS="2972.00" WIDTH="387.00">
+            <String CONTENT="06-20462" HEIGHT="35.00" HPOS="250.00" ID="ST_1.13.1.1" VPOS="2972.00" WIDTH="154.80"/>
+            <SP HPOS="404.80" ID="SP_1.13.1.2" VPOS="2972.00" WIDTH="19.35"/>
+            <String CONTENT="(E)" HEIGHT="35.00" HPOS="424.15" ID="ST_1.13.1.3" VPOS="2972.00" WIDTH="58.05"/>
+            <SP HPOS="482.20" ID="SP_1.13.1.4" VPOS="2972.00" WIDTH="38.70"/>
+            <String CONTENT="170106" HEIGHT="35.00" HPOS="520.90" ID="ST_1.13.1.5" VPOS="2972.00" WIDTH="116.10"/>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HEIGHT="36.00" HPOS="169.00" ID="BL_1.14" VPOS="3039.00" WIDTH="607.00">
+          <TextLine HEIGHT="36.00" HPOS="169.00" ID="TL_1.14.1" VPOS="3039.00" WIDTH="607.00">
+            <String CONTENT="*" HEIGHT="36.00" HPOS="169.00" ID="ST_1.14.1.1" VPOS="3039.00" WIDTH="46.69"/>
+            <SP HPOS="215.69" ID="SP_1.14.1.2" VPOS="3039.00" WIDTH="93.38"/>
+            <String CONTENT="0620462" HEIGHT="36.00" HPOS="309.08" ID="ST_1.14.1.3" VPOS="3039.00" WIDTH="326.85"/>
+            <SP HPOS="635.92" ID="SP_1.14.1.4" VPOS="3039.00" WIDTH="93.38"/>
+            <String CONTENT="*" HEIGHT="36.00" HPOS="729.31" ID="ST_1.14.1.5" VPOS="3039.00" WIDTH="46.69"/>
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>
