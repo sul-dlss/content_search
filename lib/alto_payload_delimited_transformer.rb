@@ -11,7 +11,10 @@ class AltoPayloadDelimitedTransformer
   end
 
   def namespaces
-    @namespaces ||= { alto: 'http://www.loc.gov/standards/alto/ns-v2#' }
+    @namespaces ||= begin
+      alto_ns = document.namespaces.values.first { |ns| ns =~ %r{standards/alto/ns} }
+      { alto: alto_ns || 'http://www.loc.gov/standards/alto/ns-v3#' }
+    end
   end
 
   def text_blocks
