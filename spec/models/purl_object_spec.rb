@@ -31,7 +31,7 @@ RSpec.describe PurlObject do
 
   describe '#to_solr' do
     let(:ocr_text) { 'text text text' }
-    let(:ocr_response) { instance_double(Faraday::Response, body: ocr_text) }
+    let(:ocr_response) { instance_double(Faraday::Response, success?: true, body: ocr_text) }
 
     before do
       stacks_url = 'https://stacks.stanford.edu/file/x/y.txt'
@@ -44,6 +44,19 @@ RSpec.describe PurlObject do
                                               resource_id: 'y',
                                               filename: 'y.txt',
                                               ocrtext: ['text text text']
+    end
+
+    context 'with a file without content on stacks' do
+      let(:ocr_response) { instance_double(Faraday::Response, success?: false) }
+
+      before do
+        stacks_url = 'https://stacks.stanford.edu/file/x/y.txt'
+        allow(described_class.client).to receive(:get).with(stacks_url).and_return(ocr_response)
+      end
+
+      it 'does nothing' do
+        expect(object.to_solr.to_a.length).to eq 0
+      end
     end
   end
 end
