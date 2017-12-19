@@ -22,6 +22,8 @@
 
   <dataDir>${solr.data.dir:}</dataDir>
 
+  <jmx />
+
   <requestHandler name="search" class="solr.SearchHandler" default="true">
     <!-- default values for query parameters can be specified, these
          will be overridden by parameters in the request
@@ -58,6 +60,15 @@
          score
        </str>
      </lst>
+  </requestHandler>
+
+  <!-- realtime get handler, guaranteed to return the latest stored fields
+    of any document, without the need to commit or open a new searcher. The current
+    implementation relies on the updateLog feature being enabled. -->
+  <requestHandler name="/get" class="solr.RealTimeGetHandler">
+    <lst name="defaults">
+      <str name="omitHeader">true</str>
+    </lst>
   </requestHandler>
 
   <requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy" />
