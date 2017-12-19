@@ -24,6 +24,8 @@ class PurlObject
     resources.each do |r|
       r.xpath('file[@mimetype="application/xml" or @mimetype="application/alto+xml" or @mimetype="text/plain"]').each do |file|
         f = PurlObject::File.new(druid, file)
+        next if f.content.nil?
+
         indexer = FullTextIndexer.new(f)
 
         next if file['mimetype'] == 'application/xml' && !indexer.alto?
@@ -79,7 +81,9 @@ class PurlObject
     private
 
     def fetch(url)
-      PurlObject.client.get(url).body
+      response = PurlObject.client.get(url)
+
+      response.body if response.success?
     end
   end
 end
