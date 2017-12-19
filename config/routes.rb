@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   # discovery dispatcher API uses subtargets; we could care less, so make them optional.
   put '/items/:druid/(*subtargets)', to: 'items#update'
   delete '/items/:druid/(*subtargets)', to: 'items#destroy'
+
+  mount OkComputer::Engine, at: "/status"
 end
