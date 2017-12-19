@@ -56,4 +56,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'config'
 gem 'faraday'
 gem 'nokogiri'
+gem 'okcomputer'
 gem 'rsolr'
