@@ -35,10 +35,21 @@
     <fieldType name="date" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0"/>
 
     <fieldType name="text_with_delimited_ocr_position" class="solr.TextField" positionIncrementGap="100">
-      <analyzer>
+      <analyzer type="index">
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
         <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
         <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
+        <filter class="solr.EnglishPossessiveFilterFactory"/>
+        <filter class="solr.EnglishMinimalStemFilterFactory"/>
+        <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.FlattenGraphFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
         <filter class="solr.EnglishPossessiveFilterFactory"/>
         <filter class="solr.EnglishMinimalStemFilterFactory"/>
         <filter class="solr.TrimFilterFactory"/>
