@@ -61,8 +61,7 @@ class IiifContentSearchResponse
   end
 
   def ignored_params
-    valid_iiif_params = %w[motivation date user]
-    valid_iiif_params.select { |param| controller.params.keys.include?(param) }
+    Settings.iiif.ignored_request_params.select { |param| controller.params.keys.include?(param) }
   end
 
   def resources
