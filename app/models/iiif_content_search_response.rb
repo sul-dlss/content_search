@@ -30,7 +30,8 @@ class IiifContentSearchResponse
       within: {
         '@type': 'sc:Layer',
         first: first_page_url,
-        last: last_page_url
+        last: last_page_url,
+        ignored: ignored_params
       }
     }
     hash[:next] = next_page_url if next_page?
@@ -57,6 +58,11 @@ class IiifContentSearchResponse
 
   def next_page?
     search.num_found >= (search.start + search.rows)
+  end
+
+  def ignored_params
+    valid_iiif_params = %w[motivation date user]
+    valid_iiif_params.select { |param| controller.params.keys.include?(param) }
   end
 
   def resources
