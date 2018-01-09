@@ -21,7 +21,8 @@ RSpec.describe SearchController do
 
       data = JSON.parse(response.body)
 
-      expect(data).to include '@context' => 'http://iiif.io/api/presentation/2/context.json',
+      expect(data).to include '@context' => ['http://iiif.io/api/presentation/2/context.json',
+                                             'http://iiif.io/api/search/1/context.json'],
                               '@id' => 'http://test.host/x/search?q=y',
                               '@type' => 'sc:AnnotationList'
     end

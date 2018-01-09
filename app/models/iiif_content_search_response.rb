@@ -13,7 +13,10 @@ class IiifContentSearchResponse
 
   def as_json(*_args)
     {
-      "@context": 'http://iiif.io/api/presentation/2/context.json',
+      "@context": [
+        'http://iiif.io/api/presentation/2/context.json',
+        'http://iiif.io/api/search/1/context.json'
+      ],
       "@id": request.original_url,
       "@type": 'sc:AnnotationList',
       "resources": resources.map(&:as_json)

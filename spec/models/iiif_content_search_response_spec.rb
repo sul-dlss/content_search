@@ -17,7 +17,8 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
 
   describe '#as_json' do
     it 'has the expected json-ld properties' do
-      expect(response.as_json).to include "@context": 'http://iiif.io/api/presentation/2/context.json',
+      expect(response.as_json).to include "@context": ['http://iiif.io/api/presentation/2/context.json',
+                                                       'http://iiif.io/api/search/1/context.json'],
                                           "@id": 'http://test.host',
                                           "@type": 'sc:AnnotationList'
     end
