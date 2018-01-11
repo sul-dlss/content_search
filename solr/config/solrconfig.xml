@@ -48,9 +48,15 @@
           pid
           canvas
           ocrtext
+          ocrtext_en
+          ocrtext_pt
+          ocrtext_id
         </str>
         <str name="pf">
           ocrtext^10
+          ocrtext_en^5
+          ocrtext_pt^5
+          ocrtext_id^5
         </str>
 
        <str name="fl">
@@ -59,6 +65,11 @@
          canvas,
          score
        </str>
+
+       <str name="hl">true</str>
+       <int name="hl.snippets">10</int>
+       <str name="hl.fl">ocrtext_en ocrtext_id ocrtext_pt</str>
+       <str name="hl.method">fastVector</str>
      </lst>
   </requestHandler>
 

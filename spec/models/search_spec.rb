@@ -17,9 +17,10 @@ RSpec.describe Search do
 
   describe '#highlights' do
     it 'transforms Solr responses into a hash' do
-      client = instance_double(RSolr::Client, get: { 'highlighting' => { 'x' => { 'ocrtext' => %w[1 2] } } })
+      highlights = { 'ocrtext' => %w[1 2], 'ocrtext_lang' => %w[2 3] }
+      client = instance_double(RSolr::Client, get: { 'highlighting' => { 'x' => highlights } })
       allow(described_class).to receive(:client).and_return(client)
-      expect(search.highlights).to include 'x' => match_array(%w[1 2])
+      expect(search.highlights).to include 'x' => match_array(%w[1 2 3])
     end
   end
 

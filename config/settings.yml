@@ -10,7 +10,3 @@ solr:
   path: 'select'
   highlight_params:
     fl: 'id'
-    hl: true
-    "hl.snippets": 10
-    "hl.fl": 'ocrtext'
-    "hl.method": 'fastVector'
