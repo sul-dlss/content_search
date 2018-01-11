@@ -19,6 +19,7 @@
   <!-- solr lib dirs -->
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
+  <lib dir="${solr.install.dir:../../../..}/contrib" regex="solr-tokenizing_suggester-7.x.jar" />
 
   <dataDir>${solr.data.dir:}</dataDir>
 
@@ -93,9 +94,11 @@
   <searchComponent name="suggest" class="solr.SuggestComponent">
     <lst name="suggester">
       <str name="name">mySuggester</str>
-      <str name="lookupImpl">FuzzyLookupFactory</str>
+      <str name="lookupImpl">edu.stanford.dlss.search.suggest.analyzing.TokenizingLookupFactory</str>
+      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
       <str name="suggestAnalyzerFieldType">textSuggest</str>
-      <str name="buildOnCommit">true</str>
+      <str name="suggestTokenizingAnalyzerFieldType">textSuggestTokenizer</str>
+      <str name="contextField">druid</str>
       <str name="field">ocrtext_suggest</str>
     </lst>
   </searchComponent>

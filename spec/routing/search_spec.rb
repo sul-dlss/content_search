@@ -7,6 +7,10 @@ RSpec.describe 'Search routes' do
     expect(get: '/x/search').to route_to('search#search', id: 'x')
   end
 
+  it 'routes to #autocomplete' do
+    expect(get: '/x/autocomplete').to route_to('search#autocomplete', id: 'x')
+  end
+
   it 'routes the root url' do
     expect(get: '/?id=x').to route_to('search#search', id: 'x')
   end

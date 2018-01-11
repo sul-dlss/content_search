@@ -16,27 +16,44 @@ class Search
   end
 
   def num_found
-    response['response']['numFound']
+    highlight_response['response']['numFound']
   end
 
   def highlights
-    response['highlighting'].map do |id, fields|
+    highlight_response['highlighting'].map do |id, fields|
       [id, fields.values.flatten.uniq]
     end.to_h
   end
 
-  private
-
-  def response
-    @response ||= self.class.client.get(Settings.solr.path, params: request_params)
+  def suggestions
+    suggest_response['suggest'].values.first[q]['suggestions']
   end
 
-  def request_params
+  private
+
+  def highlight_response
+    @highlight_response ||= get(Settings.solr.highlight_path, params: highlight_request_params)
+  end
+
+  def suggest_response
+    @suggest_response ||= get(Settings.solr.suggest_path, params: suggest_request_params)
+  end
+
+  def get(url, params:)
+    self.class.client.get(url, params: params.reverse_merge(q: q))
+  end
+
+  def highlight_request_params
     Settings.solr.highlight_params.to_h.merge(
-      q: q,
       fq: ["druid:#{id}"],
       rows: rows,
       start: start
+    )
+  end
+
+  def suggest_request_params
+    Settings.solr.suggest_params.to_h.merge(
+      'suggest.cfq' => id
     )
   end
 end

@@ -12,6 +12,8 @@ stacks:
 
 solr:
   url: 'http://127.0.0.1:8983/solr/content_search/'
-  path: 'select'
+  highlight_path: 'select'
   highlight_params:
     fl: 'id'
+  suggest_path: 'suggest'
+  suggest_params: {}
