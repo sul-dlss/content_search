@@ -15,7 +15,14 @@
     <field name="resource_id" type="string" stored="true" indexed="true" multiValued="false"/>
     <field name="filename" type="string" stored="true" indexed="true" multiValued="false"/>
     <field name="ocrtext" type="text_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true"/>
+    <field name="ocrtext_en" type="text_en_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true"/>
+    <field name="ocrtext_pt" type="text_pt_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true"/>
+    <field name="ocrtext_id" type="text_id_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true"/>
   </fields>
+
+  <copyField source="ocrtext" dest="ocrtext_en"/>
+  <copyField source="ocrtext" dest="ocrtext_pt"/>
+  <copyField source="ocrtext" dest="ocrtext_id"/>
 
   <!-- Above, multiple source fields are copied to the [text] field.
       Another way to map multiple source fields to the same
@@ -40,6 +47,24 @@
         <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
         <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
         <filter class="solr.WordDelimiterGraphFilterFactory"/>
+        <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.FlattenGraphFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
+        <filter class="solr.TrimFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+    <fieldType name="text_en_with_delimited_ocr_position" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
         <filter class="solr.EnglishPossessiveFilterFactory"/>
         <filter class="solr.EnglishMinimalStemFilterFactory"/>
         <filter class="solr.TrimFilterFactory"/>
@@ -52,6 +77,46 @@
         <filter class="solr.WordDelimiterGraphFilterFactory"/>
         <filter class="solr.EnglishPossessiveFilterFactory"/>
         <filter class="solr.EnglishMinimalStemFilterFactory"/>
+        <filter class="solr.TrimFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+    <fieldType name="text_pt_with_delimited_ocr_position" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
+        <filter class="solr.PortugueseLightStemFilterFactory"/>
+        <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.FlattenGraphFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
+        <filter class="solr.PortugueseLightStemFilterFactory"/>
+        <filter class="solr.TrimFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+    <fieldType name="text_id_with_delimited_ocr_position" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
+        <filter class="solr.IndonesianStemFilterFactory" stemDerivational="true" />
+        <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.FlattenGraphFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
+        <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
+        <filter class="solr.WordDelimiterGraphFilterFactory"/>
+        <filter class="solr.IndonesianStemFilterFactory" stemDerivational="true" />
         <filter class="solr.TrimFilterFactory"/>
       </analyzer>
     </fieldType>

@@ -21,7 +21,7 @@ class Search
 
   def highlights
     response['highlighting'].map do |id, fields|
-      [id, fields['ocrtext']]
+      [id, fields.values.flatten.uniq]
     end.to_h
   end
 
