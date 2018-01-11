@@ -25,7 +25,7 @@ class PurlObject
 
     resources.each do |r|
       r.xpath('file[@mimetype="application/xml" or @mimetype="application/alto+xml" or @mimetype="text/plain"]').each do |file|
-        yield file
+        yield file unless file['size'].to_i > Settings.maximum_ocr_filesize_to_consider
       end
     end
   end

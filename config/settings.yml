@@ -1,6 +1,8 @@
 iiif:
   ignored_request_params: [motivation, date, user]
 
+maximum_ocr_filesize_to_consider: 10000000 # 10MB
+
 purl:
   canvas_url: 'https://purl.stanford.edu/%{druid}/iiif/canvas/%{resource}'
   public_xml_url: 'https://purl.stanford.edu/%{druid}.xml'

@@ -12,6 +12,9 @@ RSpec.describe PurlObject do
         <resource id="y">
           <file id="y.txt" mimetype="text/plain" />
         </resource>
+        <resource id="oversize">
+          <file id="oversize.txt" size="#{100.gigabytes}" mimetype="text/plain" />
+        </resource>
       </contentMetadata>
     </publicObject>
     XML
@@ -25,7 +28,17 @@ RSpec.describe PurlObject do
 
   describe '#resources' do
     it 'extracts resources from the contentMetadata' do
-      expect(object.resources.first['id']).to eq 'y'
+      expect(object.resources.map { |file| file['id'] }).to match_array %w[y oversize]
+    end
+  end
+
+  describe '#ocr_files' do
+    it 'has resources that are potentially OCR' do
+      expect(object.ocr_files.map { |file| file['id'] }).to include 'y.txt'
+    end
+
+    it 'excludes resources that are unlikely to be OCR' do
+      expect(object.ocr_files.map { |file| file['id'] }).not_to include 'oversize.txt'
     end
   end
 
