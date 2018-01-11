@@ -1,3 +1,6 @@
+iiif:
+  ignored_request_params: [motivation, date, user]
+
 purl:
   canvas_url: 'https://purl.stanford.edu/%{druid}/iiif/canvas/%{resource}'
   public_xml_url: 'https://purl.stanford.edu/%{druid}.xml'

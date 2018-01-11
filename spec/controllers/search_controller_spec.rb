@@ -17,13 +17,15 @@ RSpec.describe SearchController do
     end
 
     it 'executes a search and transforms it into a content search response' do
-      get :search, params: { id: 'x', q: 'y' }
+      get :search, params: { id: 'x', q: 'y', motivation: 'painting' }
 
       data = JSON.parse(response.body)
 
-      expect(data).to include '@context' => 'http://iiif.io/api/presentation/2/context.json',
-                              '@id' => 'http://test.host/x/search?q=y',
-                              '@type' => 'sc:AnnotationList'
+      expect(data).to include '@context' => ['http://iiif.io/api/presentation/2/context.json',
+                                             'http://iiif.io/api/search/1/context.json'],
+                              '@id' => 'http://test.host/x/search?motivation=painting&q=y',
+                              '@type' => 'sc:AnnotationList',
+                              'within' => include('ignored' => ['motivation'])
     end
 
     it 'includes resources for every hit' do

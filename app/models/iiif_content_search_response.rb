@@ -13,7 +13,10 @@ class IiifContentSearchResponse
 
   def as_json(*_args)
     {
-      "@context": 'http://iiif.io/api/presentation/2/context.json',
+      "@context": [
+        'http://iiif.io/api/presentation/2/context.json',
+        'http://iiif.io/api/search/1/context.json'
+      ],
       "@id": request.original_url,
       "@type": 'sc:AnnotationList',
       "resources": resources.map(&:as_json)
@@ -27,7 +30,8 @@ class IiifContentSearchResponse
       within: {
         '@type': 'sc:Layer',
         first: first_page_url,
-        last: last_page_url
+        last: last_page_url,
+        ignored: ignored_params
       }
     }
     hash[:next] = next_page_url if next_page?
@@ -54,6 +58,10 @@ class IiifContentSearchResponse
 
   def next_page?
     search.num_found >= (search.start + search.rows)
+  end
+
+  def ignored_params
+    Settings.iiif.ignored_request_params.select { |param| controller.params.keys.include?(param) }
   end
 
   def resources
