@@ -71,5 +71,17 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
                                                             last: ending_with('start=10'))
       end
     end
+
+    context 'with documents without highlights' do
+      let(:highlights) do
+        {
+          'x/y/without_highlights' => nil
+        }
+      end
+
+      it 'omits the result from the content search response' do
+        expect(response.as_json[:resources]).to be_blank
+      end
+    end
   end
 end

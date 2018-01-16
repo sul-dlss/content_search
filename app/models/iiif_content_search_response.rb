@@ -67,7 +67,7 @@ class IiifContentSearchResponse
   def resources
     return to_enum(:resources) unless block_given?
 
-    search.highlights.each do |id, hits|
+    search.highlights.reject { |_id, hits| hits.nil? }.each do |id, hits|
       hits.each do |hit|
         yield Resource.new(id, hit)
       end
