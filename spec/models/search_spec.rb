@@ -24,6 +24,15 @@ RSpec.describe Search do
     end
   end
 
+  describe '#suggestions' do
+    it 'transforms Solr responses into an array of suggestions' do
+      suggestions = { 'y' => { 'suggestions' => [{ term: 'termA' }, { term: 'termB' }] } }
+      client = instance_double(RSolr::Client, get: { 'suggest' => { 'mySuggester' => suggestions } })
+      allow(described_class).to receive(:client).and_return(client)
+      expect(search.suggestions).to match_array [{ term: 'termA' }, { term: 'termB' }]
+    end
+  end
+
   describe '#num_found' do
     it 'gets the number of hits from the solr response' do
       client = instance_double(RSolr::Client, get: { 'response' => { 'numFound' => 15 } })

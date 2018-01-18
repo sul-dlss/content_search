@@ -22,6 +22,7 @@ task default: %i[rubocop ci]
 
 task ci: [:environment] do
   SolrWrapper.wrap(port: '8983') do |solr|
+    FileUtils.cp File.join(__dir__, 'solr', 'lib', 'solr-tokenizing_suggester-7.x.jar'), File.join(solr.instance_dir, 'contrib')
     solr.with_collection(name: 'content_search',
                          dir: File.join(__dir__, 'solr', 'config')) do
       # run the tests

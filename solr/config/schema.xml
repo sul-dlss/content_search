@@ -18,7 +18,7 @@
     <field name="ocrtext_en" type="text_en_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true"/>
     <field name="ocrtext_pt" type="text_pt_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true"/>
     <field name="ocrtext_id" type="text_id_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true"/>
-    <field name="ocrtext_suggest" type="textSuggest" indexed="true" stored="false" multiValued="true" />
+    <field name="ocrtext_suggest" type="textSuggest" indexed="true" stored="true" multiValued="true" />
   </fields>
 
   <copyField source="ocrtext" dest="ocrtext_en"/>
@@ -125,12 +125,18 @@
 
     <fieldType class="solr.TextField" name="textSuggest" positionIncrementGap="100">
       <analyzer>
+        <tokenizer class="solr.KeywordTokenizerFactory" />
+      </analyzer>
+    </fieldType>
+
+    <fieldType class="solr.TextField" name="textSuggestTokenizer" positionIncrementGap="100">
+      <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
         <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
         <filter class="solr.WordDelimiterGraphFilterFactory"/>
-        <filter class="solr.StandardFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+        <filter class="solr.ShingleFilterFactory" outputUnigrams="true" outputUnigramsIfNoShingles="true" maxShingleSize="4" />
       </analyzer>
     </fieldType>
   </types>
