@@ -19,7 +19,8 @@ class IiifContentSearchResponse
       ],
       "@id": request.original_url,
       "@type": 'sc:AnnotationList',
-      "resources": resources.map(&:as_json)
+      "resources": resources.map(&:as_json),
+      "hits": hits
     }.merge(pagination_as_json)
   end
 
@@ -74,6 +75,17 @@ class IiifContentSearchResponse
     end
   end
 
+  def hits
+    resources.map do |hit|
+      {
+        '@type': 'search:Hit',
+        'annotations': [hit.annotation_url],
+        'before': hit.before,
+        'after': hit.after
+      }
+    end
+  end
+
   # Transform individual search highlights into IIIF resource annotations
   class Resource
     attr_reader :druid, :resource_id, :filename, :highlight
@@ -96,8 +108,6 @@ class IiifContentSearchResponse
       }
     end
 
-    private
-
     def annotation_url
       "#{canvas_url}/text/at/#{fragment_xywh}"
     end
@@ -107,6 +117,19 @@ class IiifContentSearchResponse
       last = highlight.rindex('</em>')
       highlight[first...last].gsub(%r{</?em>}, '')
     end
+
+    def before
+      first = highlight.index('<em>')
+      highlight[0...first].split.map { |x| split_word_and_payload(x).first }.join(' ').strip
+    end
+
+    def after
+      token = '</em>'
+      last = highlight.rindex(token) + token.length
+      highlight[last..highlight.length].split.map { |x| split_word_and_payload(x).first }.join(' ').strip
+    end
+
+    private
 
     def chars
       text.split.map { |x| split_word_and_payload(x) }.map(&:first).join(' ')

@@ -45,6 +45,24 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
                                                              "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=0,0,0,0')
     end
 
+    it 'has hits with additional context for an ALTO resource' do
+      expect(response.as_json).to include hits: include("@type": 'search:Hit',
+                                                        "annotations": [
+                                                          'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,129,85,597'
+                                                        ],
+                                                        "before": '',
+                                                        "after": 'Heritage')
+    end
+
+    it 'has hits with additional context for a plain text resource' do
+      expect(response.as_json).to include hits: include("@type": 'search:Hit',
+                                                        "annotations": [
+                                                          'https://purl.stanford.edu/x/iiif/canvas/y/text/at/0,0,0,0'
+                                                        ],
+                                                        "before": '',
+                                                        "after": 'OF THE COUNCIL')
+    end
+
     it 'has basic pagination context' do
       expect(response.as_json).to include within: include('@type': 'sc:Layer',
                                                           first: ending_with('start=0'),
