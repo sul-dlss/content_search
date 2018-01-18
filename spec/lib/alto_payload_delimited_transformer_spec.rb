@@ -21,6 +21,11 @@ RSpec.describe AltoPayloadDelimitedTransformer do
       it 'returns a payload-delimited string' do
         expect(transformer.output.first).to start_with 'United☞514.00,229.00,147.43,42.00 Nations☞686.00,229.00,172.00,42.00'
       end
+
+      it 'includes line breaks where appropriate' do
+        words_only = transformer.output.map { |block| block.gsub(/☞[\d,\.]+/, '') }
+        expect(words_only).to include "Progress report of the Secretary-General on the\nUnited Nations Office in Timor-Leste"
+      end
     end
   end
 end

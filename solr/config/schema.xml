@@ -50,6 +50,7 @@
         <filter class="solr.ICUFoldingFilterFactory"/>  <!-- NFKC, case folding, diacritics removed -->
         <filter class="solr.WordDelimiterGraphFilterFactory"/>
         <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.HyphenatedWordsFilterFactory"/>
         <filter class="solr.FlattenGraphFilterFactory"/>
       </analyzer>
       <analyzer type="query">
@@ -70,6 +71,7 @@
         <filter class="solr.EnglishPossessiveFilterFactory"/>
         <filter class="solr.EnglishMinimalStemFilterFactory"/>
         <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.HyphenatedWordsFilterFactory"/>
         <filter class="solr.FlattenGraphFilterFactory"/>
       </analyzer>
       <analyzer type="query">
@@ -91,6 +93,7 @@
         <filter class="solr.WordDelimiterGraphFilterFactory"/>
         <filter class="solr.PortugueseLightStemFilterFactory"/>
         <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.HyphenatedWordsFilterFactory"/>
         <filter class="solr.FlattenGraphFilterFactory"/>
       </analyzer>
       <analyzer type="query">
@@ -111,6 +114,7 @@
         <filter class="solr.WordDelimiterGraphFilterFactory"/>
         <filter class="solr.IndonesianStemFilterFactory" stemDerivational="true" />
         <filter class="solr.TrimFilterFactory"/>
+        <filter class="solr.HyphenatedWordsFilterFactory"/>
         <filter class="solr.FlattenGraphFilterFactory"/>
       </analyzer>
       <analyzer type="query">
@@ -135,6 +139,7 @@
         <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
         <filter class="solr.WordDelimiterGraphFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.HyphenatedWordsFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
         <filter class="solr.ShingleFilterFactory" outputUnigrams="true" outputUnigramsIfNoShingles="true" maxShingleSize="4" />
       </analyzer>
