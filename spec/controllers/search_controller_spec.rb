@@ -71,8 +71,8 @@ RSpec.describe SearchController do
       data = JSON.parse(response.body)
 
       expect(data['terms']).to match_array [
-        { 'match' => 'termA', 'url' => 'http://test.host/x/search?q=termA', 'count' => 5 },
-        { 'match' => 'termB', 'url' => 'http://test.host/x/search?q=termB', 'count' => 3 }
+        { 'match' => 'termA', 'url' => 'http://test.host/x/search?q=%22termA%22', 'count' => 5 },
+        { 'match' => 'termB', 'url' => 'http://test.host/x/search?q=%22termB%22', 'count' => 3 }
       ]
     end
   end
