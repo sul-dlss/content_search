@@ -26,7 +26,7 @@ class IiifAutocompleteResponse
   private
 
   def match_url(q)
-    controller.iiif_content_search_url(id: search.id, q: q)
+    controller.iiif_content_search_url(id: search.id, q: "\"#{q}\"")
   end
 
   def ignored_params
