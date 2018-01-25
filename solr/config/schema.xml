@@ -130,6 +130,7 @@
     <fieldType class="solr.TextField" name="textSuggest" positionIncrementGap="100">
       <analyzer>
         <tokenizer class="solr.KeywordTokenizerFactory" />
+        <filter class="solr.ICUFoldingFilterFactory"/>
       </analyzer>
     </fieldType>
 
@@ -138,7 +139,6 @@
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
         <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="identity" delimiter="☞" />
         <filter class="solr.WordDelimiterGraphFilterFactory"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.HyphenatedWordsFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
         <filter class="solr.ShingleFilterFactory" outputUnigrams="true" outputUnigramsIfNoShingles="true" maxShingleSize="4" />
