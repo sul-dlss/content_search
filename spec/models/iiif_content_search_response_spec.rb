@@ -11,6 +11,7 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
   let(:highlights) do
     {
       'x/y/alto_with_coords' => ['<em>George☞639,129,79,243 Stirling’s☞633,426,84,300</em> Heritage☞632,789,84,291'],
+      'x/y/alto_multiline_coords' => ['<em>George☞639,129,79,243 Stirling’s☞732,0,84,291</em>'],
       'x/y/text_without_coords' => ['<em>MEMBERS</em> OF THE COUNCIL']
     }
   end
@@ -32,6 +33,17 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
                                                                "chars": 'George Stirling’s'
                                                              },
                                                              "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=633,129,85,597')
+    end
+
+    it 'highlights the whole matching region for multi-line matches' do
+      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/639,0,177,372',
+                                                             "@type": 'oa:Annotation',
+                                                             "motivation": 'sc:painting',
+                                                             "resource": {
+                                                               "@type": 'cnt:ContentAsText',
+                                                               "chars": 'George Stirling’s'
+                                                             },
+                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=639,0,177,372')
     end
 
     it 'has a resource for the plain text highlight' do

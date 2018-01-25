@@ -157,10 +157,10 @@ class IiifContentSearchResponse
         pos1s = word_bboxes.map(&:first)
         pos2s = word_bboxes.map(&:last)
         {
-          x1: pos1s.map(&:first).min,
-          y1: pos1s.map(&:last).min,
-          x2: pos2s.map(&:first).max,
-          y2: pos2s.map(&:last).max
+          x1: [pos1s.map(&:first).min, pos2s.map(&:first).min].min,
+          y1: [pos1s.map(&:last).min, pos2s.map(&:last).min].min,
+          x2: [pos1s.map(&:first).max, pos2s.map(&:first).max].max,
+          y2: [pos1s.map(&:last).max, pos2s.map(&:last).max].max
         }
       end
     end
