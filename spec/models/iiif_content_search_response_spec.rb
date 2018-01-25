@@ -15,6 +15,20 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
     }
   end
 
+  describe '#before' do
+    context 'with truncated coordinate payloads in the highlight' do
+      let(:highlights) do
+        {
+          'x/truncated_highlight_coords/alto' => ['0,2 George☞639,129,79,243 <em>Stirling’s☞633,426,84,300</em>']
+        }
+      end
+
+      it 'strips leading payload fragments' do
+        expect(response.resources.first.before).to eq 'George'
+      end
+    end
+  end
+
   describe '#as_json' do
     it 'has the expected json-ld properties' do
       expect(response.as_json).to include "@context": ['http://iiif.io/api/presentation/2/context.json',
