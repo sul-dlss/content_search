@@ -18,6 +18,9 @@ Rails:
 Metrics/LineLength:
   Max: 130
 
+Metrics/MethodLength:
+  Max: 12
+
 Style/Documentation:
   Exclude:
     - 'spec/**/*'
