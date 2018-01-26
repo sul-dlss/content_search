@@ -24,6 +24,16 @@ class IiifContentSearchResponse
     }.merge(pagination_as_json)
   end
 
+  def resources
+    return to_enum(:resources) unless block_given?
+
+    search.highlights.each do |id, hits|
+      hits.each do |hit|
+        yield Resource.new(id, hit)
+      end
+    end
+  end
+
   private
 
   def pagination_as_json
@@ -63,16 +73,6 @@ class IiifContentSearchResponse
 
   def ignored_params
     Settings.iiif.ignored_request_params.select { |param| controller.params.keys.include?(param) }
-  end
-
-  def resources
-    return to_enum(:resources) unless block_given?
-
-    search.highlights.each do |id, hits|
-      hits.each do |hit|
-        yield Resource.new(id, hit)
-      end
-    end
   end
 
   def hits
@@ -120,24 +120,24 @@ class IiifContentSearchResponse
 
     def before
       first = highlight.index('<em>')
-      highlight[0...first].split.map { |x| split_word_and_payload(x).first }.join(' ').strip
+      tokenized_text(highlight[0...first]).map(&:first).join(' ').strip
     end
 
     def after
       token = '</em>'
       last = highlight.rindex(token) + token.length
-      highlight[last..highlight.length].split.map { |x| split_word_and_payload(x).first }.join(' ').strip
+      tokenized_text(highlight[last..highlight.length]).map(&:first).join(' ').strip
     end
 
     private
 
     def chars
-      text.split.map { |x| split_word_and_payload(x) }.map(&:first).join(' ')
+      tokenized_text(text).map(&:first).join(' ')
     end
 
     def word_bboxes
       @word_bboxes ||= begin
-        text.split.map { |x| split_word_and_payload(x) }.map(&:last).compact.map do |xywh|
+        tokenized_text(text).map(&:last).compact.map do |xywh|
           x, y, w, h = xywh.split(',').map(&:to_i)
           [[x, y], [x + w, y + h]]
         end
@@ -175,6 +175,16 @@ class IiifContentSearchResponse
 
     def canvas_url
       format(Settings.purl.canvas_url, druid: druid, resource: resource_id)
+    end
+
+    def tokenized_text(text)
+      sanitized_text(text).split.map { |x| split_word_and_payload(x) }
+    end
+
+    def sanitized_text(text)
+      return text unless text.match?(/☞/)
+
+      text.sub(/^[\d+,\.]+ /, '')
     end
   end
 end
