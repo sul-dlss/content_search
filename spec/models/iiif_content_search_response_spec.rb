@@ -38,26 +38,24 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
                                           "@type": 'sc:AnnotationList'
     end
 
-    it 'has a resource for the alto highlight' do
-      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,129,85,597',
+    it 'has resources for each word in the alto highlight' do
+      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/639,129,79,243',
                                                              "@type": 'oa:Annotation',
                                                              "motivation": 'sc:painting',
                                                              "resource": {
                                                                "@type": 'cnt:ContentAsText',
-                                                               "chars": 'George Stirling’s'
+                                                               "chars": 'George'
                                                              },
-                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=633,129,85,597')
-    end
+                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=639,129,79,243')
 
-    it 'highlights the whole matching region for multi-line matches' do
-      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/639,0,177,372',
+      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,426,84,300',
                                                              "@type": 'oa:Annotation',
                                                              "motivation": 'sc:painting',
                                                              "resource": {
                                                                "@type": 'cnt:ContentAsText',
-                                                               "chars": 'George Stirling’s'
+                                                               "chars": 'Stirling’s'
                                                              },
-                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=639,0,177,372')
+                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=633,426,84,300')
     end
 
     it 'has a resource for the plain text highlight' do
@@ -74,7 +72,8 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
     it 'has hits with additional context for an ALTO resource' do
       expect(response.as_json).to include hits: include("@type": 'search:Hit',
                                                         "annotations": [
-                                                          'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,129,85,597'
+                                                          'https://purl.stanford.edu/x/iiif/canvas/y/text/at/639,129,79,243',
+                                                          'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,426,84,300'
                                                         ],
                                                         "before": '',
                                                         "after": 'Heritage')

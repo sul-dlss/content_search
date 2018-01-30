@@ -19,7 +19,7 @@ class IiifContentSearchResponse
       ],
       "@id": request.original_url,
       "@type": 'sc:AnnotationList',
-      "resources": resources.map(&:as_json),
+      "resources": resources.flat_map(&:annotations),
       "hits": hits
     }.merge(pagination_as_json)
   end
@@ -79,7 +79,7 @@ class IiifContentSearchResponse
     resources.map do |hit|
       {
         '@type': 'search:Hit',
-        'annotations': [hit.annotation_url],
+        'annotations': hit.annotation_urls,
         'before': hit.before,
         'after': hit.after
       }
@@ -95,21 +95,29 @@ class IiifContentSearchResponse
       @highlight = highlight
     end
 
-    def as_json
-      {
-        "@id": annotation_url,
-        "@type": 'oa:Annotation',
-        "motivation": 'sc:painting',
-        "resource": {
-          "@type": 'cnt:ContentAsText',
-          "chars": chars
-        },
-        "on": canvas_fragment_url
-      }
+    def annotations
+      tokens.map do |(chars, xywh)|
+        {
+          "@id": annotation_url([chars, xywh]),
+          "@type": 'oa:Annotation',
+          "motivation": 'sc:painting',
+          "resource": {
+            "@type": 'cnt:ContentAsText',
+            "chars": chars
+          },
+          "on": canvas_fragment_url(xywh)
+        }
+      end
     end
 
-    def annotation_url
-      "#{canvas_url}/text/at/#{fragment_xywh}"
+    def annotation_urls
+      tokens.map do |(chars, xywh)|
+        annotation_url([chars, xywh])
+      end
+    end
+
+    def annotation_url(token)
+      "#{canvas_url}/text/at/#{token.last}"
     end
 
     def text
@@ -131,17 +139,8 @@ class IiifContentSearchResponse
 
     private
 
-    def chars
-      tokenized_text(text).map(&:first).join(' ')
-    end
-
-    def word_bboxes
-      @word_bboxes ||= begin
-        tokenized_text(text).map(&:last).compact.map do |xywh|
-          x, y, w, h = xywh.split(',').map(&:to_i)
-          [[x, y], [x + w, y + h]]
-        end
-      end
+    def tokens
+      text.split.map { |x| split_word_and_payload(x) }
     end
 
     def split_word_and_payload(x)
@@ -152,25 +151,8 @@ class IiifContentSearchResponse
       end
     end
 
-    def bbox
-      @bbox ||= begin
-        pos1s = word_bboxes.map(&:first)
-        pos2s = word_bboxes.map(&:last)
-        {
-          x1: [pos1s.map(&:first).min, pos2s.map(&:first).min].min,
-          y1: [pos1s.map(&:last).min, pos2s.map(&:last).min].min,
-          x2: [pos1s.map(&:first).max, pos2s.map(&:first).max].max,
-          y2: [pos1s.map(&:last).max, pos2s.map(&:last).max].max
-        }
-      end
-    end
-
-    def fragment_xywh
-      [bbox[:x1], bbox[:y1], bbox[:x2] - bbox[:x1], bbox[:y2] - bbox[:y1]].join(',')
-    end
-
-    def canvas_fragment_url
-      "#{canvas_url}#xywh=#{fragment_xywh}"
+    def canvas_fragment_url(xywh)
+      "#{canvas_url}#xywh=#{xywh.split(',').map(&:to_i).join(',')}"
     end
 
     def canvas_url
