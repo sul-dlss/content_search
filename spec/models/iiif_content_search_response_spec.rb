@@ -11,6 +11,10 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
   let(:highlights) do
     {
       'x/y/alto_with_coords' => ['<em>George☞639,129,79,243 Stirling’s☞633,426,84,300</em> Heritage☞632,789,84,291'],
+      'x/y/alto_with_intermediates' => ['<em>George☞639,129,79,243</em> Emerson’s☞633,426,84,300
+<em>Heritage☞632,789,84,291</em><em>George☞639,129,79,243</em>
+Emerson’s☞633,426,84,300 <em>Heritage☞632,789,84,291</em>
+Endcap☞632,789,84,291'],
       'x/y/alto_multiline_coords' => ['<em>George☞639,129,79,243 Stirling’s☞732,0,84,291</em>'],
       'x/y/text_without_coords' => ['<em>MEMBERS</em> OF THE COUNCIL']
     }
@@ -67,6 +71,34 @@ RSpec.describe IiifContentSearchResponse, type: :controller do
                                                                "chars": 'MEMBERS'
                                                              },
                                                              "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=0,0,0,0')
+    end
+
+    describe '#resources' do
+      context 'with mixed emphasis solr responses' do
+        let(:highlights) do
+          {
+            'x/y/alto_with_intermediates' => ['<em>George☞639,129,79,243</em> Emerson’s☞633,426,84,300
+<em>Heritage☞632,789,84,291 Library☞639,129,79,243</em>
+being☞633,426,84,300 <em>demolished☞632,789,84,291</em>
+thursday☞632,789,84,291']
+          }
+        end
+
+        it 'returns 3 resources' do
+          expect(response.resources.to_a.length).to eq 3
+        end
+
+        it 'returns have multiple annotations if multiple words are emphasized' do
+          expect(response.resources.to_a[0].annotations.length).to eq 1
+          expect(response.resources.to_a[1].annotations.length).to eq 2
+          expect(response.resources.to_a[2].annotations.length).to eq 1
+        end
+
+        it 'returns the expected annotation chars' do
+          chars = response.resources.flat_map(&:annotations).map { |annotation| annotation[:resource][:chars] }
+          expect(chars).to eq %w[George Heritage Library demolished]
+        end
+      end
     end
 
     it 'has hits with additional context for an ALTO resource' do
