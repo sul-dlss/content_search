@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 class SearchController < ApplicationController #:nodoc:
-  before_action :load_search
+  before_action :load_search, except: [:home]
+
+  def home
+    head :ok
+  end
 
   def search
     response.headers['Access-Control-Allow-Origin'] = '*'
