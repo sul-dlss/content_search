@@ -24,7 +24,7 @@ class PurlObject
     return to_enum(:ocr_files) unless block_given?
 
     resources.each do |r|
-      r.xpath('file[@mimetype="application/xml" or @mimetype="application/alto+xml" or @mimetype="text/plain"]').each do |file|
+      r.xpath('file[@role="transcription"][@mimetype="application/xml" or @mimetype="application/alto+xml" or @mimetype="text/plain"]').each do |file|
         yield file unless file['size'].to_i > Settings.maximum_ocr_filesize_to_consider
       end
     end
