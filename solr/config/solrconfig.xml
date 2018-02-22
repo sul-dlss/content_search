@@ -70,7 +70,7 @@
        <str name="hl">true</str>
        <int name="hl.snippets">10</int>
        <str name="hl.fl">ocrtext_en ocrtext_id ocrtext_pt</str>
-       <str name="hl.method">fastVector</str>
+       <str name="hl.method">unified</str>
      </lst>
   </requestHandler>
 
