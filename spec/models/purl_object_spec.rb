@@ -10,7 +10,7 @@ RSpec.describe PurlObject do
     <publicObject>
       <contentMetadata>
         <resource id="y">
-          <file id="y.txt" mimetype="text/plain" />
+          <file id="y.txt" mimetype="text/plain" role="transcription" />
         </resource>
         <resource id="oversize">
           <file id="oversize.txt" size="#{100.gigabytes}" mimetype="text/plain" />
