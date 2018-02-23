@@ -11,6 +11,13 @@ RSpec.describe SearchController do
                             highlights: { 'x/y/z' => ['some <em>highlighted</em> text'] })
   end
 
+  describe 'GET home' do
+    it 'is a success' do
+      get :home
+      expect(response).to be_a_success
+    end
+  end
+
   describe 'GET search' do
     before do
       allow(Search).to receive(:new).with('x', q: 'y').and_return(search)

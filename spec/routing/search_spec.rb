@@ -12,6 +12,6 @@ RSpec.describe 'Search routes' do
   end
 
   it 'routes the root url' do
-    expect(get: '/?id=x').to route_to('search#search', id: 'x')
+    expect(get: '/').to route_to('search#home')
   end
 end
