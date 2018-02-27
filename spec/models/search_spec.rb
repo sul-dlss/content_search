@@ -25,13 +25,42 @@ RSpec.describe Search do
   end
 
   describe '#suggestions' do
-    it 'transforms Solr responses into an array of suggestions' do
-      suggestions = { 'y' => { 'suggestions' => [
-        { 'term' => 'termA', 'weight' => 1 }, { 'term' => 'termB', 'weight' => 2 }
-      ] } }
+    let(:suggestions) { { 'y' => { 'suggestions' => suggestion_values } } }
+    let(:suggestion_values) do
+      [
+        { 'term' => 'termA', 'weight' => 1 },
+        { 'term' => 'termB', 'weight' => 2 },
+        { 'term' => 'termb', 'weight' => 2 },
+        { 'term' => 'termC', 'weight' => 2 },
+        { 'term' => 'termD', 'weight' => 2 },
+        { 'term' => 'termE', 'weight' => 2 },
+        { 'term' => 'termFF', 'weight' => 3 },
+        { 'term' => 'termF', 'weight' => 3 },
+        { 'term' => 'termGgg', 'weight' => 2 }
+      ]
+    end
+
+    before do
       client = instance_double(RSolr::Client, get: { 'suggest' => { 'mySuggester' => suggestions } })
       allow(described_class).to receive(:client).and_return(client)
-      expect(search.suggestions).to match_array [{ 'term' => 'termB', 'weight' => 2 }, { 'term' => 'termA', 'weight' => 1 }]
+    end
+
+    it 'grabs unique terms by case' do
+      expect(search.suggestions.select { |s| s['term'].casecmp('termb').zero? }.count).to eq 1
+    end
+
+    it 'sorts the values by weight and then reverse length' do
+      expect(search.suggestions).to match_array [
+        { 'term' => 'termF', 'weight' => 3 },
+        { 'term' => 'termFF', 'weight' => 3 },
+        { 'term' => 'termB', 'weight' => 2 },
+        { 'term' => 'termC', 'weight' => 2 },
+        { 'term' => 'termD', 'weight' => 2 }
+      ]
+    end
+
+    it 'takes the last 5' do
+      expect(search.suggestions.count).to eq 5
     end
   end
 
