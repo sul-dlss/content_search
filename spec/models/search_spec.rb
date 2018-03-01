@@ -3,7 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe Search do
-  subject(:search) { described_class.new('x', q: 'y') }
+  subject(:search) { described_class.new('x', q: q) }
+
+  let(:q) { 'y' }
 
   describe '.client' do
     it 'returns an RSolr client' do
@@ -25,11 +27,23 @@ RSpec.describe Search do
   end
 
   describe '#suggestions' do
-    it 'transforms Solr responses into an array of suggestions' do
-      suggestions = { 'y' => { 'suggestions' => [{ term: 'termA' }, { term: 'termB' }] } }
-      client = instance_double(RSolr::Client, get: { 'suggest' => { 'mySuggester' => suggestions } })
-      allow(described_class).to receive(:client).and_return(client)
-      expect(search.suggestions).to match_array [{ term: 'termA' }, { term: 'termB' }]
+    subject { search.suggestions }
+
+    context 'when the query parameter is set' do
+      let(:suggestions) { { 'y' => { 'suggestions' => [{ term: 'termA' }, { term: 'termB' }] } } }
+      let(:client) { instance_double(RSolr::Client, get: { 'suggest' => { 'mySuggester' => suggestions } }) }
+
+      before { allow(described_class).to receive(:client).and_return(client) }
+
+      it 'transforms Solr responses into an array of suggestions' do
+        expect(search.suggestions).to match_array [{ term: 'termA' }, { term: 'termB' }]
+      end
+    end
+
+    context 'when the query parameter is nil' do
+      let(:q) { nil }
+
+      it { is_expected.to eq [] }
     end
   end
 
