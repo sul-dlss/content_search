@@ -23,6 +23,14 @@ RSpec.describe SearchController do
       allow(Search).to receive(:new).with('x', q: 'y').and_return(search)
     end
 
+    context 'without required parameters' do
+      it 'renders a 400 Bad Request error' do
+        expect do
+          get :search, params: { id: 'x' }
+        end.to raise_exception ActionController::ParameterMissing
+      end
+    end
+
     it 'executes a search and transforms it into a content search response' do
       get :search, params: { id: 'x', q: 'y', motivation: 'painting' }
 
