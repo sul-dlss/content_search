@@ -24,6 +24,7 @@ class SearchController < ApplicationController #:nodoc:
   end
 
   def search_params
+    params.require(:q)
     params.permit(:id, :q, :start)
   end
 end
