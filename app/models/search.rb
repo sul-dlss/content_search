@@ -8,7 +8,7 @@ class Search
     RSolr.connect(url: Settings.solr.url)
   end
 
-  def initialize(id, q:, start: 0)
+  def initialize(id, q: nil, start: 0)
     @id = id
     @q = q
     @start = start
@@ -26,6 +26,7 @@ class Search
   end
 
   def suggestions
+    return [] unless q
     suggest_response['suggest'].values.first[q]['suggestions']
   end
 
