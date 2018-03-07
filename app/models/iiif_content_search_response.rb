@@ -28,8 +28,11 @@ class IiifContentSearchResponse
     return to_enum(:resources) unless block_given?
 
     search.highlights.each do |id, hits|
+      # Hit here refers to the Solr hit
       hits.each do |hit|
-        yield Resource.new(id, hit)
+        hit.to_enum(:scan, %r{<em>.*?</em>}).each do |*_match|
+          yield Resource.new(id, Regexp.last_match)
+        end
       end
     end
   end
@@ -88,11 +91,13 @@ class IiifContentSearchResponse
 
   # Transform individual search highlights into IIIF resource annotations
   class Resource
-    attr_reader :druid, :resource_id, :filename, :highlight
+    attr_reader :druid, :resource_id, :filename, :highlight, :pre_match, :post_match
 
     def initialize(id, highlight)
       @druid, @resource_id, @filename = id.split('/')
-      @highlight = highlight
+      @highlight = strip_em highlight.to_s
+      @pre_match = strip_em highlight.pre_match
+      @post_match = strip_em highlight.post_match
     end
 
     def annotations
@@ -120,27 +125,18 @@ class IiifContentSearchResponse
       "#{canvas_url}/text/at/#{token.last}"
     end
 
-    def text
-      first = highlight.index('<em>')
-      last = highlight.rindex('</em>')
-      highlight[first...last].gsub(%r{</?em>}, '')
-    end
-
     def before
-      first = highlight.index('<em>')
-      tokenized_text(highlight[0...first]).map(&:first).join(' ').strip
+      tokenized_text(pre_match).map(&:first).join(' ').strip
     end
 
     def after
-      token = '</em>'
-      last = highlight.rindex(token) + token.length
-      tokenized_text(highlight[last..highlight.length]).map(&:first).join(' ').strip
+      tokenized_text(post_match).map(&:first).join(' ').strip
     end
 
     private
 
     def tokens
-      text.split.map { |x| split_word_and_payload(x) }
+      highlight.split.map { |x| split_word_and_payload(x) }
     end
 
     def split_word_and_payload(x)
@@ -161,6 +157,10 @@ class IiifContentSearchResponse
 
     def tokenized_text(text)
       sanitized_text(text).split.map { |x| split_word_and_payload(x) }
+    end
+
+    def strip_em(text)
+      text.gsub(%r{</?em>}, '')
     end
 
     def sanitized_text(text)
