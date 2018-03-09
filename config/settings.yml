@@ -16,4 +16,5 @@ solr:
   highlight_params:
     fl: 'id'
   suggest_path: 'suggest'
-  suggest_params: {}
+  suggest_params:
+    'suggest.count': 1000
