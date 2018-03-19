@@ -28,7 +28,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
 
-  gem 'coveralls', require: false
+  gem 'coveralls', '~> 0.8', require: false
   gem 'simplecov'
 
   gem 'rubocop'
