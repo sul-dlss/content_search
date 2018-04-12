@@ -30,7 +30,7 @@ class IiifContentSearchResponse
     search.highlights.each do |id, hits|
       # Hit here refers to the Solr hit
       hits.each do |hit|
-        hit.to_enum(:scan, %r{<em>.*?</em>}).each do |*_match|
+        hit.gsub('</em> <em>', ' ').to_enum(:scan, %r{<em>.*?</em>}).each do |*_match|
           yield Resource.new(id, Regexp.last_match)
         end
       end
