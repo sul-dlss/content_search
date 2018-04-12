@@ -84,7 +84,8 @@ class IiifContentSearchResponse
         '@type': 'search:Hit',
         'annotations': hit.annotation_urls,
         'before': hit.before,
-        'after': hit.after
+        'after': hit.after,
+        'match': hit.match
       }
     end
   end
@@ -131,6 +132,10 @@ class IiifContentSearchResponse
 
     def after
       tokenized_text(post_match).map(&:first).join(' ').strip
+    end
+
+    def match
+      tokenized_text(highlight).map(&:first).join(' ').strip
     end
 
     private
