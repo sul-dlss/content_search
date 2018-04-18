@@ -34,6 +34,20 @@ Endcap☞632,789,84,291'],
     end
   end
 
+  describe '#match' do
+    context 'with truncated coordinate payloads in the highlight' do
+      let(:highlights) do
+        {
+          'x/truncated_highlight_coords/alto' => ['0,2 George☞639,129,79,243 <em>Stirling’s☞633,426,84,300</em>']
+        }
+      end
+
+      it 'strips leading payload fragments' do
+        expect(response.resources.first.match).to eq 'Stirling’s'
+      end
+    end
+  end
+
   describe '#as_json' do
     it 'has the expected json-ld properties' do
       expect(response.as_json).to include "@context": ['http://iiif.io/api/presentation/2/context.json',
@@ -100,6 +114,22 @@ thursday☞632,789,84,291']
         end
       end
     end
+    context 'with adjacent hits' do
+      let(:highlights) do
+        {
+          '' => [
+            'as☞1590.12,1094.11,46.81,33.89 <em>crimes☞1660.33,1094.11,140.42,3'\
+            '3.89</em> <em>against☞1824.15,1094.11,163.82,33.89</em> <em>humani'\
+            'ty,☞2011.38,1094.11,210.62,33.89</em> contrary☞674.90,1140.00,179.'\
+            '61,32.48 to☞899.41,1140.00,44.90,32.48'
+          ]
+        }
+      end
+
+      it 'combines together into a single hit' do
+        expect(response.resources.to_a[0].match).to eq 'crimes against humanity,'
+      end
+    end
 
     it 'has hits with additional context for an ALTO resource' do
       expect(response.as_json).to include hits: include("@type": 'search:Hit',
@@ -108,7 +138,8 @@ thursday☞632,789,84,291']
                                                           'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,426,84,300'
                                                         ],
                                                         "before": '',
-                                                        "after": 'Heritage')
+                                                        "after": 'Heritage',
+                                                        "match": 'George Stirling’s')
     end
 
     it 'has hits with additional context for a plain text resource' do
@@ -117,7 +148,8 @@ thursday☞632,789,84,291']
                                                           'https://purl.stanford.edu/x/iiif/canvas/y/text/at/0,0,0,0'
                                                         ],
                                                         "before": '',
-                                                        "after": 'OF THE COUNCIL')
+                                                        "after": 'OF THE COUNCIL',
+                                                        "match": 'MEMBERS')
     end
 
     it 'has basic pagination context' do

@@ -59,7 +59,8 @@ class Search
     Settings.solr.highlight_params.to_h.merge(
       fq: ["druid:#{id}"],
       rows: rows,
-      start: start
+      start: start,
+      'hl.tag.ellipsis' => ' ' # Gives the after block in missing cases
     )
   end
 
