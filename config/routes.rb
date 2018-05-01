@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   delete '/items/:druid/(*subtargets)', to: 'items#destroy'
 
   mount OkComputer::Engine, at: "/status"
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end
