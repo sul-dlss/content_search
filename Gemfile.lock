@@ -72,11 +72,15 @@ GEM
       capistrano (~> 3.0)
       sshkit (~> 1.2)
     capistrano-shared_configs (0.2.2)
+    capistrano-sidekiq (1.0.2)
+      capistrano (>= 3.9.0)
+      sidekiq (>= 3.4)
     concurrent-ruby (1.0.5)
     config (1.7.0)
       activesupport (>= 3.0)
       deep_merge (~> 1.2.1)
       dry-validation (>= 0.10.4)
+    connection_pool (2.2.1)
     coveralls (0.8.21)
       json (>= 1.8, < 3)
       simplecov (~> 0.14.1)
@@ -161,6 +165,8 @@ GEM
     powerpack (0.1.1)
     puma (3.11.4)
     rack (2.0.5)
+    rack-protection (2.0.1)
+      rack
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.2.0)
@@ -192,6 +198,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redis (4.0.1)
     retriable (3.1.1)
     rsolr (2.1.0)
       builder (>= 2.1.2)
@@ -225,6 +232,11 @@ GEM
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
+    sidekiq (5.1.3)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     simplecov (0.14.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -272,6 +284,7 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-passenger
   capistrano-rvm
+  capistrano-sidekiq
   config
   coveralls (~> 0.8)
   dlss-capistrano
@@ -287,6 +300,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   rubocop-rspec
+  sidekiq
   simplecov
   solr_wrapper
   spring

@@ -49,6 +49,7 @@ group :deployment do
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'
+  gem 'capistrano-sidekiq'
   gem 'dlss-capistrano'
 end
 
@@ -62,3 +63,4 @@ gem 'nokogiri'
 gem 'okcomputer'
 gem 'parallel'
 gem 'rsolr'
+gem 'sidekiq'
