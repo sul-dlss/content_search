@@ -59,6 +59,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'config'
 gem 'faraday'
 gem 'honeybadger'
+gem 'newrelic_rpm', group: :production
 gem 'nokogiri'
 gem 'okcomputer'
 gem 'parallel'
