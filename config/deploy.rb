@@ -20,7 +20,7 @@ set :deploy_to, "/opt/app/contentsearch/contentsearch"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/master.key", "config/honeybadger.yml"
+append :linked_files, "config/master.key", "config/honeybadger.yml", "config/newrelic.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "config/settings"
