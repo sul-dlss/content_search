@@ -30,7 +30,7 @@ class IiifAutocompleteResponse
   end
 
   def ignored_params
-    Settings.iiif.ignored_request_params.select { |param| controller.params.keys.include?(param) }
+    Settings.iiif.ignored_request_params.select { |param| controller.params.key?(param) }
   end
 
   def terms
