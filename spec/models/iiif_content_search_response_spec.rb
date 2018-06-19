@@ -114,6 +114,7 @@ thursday☞632,789,84,291']
         end
       end
     end
+
     context 'with adjacent hits' do
       let(:highlights) do
         {
