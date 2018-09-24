@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sul-dlss/purl_fetcher-client.git
-  revision: 7109f88fe3431a02f34b9e78c467050c78c207ac
+  revision: 18806d506f9381159a5e955a3755a2168c0a98ea
   specs:
     purl_fetcher-client (0.1.0)
       http
