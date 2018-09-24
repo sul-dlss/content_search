@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sul-dlss/purl_fetcher-client.git
-  revision: ceb71bc41792c02b72618e0c43868e0232f11e70
+  revision: 7109f88fe3431a02f34b9e78c467050c78c207ac
   specs:
     purl_fetcher-client (0.1.0)
       http
@@ -140,7 +140,7 @@ GEM
     edtf (3.0.4)
       activesupport (>= 3.0, < 6.0)
     erubi (1.7.1)
-    faraday (0.15.2)
+    faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
     globalid (0.4.1)
@@ -194,7 +194,7 @@ GEM
       activesupport (>= 3.2.18)
       i18n
       nokogiri
-    okcomputer (1.17.2)
+    okcomputer (1.17.3)
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
@@ -257,7 +257,7 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    rubocop (0.59.1)
+    rubocop (0.59.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
