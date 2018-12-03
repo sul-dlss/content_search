@@ -69,9 +69,10 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
-    capistrano-bundle_audit (0.2.1)
+    capistrano-bundle_audit (0.2.2)
       bundler-audit (~> 0.5)
       capistrano (~> 3.0)
+      capistrano-bundler (~> 1.4)
     capistrano-bundler (1.4.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
