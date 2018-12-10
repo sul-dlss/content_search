@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/sul-dlss/content_search.svg?branch=master)](https://travis-ci.org/sul-dlss/content_search)
-[![Coverage Status](https://coveralls.io/repos/github/sul-dlss/content_search/badge.svg?branch=master)](https://coveralls.io/github/sul-dlss/content_search?branch=master)
 [![Code Climate](https://codeclimate.com/github/sul-dlss/content_search/badges/gpa.svg)](https://codeclimate.com/github/sul-dlss/content_search)
 [![Code Climate Test Coverage](https://codeclimate.com/github/sul-dlss/content_search/badges/coverage.svg)](https://codeclimate.com/github/sul-dlss/content_search/coverage)
 [![GitHub version](https://badge.fury.io/gh/sul-dlss%2Fcontent_search.svg)](https://badge.fury.io/gh/sul-dlss%2Fcontent_search)
