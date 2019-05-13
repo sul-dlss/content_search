@@ -32,6 +32,7 @@ group :development, :test do
   gem 'simplecov'
 
   gem 'rubocop'
+  gem 'rubocop-performance'
   gem 'rubocop-rspec'
 
   gem 'solr_wrapper'

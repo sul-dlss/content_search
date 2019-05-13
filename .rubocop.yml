@@ -1,6 +1,8 @@
 inherit_from: .rubocop_todo.yml
 
-require: rubocop-rspec
+require:
+  - rubocop-rspec
+  - rubocop-performance
 
 AllCops:
   TargetRubyVersion: 2.5
@@ -35,7 +37,7 @@ RSpec/ExampleLength:
   Max: 10
 
 RSpec/NestedGroups:
-  Max: 4 
+  Max: 4
 
 RSpec/MultipleExpectations:
   Max: 3
