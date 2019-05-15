@@ -62,7 +62,7 @@ $ bundle exec solr_wrapper
 Content can be indexed from the Rails console:
 
 ```
-> druid = 'jg072yr3056' # e.g.
+> druid = 'bb034nj7139' # e.g.
 > IndexFullTextContentJob.perform_now(druid)
 ```
 You may need to commit this separately
