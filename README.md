@@ -62,7 +62,7 @@ $ bundle exec solr_wrapper
 Content can be indexed from the Rails console:
 
 ```
-> druid = 'jg072yr3056' # e.g.
+> druid = 'bb034nj7139' # e.g.
 > IndexFullTextContentJob.perform_now(druid)
 ```
 You may need to commit this separately
@@ -74,6 +74,12 @@ You may need to commit this separately
 ### Updating the spellcheck database
 
 After indexing content, you may need to ask Solr to update the spellcheck database to enable autocomplete
+
+```ruby
+> BuildSuggestJob.perform_now
+```
+
+or
 
 ```sh
 $ curl http://127.0.0.1:8983/solr/content_search/suggest?suggest.build=true
