@@ -14,7 +14,7 @@ RSpec.describe SearchController do
   describe 'GET home' do
     it 'is a success' do
       get :home
-      expect(response).to be_a_success
+      expect(response).to be_successful
     end
   end
 
