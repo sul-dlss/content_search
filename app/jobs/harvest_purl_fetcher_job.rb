@@ -8,7 +8,7 @@ class HarvestPurlFetcherJob < ApplicationJob
     first_modified ||= File.read(STATE_FILE).strip if File.exist? STATE_FILE
     perform_deletes(first_modified)
     most_recent_timestamp = perform_indexes(first_modified)
-    write_state_file(most_recent_timestamp) if most_recent_timestamp
+    write_state_file(most_recent_timestamp) if first_modified.nil? || (most_recent_timestamp > first_modified)
   end
 
   private
@@ -24,12 +24,12 @@ class HarvestPurlFetcherJob < ApplicationJob
   def perform_indexes(first_modified)
     client = PurlFetcher::Client::Reader.new('', 'purl_fetcher.first_modified' => first_modified)
     last_record = nil
-    client.each do |record|
+    client.each do |record, _change, meta|
       IndexFullTextContentJob.perform_later(record.druid)
-      last_record = record
+      last_record = meta
     end
 
-    last_record.public_xml_doc.root['published'] if last_record
+    last_record['range']['last_updated'] if last_record
   end
 
   def write_state_file(timestamp)
