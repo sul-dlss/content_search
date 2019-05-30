@@ -14,13 +14,18 @@ RSpec.describe HarvestPurlFetcherJob do
       instance_double(PurlFetcher::Client::PublicXmlRecord, druid: 'delete_b')
     ]
   end
+
+  let(:time) { '2018-09-18T01:02:03' }
+
   let(:reader) do
-    [
-      instance_double(PurlFetcher::Client::PublicXmlRecord, druid: 'new_c'),
-      instance_double(PurlFetcher::Client::PublicXmlRecord, druid: 'new_d', public_xml_doc: doc)
-    ]
+    dbl = double
+    allow(dbl).to receive(:each).and_yield(
+      instance_double(PurlFetcher::Client::PublicXmlRecord, druid: 'new_c'), nil, nil
+    ).and_yield(
+      instance_double(PurlFetcher::Client::PublicXmlRecord, druid: 'new_d'), nil, 'range' => { 'last_updated' => time }
+    )
+    dbl
   end
-  let(:doc) { Nokogiri::XML('<publicObject published="2018-09-18T01:02:03" />') }
 
   describe '#perform' do
     before do
@@ -38,7 +43,7 @@ RSpec.describe HarvestPurlFetcherJob do
     it 'tracks the most recently retrieved timestamp' do
       described_class.perform_now
 
-      expect(File.read(described_class::STATE_FILE).strip).to eq '2018-09-18T01:02:03'
+      expect(File.read(described_class::STATE_FILE).strip).to eq time
     end
 
     it 'deletes content' do
