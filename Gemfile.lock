@@ -192,7 +192,7 @@ GEM
       ast (~> 2.4.0)
     public_suffix (3.1.0)
     puma (3.12.1)
-    purl_fetcher-client (0.2.0)
+    purl_fetcher-client (0.3.0)
       http
       nokogiri
       stanford-mods
@@ -230,7 +230,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    redis (4.1.1)
+    redis (4.1.2)
     retriable (3.1.2)
     rsolr (2.2.1)
       builder (>= 2.1.2)
@@ -252,7 +252,7 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    rubocop (0.70.0)
+    rubocop (0.71.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
@@ -338,7 +338,7 @@ DEPENDENCIES
   okcomputer
   parallel
   puma (~> 3.11)
-  purl_fetcher-client (~> 0.2)
+  purl_fetcher-client (~> 0.3)
   rails (~> 5.2.0)
   rsolr
   rspec-rails
