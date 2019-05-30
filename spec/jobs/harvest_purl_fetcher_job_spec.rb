@@ -18,12 +18,17 @@ RSpec.describe HarvestPurlFetcherJob do
   let(:time) { '2018-09-18T01:02:03' }
 
   let(:reader) do
-    dbl = double
-    allow(dbl).to receive(:each).and_yield(
-      instance_double(PurlFetcher::Client::PublicXmlRecord, druid: 'new_c'), nil, nil
-    ).and_yield(
-      instance_double(PurlFetcher::Client::PublicXmlRecord, druid: 'new_d'), nil, 'range' => { 'last_updated' => time }
-    )
+    o = Object.new
+
+    def o.each
+      return to_enum(:each) unless block_given?
+
+      yield(OpenStruct.new(druid: 'new_c'), 'updated_at' => nil)
+      yield(OpenStruct.new(druid: 'new_d'), 'updated_at' => nil)
+    end
+
+    dbl = instance_double(PurlFetcher::Client::Reader, range: { 'last_updated' => time })
+    allow(dbl).to receive(:each_slice) { |&block| o.each.each_slice(100, &block) }
     dbl
   end
 

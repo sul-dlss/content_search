@@ -64,7 +64,7 @@ gem 'newrelic_rpm', group: :production
 gem 'nokogiri'
 gem 'okcomputer'
 gem 'parallel'
-gem 'purl_fetcher-client', '~> 0.2'
+gem 'purl_fetcher-client', '~> 0.3'
 gem 'rsolr'
 gem 'sidekiq'
 gem 'whenever'
