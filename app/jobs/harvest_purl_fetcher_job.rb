@@ -43,7 +43,7 @@ class HarvestPurlFetcherJob < ApplicationJob
       yield ts if ts
     end
 
-    yield client.range['last_updated']
+    yield client.range['last_modified']
   end
 
   def with_state_file
