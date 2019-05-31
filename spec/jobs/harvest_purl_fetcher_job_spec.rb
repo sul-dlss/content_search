@@ -27,7 +27,7 @@ RSpec.describe HarvestPurlFetcherJob do
       yield(OpenStruct.new(druid: 'new_d'), 'updated_at' => nil)
     end
 
-    dbl = instance_double(PurlFetcher::Client::Reader, range: { 'last_updated' => time })
+    dbl = instance_double(PurlFetcher::Client::Reader, range: { 'last_modified' => time })
     allow(dbl).to receive(:each_slice) { |&block| o.each.each_slice(100, &block) }
     dbl
   end
