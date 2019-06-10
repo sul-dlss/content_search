@@ -2,10 +2,10 @@
 
 # Update the Spellcheck database to enable autocomplete
 class BuildSuggestJob < ApplicationJob
-  def perform
-    Search.client.send_and_receive(
-      'suggest',
-      params: { 'suggest.build' => true }
-    )
+  def perform(url, collection_name)
+    conn = Faraday.new(url)
+    conn.get do |req|
+      req.url "#{collection_name}/suggest", 'suggest.build' => true
+    end
   end
 end
