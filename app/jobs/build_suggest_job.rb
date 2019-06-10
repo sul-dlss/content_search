@@ -2,6 +2,8 @@
 
 # Update the Spellcheck database to enable autocomplete
 class BuildSuggestJob < ApplicationJob
+  discard_on RSolr::Error::Http
+
   def perform(url, collection_name)
     conn = Faraday.new(url)
     conn.get do |req|
