@@ -5,5 +5,5 @@ end
 
 # Build suggest index (enabling autocomplete)
 every '0 3 * * *' do
-  runner 'BuildSuggestJob.perform_now'
+  runner 'BuildCollectionSuggestJob.perform_now'
 end
