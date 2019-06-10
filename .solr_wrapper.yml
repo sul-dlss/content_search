@@ -4,3 +4,4 @@
 collection:
   dir: solr/config/
   name: content_search
+cloud: true
