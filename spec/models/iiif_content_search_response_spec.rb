@@ -115,6 +115,22 @@ thursday☞632,789,84,291']
       end
     end
 
+    context 'with results with slightly different highlights due to language-specific stemming differences' do
+      let(:highlights) do
+        {
+          'zx429wp8334/zx429wp8334_35/36105115596277_0036.xml' => [
+            '<em>flower☞855,685,96,27</em> of☞972,682,29,28 <em>flowers.☞1024,682,120,27</em>',
+            '<em>flower☞855,685,96,27</em> of☞972,682,29,28 flowers.'
+          ]
+        }
+      end
+
+      it 'deduplicates based on the actual highlight and returns only 2 resources' do
+        expect(response.as_json[:resources].length).to eq 2
+        expect(response.as_json[:hits].length).to eq 2
+      end
+    end
+
     context 'with adjacent hits' do
       let(:highlights) do
         {

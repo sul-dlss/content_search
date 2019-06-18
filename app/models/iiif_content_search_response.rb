@@ -19,7 +19,7 @@ class IiifContentSearchResponse
       ],
       "@id": request.original_url,
       "@type": 'sc:AnnotationList',
-      "resources": resources.flat_map(&:annotations),
+      "resources": resources.flat_map(&:annotations).uniq { |a| a[:'@id'] },
       "hits": hits
     }.merge(pagination_as_json)
   end
@@ -79,7 +79,7 @@ class IiifContentSearchResponse
   end
 
   def hits
-    resources.map do |hit|
+    resources.uniq(&:annotation_urls).map do |hit|
       {
         '@type': 'search:Hit',
         'annotations': hit.annotation_urls,

@@ -2,6 +2,8 @@
 
 # Solr search model
 class Search
+  include ActiveSupport::Benchmarkable
+
   attr_reader :id, :q, :start, :rows
 
   def self.client
@@ -52,7 +54,10 @@ class Search
   end
 
   def get(url, params:)
-    self.class.client.get(url, params: params.reverse_merge(q: q))
+    p = params.reverse_merge(q: q)
+    benchmark "Fetching Search#get(#{url}, params: #{p})", level: :debug do
+      self.class.client.get(url, params: p)
+    end
   end
 
   def highlight_request_params
@@ -68,5 +73,9 @@ class Search
     Settings.solr.suggest_params.to_h.merge(
       'suggest.cfq' => id
     )
+  end
+
+  def logger
+    Rails.logger
   end
 end
