@@ -42,6 +42,9 @@ RSpec/NestedGroups:
 RSpec/MultipleExpectations:
   Max: 3
 
+RSpec/MessageSpies:
+  Enabled: false
+
 Style/NumericLiterals:
   Enabled: false
 
