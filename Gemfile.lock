@@ -262,11 +262,11 @@ GEM
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     rubyzip (1.2.3)
-    sidekiq (6.0.0)
-      connection_pool (>= 2.2.2)
-      rack (>= 2.0.0)
-      rack-protection (>= 2.0.0)
-      redis (>= 4.1.0)
+    sidekiq (5.2.7)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack (>= 1.5.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     simplecov (0.17.0)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -336,7 +336,7 @@ DEPENDENCIES
   rubocop
   rubocop-performance
   rubocop-rspec
-  sidekiq
+  sidekiq (~> 5.0)
   simplecov
   solr_wrapper
   spring
