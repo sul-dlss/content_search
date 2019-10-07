@@ -46,7 +46,7 @@ RSpec.describe Search do
     end
 
     it 'grabs unique terms by case' do
-      expect(search.suggestions.select { |s| s['term'].casecmp('termb').zero? }.count).to eq 1
+      expect(search.suggestions.count { |s| s['term'].casecmp('termb').zero? }).to eq 1
     end
 
     it 'sorts the values by weight and then reverse length' do
