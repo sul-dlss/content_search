@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'alto_payload_delimited_transformer'
+require 'hocr_payload_delimited_transformer'
 require 'plain_text_payload_delimited_transformer'
 
 require 'active_support/core_ext/module/delegation'
@@ -34,6 +35,8 @@ class FullTextIndexer
     case mimetype
     when 'application/xml', 'application/alto+xml'
       AltoPayloadDelimitedTransformer.new(content)
+    when 'text/html'
+      HocrPayloadDelimitedTransformer.new(content)
     when 'text/plain'
       PlainTextPayloadDelimitedTransformer.new(content)
     end
