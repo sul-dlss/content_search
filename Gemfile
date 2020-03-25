@@ -49,7 +49,6 @@ group :deployment do
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'
-  gem 'capistrano-sidekiq'
   gem 'dlss-capistrano'
 end
 
@@ -65,5 +64,5 @@ gem 'okcomputer'
 gem 'parallel'
 gem 'purl_fetcher-client', '~> 0.3'
 gem 'rsolr'
-gem 'sidekiq', '~> 5.0'
+gem 'sidekiq', '~> 6.0'
 gem 'whenever'

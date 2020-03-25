@@ -74,9 +74,6 @@ GEM
       capistrano (~> 3.0)
       sshkit (~> 1.2)
     capistrano-shared_configs (0.2.2)
-    capistrano-sidekiq (1.0.3)
-      capistrano (>= 3.9.0)
-      sidekiq (>= 3.4, < 6.0)
     chronic (0.10.2)
     concurrent-ruby (1.1.6)
     config (2.2.1)
@@ -202,7 +199,7 @@ GEM
       http
       nokogiri
       stanford-mods
-    rack (2.0.9)
+    rack (2.2.2)
     rack-protection (2.0.8.1)
       rack
     rack-test (1.1.0)
@@ -274,11 +271,11 @@ GEM
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
-    sidekiq (5.2.8)
-      connection_pool (~> 2.2, >= 2.2.2)
-      rack (< 2.1.0)
-      rack-protection (>= 1.5.0)
-      redis (>= 3.3.5, < 5)
+    sidekiq (6.0.6)
+      connection_pool (>= 2.2.2)
+      rack (~> 2.0)
+      rack-protection (>= 2.0.0)
+      redis (>= 4.1.0)
     simplecov (0.18.5)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -329,7 +326,6 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-passenger
   capistrano-rvm
-  capistrano-sidekiq
   config
   dlss-capistrano
   faraday
@@ -347,7 +343,7 @@ DEPENDENCIES
   rubocop
   rubocop-performance
   rubocop-rspec
-  sidekiq (~> 5.0)
+  sidekiq (~> 6.0)
   simplecov
   solr_wrapper
   spring
@@ -356,4 +352,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.0.1
+   2.1.2

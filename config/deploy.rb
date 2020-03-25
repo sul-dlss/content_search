@@ -44,3 +44,11 @@ set :honeybadger_env, fetch(:stage)
 before 'deploy:restart', 'shared_configs:update'
 
 set :whenever_roles, [:indexer]
+
+namespace :deploy do
+  after :restart, :restart_sidekiq do
+    on roles(:app) do
+      sudo :systemctl, "restart", "sidekiq-*", raise_on_non_zero_exit: false
+    end
+  end
+end
