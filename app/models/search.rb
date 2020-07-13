@@ -3,6 +3,7 @@
 # Solr search model
 class Search
   include ActiveSupport::Benchmarkable
+  include Locking
 
   attr_reader :id, :q, :start, :rows
 
@@ -36,6 +37,8 @@ class Search
   # - Take the last 5 results
   # rubocop:disable Metrics/AbcSize
   def suggestions
+    return [] unless suggest_response['suggest']&.values&.first&.fetch(q, false)
+
     suggest_response['suggest'].values.first[q]['suggestions']
                                .uniq { |s| s['term'].downcase }
                                .sort_by { |s| (-s['weight']) * 100 + s['term'].length }
@@ -46,17 +49,63 @@ class Search
   private
 
   def highlight_response
-    @highlight_response ||= get(Settings.solr.highlight_path, params: highlight_request_params)
+    @highlight_response ||= begin
+      response = get(Settings.solr.highlight_path, params: highlight_request_params)
+
+      if response.dig('response', 'numFound')&.zero?
+        reindex_document
+
+        response = get(Settings.solr.highlight_path, params: highlight_request_params)
+      end
+
+      response.tap { bookkeep! }
+    end
   end
 
   def suggest_response
-    @suggest_response ||= get(Settings.solr.suggest_path, params: suggest_request_params)
+    @suggest_response ||= begin
+      response = suggest_request
+      response = suggest_request(rebuild: true) if response.nil? || (response['suggest']&.values&.dig(0, q, 'numFound') || 0)&.zero?
+
+      response.tap { bookkeep! }
+    end
+  end
+
+  def suggest_request(rebuild: false)
+    rebuild_suggester if rebuild
+    get(Settings.solr.suggest_path, params: suggest_request_params)
+  rescue RSolr::Error::Http => e
+    raise(e) unless e&.response&.dig(:body)&.match(/suggester was not built/)
+
+    nil
   end
 
   def get(url, params:)
     p = params.reverse_merge(q: q)
     benchmark "Fetching Search#get(#{url}, params: #{p})", level: :debug do
       self.class.client.get(url, params: p)
+    end
+  end
+
+  def any_results_for_document?
+    response = get(Settings.solr.highlight_path, params: { q: "druid:#{id}", rows: 0, fl: 'id' })
+
+    response['response']['numFound'].positive?
+  end
+
+  def reindex_document
+    with_lock("indexing_lock_#{id.parameterize}") do |locked_on_first_try|
+      next if !locked_on_first_try || any_results_for_document?
+
+      IndexFullTextContentJob.perform_now(id, commit: true)
+    end
+  end
+
+  def rebuild_suggester
+    reindex_document
+
+    with_lock "indexing_lock_suggester_#{id}" do |locked_on_first_try|
+      BuildSuggestJob.perform_now if locked_on_first_try
     end
   end
 
@@ -77,5 +126,12 @@ class Search
 
   def logger
     Rails.logger
+  end
+
+  # Do some bookkeeping to keep track of the last time this record was used
+  def bookkeep!
+    Thread.new do
+      Search.client.add([{ id: id, druid: id, resource_id: 'druid' }], add_attributes: { commitWithin: (1.hour.to_i * 1000) })
+    end
   end
 end

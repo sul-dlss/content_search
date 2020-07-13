@@ -18,14 +18,22 @@ RSpec.describe Search do
   describe '#highlights' do
     it 'transforms Solr responses into a hash' do
       highlights = { 'ocrtext' => %w[1 2], 'ocrtext_lang' => %w[2 3] }
-      client = instance_double(RSolr::Client, get: { 'highlighting' => { 'x' => highlights } })
+      client = instance_double(RSolr::Client, get: { 'response' => { 'numFound' => 3 }, 'highlighting' => { 'x' => highlights } })
       allow(described_class).to receive(:client).and_return(client)
       expect(search.highlights).to include 'x' => match_array(%w[1 2 3])
+    end
+
+    it 'kicks off indexing if no results were found' do
+      client = instance_double(RSolr::Client, get: { 'response' => { 'numFound' => 0 }, 'highlighting' => {} })
+      allow(described_class).to receive(:client).and_return(client)
+      allow(IndexFullTextContentJob).to receive(:perform_now)
+      search.highlights
+      expect(IndexFullTextContentJob).to have_received(:perform_now).with('x', commit: true)
     end
   end
 
   describe '#suggestions' do
-    let(:suggestions) { { 'y' => { 'suggestions' => suggestion_values } } }
+    let(:suggestions) { { 'y' => { 'numFound' => 10, 'suggestions' => suggestion_values } } }
     let(:suggestion_values) do
       [
         { 'term' => 'termA', 'weight' => 1 },
@@ -61,6 +69,16 @@ RSpec.describe Search do
 
     it 'takes the last 5' do
       expect(search.suggestions.count).to eq 5
+    end
+
+    it 'kicks off indexing and suggestions build if no results were found' do
+      client = instance_double(RSolr::Client, get: { 'response' => { 'numFound' => 0 } })
+      allow(described_class).to receive(:client).and_return(client)
+      allow(IndexFullTextContentJob).to receive(:perform_now)
+      allow(BuildSuggestJob).to receive(:perform_now)
+      search.suggestions
+      expect(IndexFullTextContentJob).to have_received(:perform_now).with('x', commit: true)
+      expect(BuildSuggestJob).to have_received(:perform_now)
     end
   end
 

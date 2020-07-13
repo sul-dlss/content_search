@@ -36,7 +36,8 @@ class HarvestPurlFetcherJob < ApplicationJob
     client = PurlFetcher::Client::Reader.new('', 'purl_fetcher.first_modified' => first_modified)
     client.each_slice(1000) do |batch|
       batch.each do |record, _change|
-        IndexFullTextContentJob.perform_later(record.druid)
+        # Delete the content and let on-demand indexing reindex it
+        DeleteContentFromIndexJob.perform_later(record.druid)
       end
 
       ts = batch.map { |_, change| Time.zone.parse(change['updated_at']) if change['updated_at'] }.max
