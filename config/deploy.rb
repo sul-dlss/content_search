@@ -4,7 +4,7 @@ set :application, "contentsearch"
 set :repo_url, "https://github.com/sul-dlss/content_search.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call unless ENV['DEPLOY']
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/opt/app/contentsearch/contentsearch"
