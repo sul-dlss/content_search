@@ -13,7 +13,7 @@ sudo: false
 language: ruby
 cache: bundler
 
-jdk: oraclejdk9
+jdk: openjdk11
 
 env:
   global:
