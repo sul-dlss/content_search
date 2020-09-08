@@ -25,13 +25,17 @@ class AltoPayloadDelimitedTransformer
     text_blocks.map do |block|
       block.xpath('.//alto:TextLine', namespaces).map do |line|
         line.xpath('.//alto:String', namespaces).map do |el|
-          "#{el['CONTENT']}☞#{%w[HPOS VPOS WIDTH HEIGHT].map { |k| el[k] }.join(',')}"
+          "#{el['CONTENT']}☞#{textline_attributes.map { |k| el[k] }.join(',')}"
         end.join(' ')
       end.join("\n")
     end
   end
 
   private
+
+  def textline_attributes
+    %w[HPOS VPOS WIDTH HEIGHT]
+  end
 
   def document
     Nokogiri::XML.parse(content)
