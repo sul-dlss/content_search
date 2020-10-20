@@ -247,6 +247,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.2.2)
+    redlock (1.2.0)
+      redis (>= 3.0.0, < 5.0)
     regexp_parser (1.8.2)
     retriable (3.1.2)
     rexml (3.2.4)
@@ -347,8 +349,8 @@ DEPENDENCIES
   capistrano-rvm
   config
   dlss-capistrano
-  faraday
   honeybadger
+  http
   listen (>= 3.0.5, < 3.2)
   newrelic_rpm
   nokogiri
@@ -357,6 +359,7 @@ DEPENDENCIES
   puma (~> 3.11)
   purl_fetcher-client (~> 0.3)
   rails (~> 6.0.0)
+  redlock
   rsolr
   rspec-rails
   rubocop

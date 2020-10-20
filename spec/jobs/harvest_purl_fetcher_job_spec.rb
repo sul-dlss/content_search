@@ -35,7 +35,7 @@ RSpec.describe HarvestPurlFetcherJob do
   describe '#perform' do
     before do
       allow(DeleteContentFromIndexJob).to receive(:perform_later).with(anything)
-      allow(IndexFullTextContentJob).to receive(:perform_later).with(anything)
+      allow(DeleteContentFromIndexJob).to receive(:perform_later).with(anything)
     end
 
     it 'resumes from a provided timestamp' do
@@ -61,8 +61,8 @@ RSpec.describe HarvestPurlFetcherJob do
     it 'indexes content' do
       described_class.perform_now
 
-      expect(IndexFullTextContentJob).to have_received(:perform_later).with('new_c')
-      expect(IndexFullTextContentJob).to have_received(:perform_later).with('new_d')
+      expect(DeleteContentFromIndexJob).to have_received(:perform_later).with('new_c')
+      expect(DeleteContentFromIndexJob).to have_received(:perform_later).with('new_d')
     end
   end
 end

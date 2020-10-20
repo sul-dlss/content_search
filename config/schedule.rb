@@ -7,3 +7,8 @@ end
 every '0 3 * * *' do
   runner 'BuildSuggestJob.perform_now'
 end
+
+# Garbage collect the index
+every '15 * * * *' do
+  runner 'GarbageCollectJob.perform_now'
+end

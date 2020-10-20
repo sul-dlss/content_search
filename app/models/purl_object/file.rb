@@ -5,6 +5,10 @@ class PurlObject
   class File
     attr_reader :druid, :file_xml_fragment
 
+    def self.client
+      Thread.current[:client] ||= HTTP.persistent(Settings.stacks.host)
+    end
+
     def initialize(druid, file_xml_fragment)
       @druid = druid
       @file_xml_fragment = file_xml_fragment
@@ -30,12 +34,21 @@ class PurlObject
       fetch(file_url)
     end
 
+    def to_solr
+      return if content.nil?
+
+      indexer = FullTextIndexer.new(self)
+
+      return if mimetype == 'application/xml' && !indexer.alto?
+
+      indexer.to_solr
+    end
+
     private
 
     def fetch(url)
-      response = PurlObject.client.get(url)
-
-      response.body if response.success?
+      response = PurlObject::File.client.get(url)
+      response.body.to_s if response.status.success?
     end
   end
 end

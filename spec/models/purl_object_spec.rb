@@ -19,7 +19,7 @@ RSpec.describe PurlObject do
     </publicObject>
     XML
   end
-  let(:public_xml_response) { instance_double(Faraday::Response, body: public_xml) }
+  let(:public_xml_response) { instance_double(HTTP::Response, body: public_xml) }
 
   before do
     purl_url = 'https://purl.stanford.edu/x.xml'
@@ -44,11 +44,14 @@ RSpec.describe PurlObject do
 
   describe '#to_solr' do
     let(:ocr_text) { 'text text text' }
-    let(:ocr_response) { instance_double(Faraday::Response, success?: true, body: ocr_text) }
+    let(:ocr_response) { instance_double(HTTP::Response, body: ocr_text, status: instance_double(HTTP::Response::Status, success?: true)) }
 
     before do
       stacks_url = 'https://stacks.stanford.edu/file/x/y.txt'
-      allow(described_class.client).to receive(:get).with(stacks_url).and_return(ocr_response)
+      mock_client = double
+      allow(mock_client).to receive(:get).with(stacks_url).and_return(ocr_response)
+
+      allow(PurlObject::File).to receive(:client).and_return(mock_client)
     end
 
     it 'creates an indexable hash of OCR content' do
@@ -60,11 +63,14 @@ RSpec.describe PurlObject do
     end
 
     context 'with a file without content on stacks' do
-      let(:ocr_response) { instance_double(Faraday::Response, success?: false) }
+      let(:ocr_response) { instance_double(HTTP::Response, status: instance_double(HTTP::Response::Status, success?: false)) }
 
       before do
         stacks_url = 'https://stacks.stanford.edu/file/x/y.txt'
-        allow(described_class.client).to receive(:get).with(stacks_url).and_return(ocr_response)
+        mock_client = double
+        allow(mock_client).to receive(:get).with(stacks_url).and_return(ocr_response)
+
+        allow(PurlObject::File).to receive(:client).and_return(mock_client)
       end
 
       it 'does nothing' do

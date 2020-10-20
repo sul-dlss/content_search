@@ -56,13 +56,14 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'config'
-gem 'faraday'
 gem 'honeybadger'
+gem 'http'
 gem 'newrelic_rpm', group: :production
 gem 'nokogiri'
 gem 'okcomputer'
 gem 'parallel'
 gem 'purl_fetcher-client', '~> 0.3'
+gem 'redlock'
 gem 'rsolr'
 gem 'sidekiq', '~> 6.0'
 gem 'whenever'

@@ -8,6 +8,7 @@ purl:
   public_xml_url: 'https://purl.stanford.edu/%{druid}.xml'
 
 stacks:
+  host: 'https://stacks.stanford.edu'
   file_url: 'https://stacks.stanford.edu/file/%{druid}/%{filename}'
 
 solr:

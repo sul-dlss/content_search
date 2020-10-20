@@ -21,7 +21,7 @@ Layout/LineLength:
   Max: 150
 
 Metrics/MethodLength:
-  Max: 12
+  Max: 15
 
 Style/Documentation:
   Exclude:
@@ -48,3 +48,6 @@ Style/NumericLiterals:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+
+Layout/RescueEnsureAlignment:
+  Enabled: false # https://github.com/rubocop-hq/rubocop/issues/6918

@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
-require 'faraday'
+require 'http'
 require 'full_text_indexer'
 require 'purl_object/file'
+require 'parallel'
 
 # Wrapper for objects in PURL
 class PurlObject
   def self.client
-    Faraday
+    HTTP
   end
 
   attr_reader :druid
@@ -30,26 +31,21 @@ class PurlObject
     end
   end
 
-  def to_solr
+  def to_solr(options = { in_threads: 8 })
     return to_enum(:to_solr) unless block_given?
 
-    ocr_files.each do |file|
-      f = PurlObject::File.new(druid, file)
-
-      next if f.content.nil?
-
-      indexer = FullTextIndexer.new(f)
-
-      next if file['mimetype'] == 'application/xml' && !indexer.alto?
-
-      yield indexer.to_solr
+    results = Parallel.map(ocr_files, options) do |file|
+      PurlObject::File.new(druid, file).to_solr
     end
+
+    # preserving the stream-like API for now..
+    results.each { |r| yield r unless r.nil? }
   end
 
   private
 
   def fetch(url)
-    self.class.client.get(url).body
+    self.class.client.get(url).body.to_s
   end
 
   def public_xml

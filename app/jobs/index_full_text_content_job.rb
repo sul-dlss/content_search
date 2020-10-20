@@ -2,15 +2,13 @@
 
 # Index full text content into the solr index
 class IndexFullTextContentJob < ApplicationJob
-  def perform(druid)
+  def perform(druid, options = { commitWithin: 5000 })
     Search.client.update(
       data: {
         delete: { query: "druid:#{RSolr.solr_escape(druid)}" },
         add: PurlObject.new(druid).to_solr
       }.to_json,
-      params: {
-        commitWithin: 5000
-      }
+      params: options
     )
   end
 end
