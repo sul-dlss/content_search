@@ -2,7 +2,7 @@
 
 # Harvest changed content from purl-fetcher
 class HarvestPurlFetcherJob < ApplicationJob
-  STATE_FILE = Rails.root + 'tmp' + "harvest_purl_fetcher_job_last_run_#{Rails.env}"
+  STATE_FILE = Rails.root.join('tmp', "harvest_purl_fetcher_job_last_run_#{Rails.env}")
 
   def perform(first_modified = nil)
     with_state_file do |f|
