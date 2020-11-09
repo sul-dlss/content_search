@@ -29,7 +29,7 @@ module Locking
   end
 
   def with_simple_lock(id)
-    lock_file = Rails.root + 'tmp' + id
+    lock_file = Rails.root.join('tmp', id)
 
     resp = File.open(lock_file, 'w') do |f|
       f.flock(File::LOCK_EX)
