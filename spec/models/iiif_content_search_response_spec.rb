@@ -3,7 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe IiifContentSearchResponse, type: :controller do
-  controller(SearchController) {}
+  controller(SearchController) do
+    # no-op.
+  end
 
   subject(:response) { described_class.new(search, controller) }
 

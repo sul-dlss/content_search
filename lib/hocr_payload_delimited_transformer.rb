@@ -41,7 +41,7 @@ class HocrPayloadDelimitedTransformer
   def extract_bbox(bbox)
     return [0, 0, 0, 0] unless bbox
 
-    x0, y0, x1, y1 = bbox.split(' ')&.map(&:to_i)
+    x0, y0, x1, y1 = bbox.split&.map(&:to_i)
 
     [x0 || 0, y0 || 0, x1 || 0, y1 || 0]
   end
