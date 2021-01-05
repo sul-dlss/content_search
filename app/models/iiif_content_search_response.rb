@@ -171,7 +171,7 @@ class IiifContentSearchResponse
     def sanitized_text(text)
       return text unless text.match?(/☞/)
 
-      text.sub(/^[\d+,\.]+ /, '')
+      text.sub(/^[\d+,.]+ /, '')
     end
   end
 end

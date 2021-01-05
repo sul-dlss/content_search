@@ -23,7 +23,7 @@ RSpec.describe AltoPayloadDelimitedTransformer do
       end
 
       it 'includes line breaks where appropriate' do
-        words_only = transformer.output.map { |block| block.gsub(/☞[\d,\.]+/, '') }
+        words_only = transformer.output.map { |block| block.gsub(/☞[\d,.]+/, '') }
         expect(words_only).to include "Progress report of the Secretary-General on the\nUnited Nations Office in Timor-Leste"
       end
     end

@@ -32,7 +32,7 @@ class PurlObject
   end
 
   def to_solr(options = { in_threads: 8 })
-    return to_enum(:to_solr) unless block_given?
+    return to_enum(:to_solr, options) unless block_given?
 
     results = Parallel.map(ocr_files, options) do |file|
       PurlObject::File.new(druid, file).to_solr

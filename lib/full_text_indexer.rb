@@ -26,7 +26,7 @@ class FullTextIndexer
   end
 
   def alto?
-    content.match?(/<alto/)
+    content.include? '<alto'
   end
 
   private
