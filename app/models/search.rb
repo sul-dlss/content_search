@@ -23,9 +23,9 @@ class Search
   end
 
   def highlights
-    highlight_response['highlighting'].map do |id, fields|
-      [id, fields.values.flatten.uniq]
-    end.to_h
+    highlight_response['highlighting'].transform_values do |fields|
+      fields.values.flatten.uniq
+    end
   end
 
   ##
