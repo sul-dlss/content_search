@@ -5,6 +5,10 @@ require 'rails_helper'
 RSpec.describe Search do
   subject(:search) { described_class.new('x', q: 'y') }
 
+  before do
+    allow(search).to receive(:bookkeep!).and_return(nil) # rubocop:disable RSpec/SubjectStub
+  end
+
   describe '.client' do
     it 'returns an RSolr client' do
       expect(described_class.client).to be_a_kind_of RSolr::Client
