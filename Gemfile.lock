@@ -186,7 +186,7 @@ GEM
     mimemagic (0.3.5)
     mini_mime (1.0.2)
     mini_portile2 (2.5.0)
-    minitest (5.14.2)
+    minitest (5.14.3)
     mods (2.4.1)
       edtf
       iso-639
@@ -199,12 +199,12 @@ GEM
     net-ssh (6.1.0)
     newrelic_rpm (6.14.0)
     nio4r (2.5.4)
-    nokogiri (1.11.0)
+    nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.0-x86_64-darwin)
+    nokogiri (1.11.1-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.11.0-x86_64-linux)
+    nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
     nom-xml (1.1.0)
       activesupport (>= 3.2.18)
@@ -282,15 +282,15 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.1)
-    rubocop (1.7.0)
+    rubocop (1.8.0)
       parallel (~> 1.10)
-      parser (>= 2.7.1.5)
+      parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
       rubocop-ast (>= 1.2.0, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 2.0)
+      unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.4.0)
       parser (>= 2.7.1.5)
     rubocop-performance (1.9.2)
@@ -316,8 +316,8 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.2)
-    solr_wrapper (2.2.0)
-      faraday
+    solr_wrapper (3.0.1)
+      http
       retriable
       ruby-progressbar
       rubyzip
@@ -344,7 +344,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
-    unicode-display_width (1.7.0)
+    unicode-display_width (2.0.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
