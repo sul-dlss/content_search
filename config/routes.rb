@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'search#home'
   get '/:id/search', to: 'search#search', as: :iiif_content_search
-  get '/:id/autocomplete', to: 'search#autocomplete', as: :iiif_autocomplete
 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'

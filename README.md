@@ -48,7 +48,7 @@ The specs can be run without RuboCop style enforcement
 The RuboCop style enforcement can be run without running the tests
 
     $ bundle exec rubocop
-    
+
 ## Running Solr
 
 In a new terminal window:
@@ -69,18 +69,4 @@ You may need to commit this separately
 
 ```ruby
 > Search.client.commit
-```
-
-### Updating the spellcheck database
-
-After indexing content, you may need to ask Solr to update the spellcheck database to enable autocomplete
-
-```ruby
-> BuildSuggestJob.perform_now
-```
-
-or
-
-```sh
-$ curl http://127.0.0.1:8983/solr/content_search/suggest?suggest.build=true
 ```

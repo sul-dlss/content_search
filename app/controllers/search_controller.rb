@@ -12,11 +12,6 @@ class SearchController < ApplicationController #:nodoc:
     render json: IiifContentSearchResponse.new(@search, self)
   end
 
-  def autocomplete
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    render json: IiifAutocompleteResponse.new(@search, self)
-  end
-
   private
 
   def load_search
