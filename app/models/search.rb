@@ -28,24 +28,6 @@ class Search
     end
   end
 
-  ##
-  # Returns a modified result list from Solr, by following the following:
-  # - Remove duplicates by case (e.g. The, the)
-  # - Sort by "weight" (occurance) and then by length. This helps to sort values
-  #   for recurring sequences.
-  #   "the cou": ["the Court", "the Court decided", "the Court decided to"]
-  # - Take the last 5 results
-  # rubocop:disable Metrics/AbcSize
-  def suggestions
-    return [] unless suggest_response['suggest']&.values&.first&.fetch(q, false)
-
-    suggest_response['suggest'].values.first[q]['suggestions']
-                               .uniq { |s| s['term'].downcase }
-                               .sort_by { |s| (-s['weight']) * 100 + s['term'].length }
-                               .take(5)
-  end
-  # rubocop:enable Metrics/AbcSize
-
   private
 
   def highlight_response

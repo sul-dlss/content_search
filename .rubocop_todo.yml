@@ -16,7 +16,6 @@ Metrics/CyclomaticComplexity:
 # AllowedNames: at, by, db, id, in, io, ip, of, on, os, pp, to
 Naming/MethodParameterName:
   Exclude:
-    - 'app/models/iiif_autocomplete_response.rb'
     - 'app/models/iiif_content_search_response.rb'
     - 'app/models/search.rb'
 
