@@ -7,18 +7,20 @@ require 'parallel'
 
 # Wrapper for objects in PURL
 class PurlObject
-  def self.client
-    HTTP
-  end
-
   attr_reader :druid
 
   def initialize(druid)
     @druid = druid
   end
 
+  def public_xml_record
+    @public_xml_record ||= PurlFetcher::Client::PublicXmlRecord.new(druid, purl_url: format(Settings.purl.public_xml_url, druid: ''))
+  end
+
+  delegate :public_xml_doc, to: :public_xml_record
+
   def resources
-    public_xml.xpath('//contentMetadata/resource')
+    public_xml_doc.xpath('//contentMetadata/resource')
   end
 
   def ocr_files
@@ -40,19 +42,5 @@ class PurlObject
 
     # preserving the stream-like API for now..
     results.each { |r| yield r unless r.nil? }
-  end
-
-  private
-
-  def fetch(url)
-    self.class.client.get(url).body.to_s
-  end
-
-  def public_xml
-    Nokogiri::XML.parse(public_xml_body)
-  end
-
-  def public_xml_body
-    fetch(format(Settings.purl.public_xml_url, druid: druid))
   end
 end
