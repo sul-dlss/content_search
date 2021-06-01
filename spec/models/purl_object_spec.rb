@@ -7,7 +7,7 @@ RSpec.describe PurlObject do
 
   let(:public_xml) do
     <<-XML
-    <publicObject>
+    <publicObject published="2021-05-26T23:52:08Z">
       <contentMetadata>
         <resource id="y">
           <file id="y.txt" mimetype="text/plain" role="transcription" />
@@ -24,6 +24,12 @@ RSpec.describe PurlObject do
   before do
     purl_url = 'https://purl.stanford.edu/x.xml'
     allow(described_class.client).to receive(:get).with(purl_url).and_return(public_xml_response)
+  end
+
+  describe '#published' do
+    it 'parses the published attr out of public XML' do
+      expect(object.published).to eq('2021-05-26T23:52:08Z')
+    end
   end
 
   describe '#resources' do
@@ -55,11 +61,18 @@ RSpec.describe PurlObject do
     end
 
     it 'creates an indexable hash of OCR content' do
-      expect(object.to_solr.first).to include id: 'x/y/y.txt',
-                                              druid: 'x',
-                                              resource_id: 'y',
-                                              filename: 'y.txt',
-                                              ocrtext: ['text text text']
+      expect(object.to_solr).to include id: 'x/y/y.txt',
+                                        druid: 'x',
+                                        resource_id: 'y',
+                                        filename: 'y.txt',
+                                        ocrtext: ['text text text']
+    end
+
+    it 'indexes the published date' do
+      expect(object.to_solr).to include id: 'x',
+                                        druid: 'x',
+                                        published: '2021-05-26T23:52:08Z',
+                                        resource_id: 'druid'
     end
 
     context 'with a file without content on stacks' do
@@ -74,7 +87,7 @@ RSpec.describe PurlObject do
       end
 
       it 'does nothing' do
-        expect(object.to_solr.to_a.length).to eq 0
+        expect(object.to_solr.to_a.length).to eq 1
       end
     end
   end
