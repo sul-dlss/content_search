@@ -34,12 +34,19 @@ class PurlObject
   def to_solr(options = { in_threads: 8 })
     return to_enum(:to_solr, options) unless block_given?
 
+    # Inject "bookkeeping" document into index first to record last published date
+    yield({ id: druid, druid: druid, published: published, resource_id: 'druid' })
+
     results = Parallel.map(ocr_files, options) do |file|
       PurlObject::File.new(druid, file).to_solr
     end
 
     # preserving the stream-like API for now..
     results.each { |r| yield r unless r.nil? }
+  end
+
+  def published
+    public_xml.root['published']
   end
 
   private
@@ -49,7 +56,7 @@ class PurlObject
   end
 
   def public_xml
-    Nokogiri::XML.parse(public_xml_body)
+    @public_xml ||= Nokogiri::XML.parse(public_xml_body)
   end
 
   def public_xml_body

@@ -70,7 +70,8 @@ class Search
   end
 
   def any_results_for_document?
-    response = get(Settings.solr.highlight_path, params: { q: "druid:#{id}", rows: 0, fl: 'id' })
+    response = get(Settings.solr.highlight_path,
+                   params: { q: "druid:#{id}", rows: 0, fl: 'id', fq: ['resource_id:druid', "published:#{published}"] })
 
     response['response']['numFound'].positive?
   end
@@ -110,10 +111,16 @@ class Search
     Rails.logger
   end
 
+  def published
+    @published ||= PurlObject.new(id).published
+  end
+
   # Do some bookkeeping to keep track of the last time this record was used
   def bookkeep!
-    Thread.new do
-      Search.client.add([{ id: id, druid: id, resource_id: 'druid' }], add_attributes: { commitWithin: (1.hour.to_i * 1000) })
+    # We inject the published value because ... threads. Just to be safe.
+    Thread.new(published) do |published_value|
+      Search.client.add([{ id: id, druid: id, published: published_value, resource_id: 'druid' }],
+                        add_attributes: { commitWithin: (1.hour.to_i * 1000) })
     end
   end
 end

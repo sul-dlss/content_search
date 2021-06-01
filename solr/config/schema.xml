@@ -12,6 +12,7 @@
     <field name="timestamp" type="date" indexed="true" stored="true" default="NOW" multiValued="false"/>
 
     <field name="druid" type="string" stored="true" indexed="true" multiValued="false"/>
+    <field name="published" type="string" stored="true" indexed="true" multiValued="false"/>
     <field name="resource_id" type="string" stored="true" indexed="true" multiValued="false"/>
     <field name="filename" type="string" stored="true" indexed="true" multiValued="false"/>
     <field name="ocrtext" type="text_with_delimited_ocr_position" stored="true" indexed="true" multiValued="true" storeOffsetsWithPositions="true" termVectors="true" />
