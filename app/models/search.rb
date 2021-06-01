@@ -71,7 +71,7 @@ class Search
 
   def any_results_for_document?
     response = get(Settings.solr.highlight_path,
-                   params: { q: "druid:#{id}", rows: 0, fl: 'id', fq: ['resource_id:druid', "published:#{published}"] })
+                   params: { q: "druid:#{id}", rows: 0, fl: 'id', fq: ['resource_id:druid', "published:\"#{published}\""] })
 
     response['response']['numFound'].positive?
   end
