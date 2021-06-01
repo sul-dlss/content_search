@@ -15,7 +15,7 @@ class SearchController < ApplicationController #:nodoc:
   private
 
   def load_search
-    @search = Search.new(search_params[:id], search_params.slice(:q, :start).to_h.symbolize_keys)
+    @search = Search.new(search_params[:id], **search_params.slice(:q, :start).to_h.symbolize_keys)
   end
 
   def search_params
