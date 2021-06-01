@@ -19,7 +19,6 @@
   <!-- solr lib dirs -->
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
-  <lib dir="${solr.install.dir:../../../..}/contrib" regex="tokenizing-suggest-v1.0.1.jar" />
 
   <dataDir>${solr.data.dir:}</dataDir>
 
@@ -90,27 +89,4 @@
   </requestDispatcher>
 
   <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
-
-  <searchComponent name="suggest" class="solr.SuggestComponent">
-    <lst name="suggester">
-      <str name="name">mySuggester</str>
-      <str name="lookupImpl">edu.stanford.dlss.search.suggest.analyzing.TokenizingLookupFactory</str>
-      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
-      <str name="suggestAnalyzerFieldType">textSuggest</str>
-      <str name="suggestTokenizingAnalyzerFieldType">textSuggestTokenizer</str>
-      <str name="contextField">druid</str>
-      <str name="field">ocrtext_suggest</str>
-    </lst>
-  </searchComponent>
-
-  <requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
-    <lst name="defaults">
-      <str name="suggest">true</str>
-      <str name="suggest.count">5</str>
-      <str name="suggest.dictionary">mySuggester</str>
-    </lst>
-    <arr name="components">
-      <str>suggest</str>
-    </arr>
-  </requestHandler>
 </config>
