@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SearchController < ApplicationController #:nodoc:
+class SearchController < ApplicationController # :nodoc:
   before_action :load_search, except: [:home]
 
   def home
