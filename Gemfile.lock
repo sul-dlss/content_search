@@ -65,7 +65,7 @@ GEM
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.2)
-    bootsnap (1.9.3)
+    bootsnap (1.9.4)
       msgpack (~> 1.0)
     builder (3.2.4)
     bundler-audit (0.9.0.1)
@@ -142,14 +142,14 @@ GEM
       dry-core (~> 0.5, >= 0.5)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.8, >= 1.8.0)
-    edtf (3.0.7)
+    edtf (3.0.8)
       activesupport (>= 3.0, < 8.0)
     erubi (1.10.0)
     faraday (2.0.1)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (2.0.1)
-    ffi (1.15.4)
+    ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -167,7 +167,7 @@ GEM
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     iso-639 (0.3.5)
-    listen (3.7.0)
+    listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     llhttp-ffi (0.4.0)
@@ -188,24 +188,24 @@ GEM
       iso-639
       nokogiri (>= 1.6.6)
       nom-xml (~> 1.0)
-    mods_display (0.10.1)
+    mods_display (1.0.0.alpha2)
       i18n
       stanford-mods (~> 2.1)
+      view_component
     msgpack (1.4.2)
     net-scp (3.0.0)
       net-ssh (>= 2.6.5, < 7.0.0)
     net-ssh (6.1.0)
-    newrelic_rpm (8.2.0)
+    newrelic_rpm (8.3.0)
     nio4r (2.5.8)
-    nokogiri (1.13.0)
+    nokogiri (1.13.1)
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
-    nokogiri (1.13.0-x86_64-darwin)
+    nokogiri (1.13.1-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.0-x86_64-linux)
+    nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
-    nom-xml (1.1.0)
-      activesupport (>= 3.2.18)
+    nom-xml (1.2.0)
       i18n
       nokogiri
     okcomputer (1.18.4)
@@ -215,10 +215,10 @@ GEM
     public_suffix (4.0.6)
     puma (5.5.2)
       nio4r (~> 2.0)
-    purl_fetcher-client (0.4.1)
+    purl_fetcher-client (0.5.0)
       dor-rights-auth
       http
-      mods_display
+      mods_display (>= 1.0.0.alpha1)
       nokogiri
       stanford-mods
     racc (1.6.0)
@@ -251,7 +251,7 @@ GEM
       method_source
       rake (>= 0.13)
       thor (~> 1.0)
-    rainbow (3.0.0)
+    rainbow (3.1.1)
     rake (13.0.6)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
@@ -334,7 +334,7 @@ GEM
     sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    stanford-mods (2.6.3)
+    stanford-mods (2.6.4)
       activesupport
       mods (~> 2.2)
     thor (1.2.1)
@@ -344,6 +344,9 @@ GEM
       unf_ext
     unf_ext (0.0.8)
     unicode-display_width (2.1.0)
+    view_component (2.47.0)
+      activesupport (>= 5.0.0, < 8.0)
+      method_source (~> 1.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
