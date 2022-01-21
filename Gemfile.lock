@@ -128,7 +128,7 @@ GEM
     dry-core (0.7.1)
       concurrent-ruby (~> 1.0)
     dry-inflector (0.2.1)
-    dry-initializer (3.1.0)
+    dry-initializer (3.1.1)
     dry-logic (1.2.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.5, >= 0.5)
@@ -164,7 +164,7 @@ GEM
       rake
     globalid (1.0.0)
       activesupport (>= 5.0)
-    honeybadger (4.9.0)
+    honeybadger (4.10.0)
     http (5.0.4)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
@@ -197,11 +197,11 @@ GEM
       iso-639
       nokogiri (>= 1.6.6)
       nom-xml (~> 1.0)
-    mods_display (1.0.0.alpha3)
+    mods_display (1.0.0.alpha4)
       i18n
       stanford-mods (~> 2.1)
       view_component
-    msgpack (1.4.2)
+    msgpack (1.4.3)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -223,6 +223,8 @@ GEM
     newrelic_rpm (8.3.0)
     nio4r (2.5.8)
     nokogiri (1.13.1-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
     nom-xml (1.2.0)
       i18n
@@ -300,9 +302,9 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.3)
-    rubocop (1.24.1)
+    rubocop (1.25.0)
       parallel (~> 1.10)
-      parser (>= 3.0.0.0)
+      parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
@@ -323,7 +325,7 @@ GEM
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
-    sidekiq (6.3.1)
+    sidekiq (6.4.0)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
@@ -365,6 +367,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
@@ -398,4 +401,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.2.22
+   2.3.5
