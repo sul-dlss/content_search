@@ -71,7 +71,7 @@ GEM
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.2)
-    bootsnap (1.10.1)
+    bootsnap (1.10.2)
       msgpack (~> 1.2)
     builder (3.2.4)
     bundler-audit (0.9.0.1)
@@ -201,7 +201,7 @@ GEM
       i18n
       stanford-mods (~> 2.1)
       view_component
-    msgpack (1.4.3)
+    msgpack (1.4.4)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -320,7 +320,7 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
-    rubocop-rspec (2.7.0)
+    rubocop-rspec (2.8.0)
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
