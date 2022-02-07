@@ -59,6 +59,7 @@ gem 'nokogiri'
 gem 'okcomputer'
 gem 'parallel'
 gem 'purl_fetcher-client', '~> 0.3'
+gem 'redis', '~> 4.5.1' # 4.6.0 spews deprecation warnings out of sidekiq
 gem 'redlock'
 gem 'rsolr'
 gem 'sidekiq', '~> 6.0'
