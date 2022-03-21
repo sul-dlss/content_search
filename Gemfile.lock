@@ -183,7 +183,7 @@ GEM
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
-    loofah (2.14.0)
+    loofah (2.15.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -230,7 +230,7 @@ GEM
       i18n
       nokogiri
     okcomputer (1.18.4)
-    parallel (1.21.0)
+    parallel (1.22.0)
     parser (3.1.1.0)
       ast (~> 2.4.1)
     public_suffix (4.0.6)
@@ -316,7 +316,7 @@ GEM
     rubocop-performance (1.13.3)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.13.2)
+    rubocop-rails (2.14.2)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
@@ -355,7 +355,7 @@ GEM
       unf_ext
     unf_ext (0.0.8.1)
     unicode-display_width (2.1.0)
-    view_component (2.50.0)
+    view_component (2.51.0)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
     websocket-driver (0.7.5)
