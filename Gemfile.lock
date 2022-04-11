@@ -109,7 +109,7 @@ GEM
     deep_merge (1.2.2)
     diff-lcs (1.5.0)
     digest (3.1.0)
-    dlss-capistrano (4.0.0)
+    dlss-capistrano (4.1.0)
       capistrano (~> 3.0)
       capistrano-bundle_audit (>= 0.3.0)
       capistrano-one_time_key
@@ -157,7 +157,7 @@ GEM
     faraday (2.2.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.1)
+    faraday-net_http (2.0.2)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -200,7 +200,7 @@ GEM
       i18n
       stanford-mods (>= 3.0.0.alpha1, < 4)
       view_component
-    msgpack (1.4.5)
+    msgpack (1.5.1)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -218,7 +218,7 @@ GEM
       net-protocol
       timeout
     net-ssh (6.1.0)
-    newrelic_rpm (8.5.0)
+    newrelic_rpm (8.6.0)
     nio4r (2.5.8)
     nokogiri (1.13.3-x86_64-darwin)
       racc (~> 1.4)
@@ -275,7 +275,7 @@ GEM
     redis (4.5.1)
     redlock (1.2.2)
       redis (>= 3.0.0, < 5.0)
-    regexp_parser (2.2.1)
+    regexp_parser (2.3.0)
     reline (0.3.1)
       io-console (~> 0.5)
     retriable (3.1.2)
@@ -300,7 +300,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-    rubocop (1.26.1)
+    rubocop (1.27.0)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -309,7 +309,7 @@ GEM
       rubocop-ast (>= 1.16.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.16.0)
+    rubocop-ast (1.17.0)
       parser (>= 3.1.1.0)
     rubocop-performance (1.13.3)
       rubocop (>= 1.7.0, < 2.0)
