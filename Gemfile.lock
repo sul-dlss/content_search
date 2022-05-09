@@ -154,7 +154,7 @@ GEM
     edtf (3.0.8)
       activesupport (>= 3.0, < 8.0)
     erubi (1.10.0)
-    faraday (2.2.0)
+    faraday (2.3.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (2.0.2)
@@ -218,11 +218,11 @@ GEM
       net-protocol
       timeout
     net-ssh (6.1.0)
-    newrelic_rpm (8.6.0)
+    newrelic_rpm (8.7.0)
     nio4r (2.5.8)
-    nokogiri (1.13.4-x86_64-darwin)
+    nokogiri (1.13.6-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.4-x86_64-linux)
+    nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     nom-xml (1.2.0)
       i18n
@@ -300,12 +300,12 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-    rubocop (1.28.2)
+    rubocop (1.29.0)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
-      rexml
+      rexml (>= 3.2.5, < 4.0)
       rubocop-ast (>= 1.17.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
@@ -344,7 +344,7 @@ GEM
     stanford-mods (3.0.0)
       activesupport
       mods (~> 3.0, >= 3.0.1)
-    strscan (3.0.1)
+    strscan (3.0.2)
     thor (1.2.1)
     timeout (0.2.0)
     tzinfo (2.0.4)
