@@ -22,7 +22,7 @@ class HarvestPurlFetcherJob < ApplicationJob
   private
 
   def perform_deletes(first_modified)
-    client = PurlFetcher::Client::DeletesReader.new('', 'purl_fetcher.first_modified' => first_modified)
+    client = PurlFetcher::Client::DeletesReader.new('', { 'purl_fetcher.first_modified' => first_modified }.merge(purl_fetcher_config))
 
     client.each do |record|
       DeleteContentFromIndexJob.perform_later(record.druid)
@@ -33,7 +33,7 @@ class HarvestPurlFetcherJob < ApplicationJob
   # @param [String] first_modified
   # @yieldparam [Time] the timestamp of the most recently updated document (or the extent of the queried range)
   def perform_indexes(first_modified)
-    client = PurlFetcher::Client::Reader.new('', 'purl_fetcher.first_modified' => first_modified)
+    client = PurlFetcher::Client::Reader.new('', { 'purl_fetcher.first_modified' => first_modified }.merge(purl_fetcher_config))
     client.each_slice(1000) do |batch|
       batch.each do |record, _change|
         # Delete the content and let on-demand indexing reindex it
@@ -53,5 +53,9 @@ class HarvestPurlFetcherJob < ApplicationJob
       f.flock(File::LOCK_EX | File::LOCK_NB)
       yield f
     end
+  end
+
+  def purl_fetcher_config
+    Settings.purl_fetcher.to_h.stringify_keys
   end
 end

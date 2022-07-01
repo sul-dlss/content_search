@@ -19,3 +19,5 @@ solr:
   suggest_path: 'suggest'
   suggest_params:
     'suggest.count': 1000
+
+purl_fetcher: {}
