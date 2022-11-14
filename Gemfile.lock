@@ -98,7 +98,7 @@ GEM
     capistrano-shared_configs (0.2.2)
     chronic (0.10.2)
     concurrent-ruby (1.1.10)
-    config (4.0.0)
+    config (4.1.0)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
     connection_pool (2.3.0)
@@ -156,7 +156,7 @@ GEM
     faraday (2.6.0)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
-    faraday-net_http (3.0.1)
+    faraday-net_http (3.0.2)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -295,7 +295,7 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
-    rubocop (1.38.0)
+    rubocop (1.39.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.2.1)
@@ -356,7 +356,7 @@ GEM
     websocket-extensions (0.1.5)
     whenever (1.0.0)
       chronic (>= 0.6.3)
-    zeitwerk (2.6.5)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   x86_64-darwin-20
