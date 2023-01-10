@@ -11,8 +11,7 @@ gem 'puma', '~> 5.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -59,8 +58,8 @@ gem 'nokogiri'
 gem 'okcomputer'
 gem 'parallel'
 gem 'purl_fetcher-client', '~> 0.3'
-gem 'redis', '~> 4.5.1' # 4.6.0 spews deprecation warnings out of sidekiq
+gem 'redis', '~> 5.0'
 gem 'redlock'
 gem 'rsolr'
-gem 'sidekiq', '~> 6.0'
+gem 'sidekiq', '~> 7.0'
 gem 'whenever'
