@@ -20,7 +20,7 @@ set :deploy_to, "/opt/app/contentsearch/contentsearch"
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, ->{ ["config/master.key", "config/honeybadger.yml", "config/newrelic.yml", "tmp/harvest_purl_fetcher_job_last_run_#{fetch(:rails_env)}"] }
+set :linked_files, ->{ ["config/master.key", "config/honeybadger.yml", "config/newrelic.yml"] }
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "config/settings"
@@ -44,6 +44,10 @@ set :honeybadger_env, fetch(:stage)
 before 'deploy:restart', 'shared_configs:update'
 
 set :whenever_roles, [:indexer]
+
+# Manage racecar via systemd (from dlss-capistrano gem)
+set :racecar_systemd_role, :indexer
+set :racecar_systemd_use_hooks, true
 
 namespace :deploy do
   after :restart, :restart_sidekiq do

@@ -20,4 +20,6 @@ solr:
   suggest_params:
     'suggest.count': 1000
 
-purl_fetcher: {}
+kafka:
+  topic: testing_topic # Can be purl_fetcher_stage or purl_fetcher_prod
+  group_id: content-search
