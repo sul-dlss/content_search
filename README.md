@@ -62,7 +62,7 @@ Content can be indexed from the Rails console:
 
 ```
 > druid = 'bb034nj7139' # e.g.
-> IndexFullTextContentJob.perform_now(druid)
+> IndexFullTextContent.run(druid)
 ```
 You may need to commit this separately
 

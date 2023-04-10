@@ -1,16 +1,14 @@
 # frozen_string_literal: true
 
 # Remove content for a druid from the solr index
-class GarbageCollectJob < ApplicationJob
-  def perform
+class GarbageCollectIndex
+  def self.run
     response['response']['docs'].each do |doc|
       Search.client.delete_by_query("druid:#{doc['druid']}", params: { commit: true })
     end
   end
 
-  private
-
-  def response
+  def self.response
     Search.client.get(
       Settings.solr.highlight_path,
       params: {
@@ -21,4 +19,5 @@ class GarbageCollectJob < ApplicationJob
       }
     )
   end
+  private_class_method :response
 end

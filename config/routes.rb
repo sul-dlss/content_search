@@ -4,8 +4,5 @@ Rails.application.routes.draw do
   root to: 'search#home'
   get '/:id/search', to: 'search#search', as: :iiif_content_search
 
-  require 'sidekiq/web'
-  mount Sidekiq::Web => '/sidekiq'
-
   mount OkComputer::Engine, at: "/status"
 end

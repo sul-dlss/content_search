@@ -103,7 +103,6 @@ GEM
     config (5.1.0)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
-    connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
     debug (1.9.1)
@@ -272,12 +271,6 @@ GEM
       rake (> 12)
     rdoc (6.6.2)
       psych (>= 4.0.0)
-    redis (5.0.8)
-      redis-client (>= 0.17.0)
-    redis-client (0.19.1)
-      connection_pool
-    redlock (2.0.6)
-      redis-client (>= 0.14.1, < 1.0.0)
     regexp_parser (2.9.0)
     reline (0.4.2)
       io-console (~> 0.5)
@@ -334,11 +327,6 @@ GEM
       rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
-    sidekiq (7.2.0)
-      concurrent-ruby (< 2)
-      connection_pool (>= 2.3.0)
-      rack (>= 2.2.4)
-      redis-client (>= 0.14.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -391,15 +379,12 @@ DEPENDENCIES
   puma (~> 5.0)
   racecar (~> 2.8)
   rails (~> 7.0.0)
-  redis (~> 5.0)
-  redlock
   rsolr
   rspec-rails
   rubocop
   rubocop-performance
   rubocop-rails
   rubocop-rspec
-  sidekiq (~> 7.0)
   simplecov
   solr_wrapper
   tzinfo-data
