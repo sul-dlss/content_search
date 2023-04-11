@@ -15,7 +15,7 @@ RSpec.describe PublishConsumer do
     let(:message_value) { { druid: 'druid:123' }.to_json }
 
     it 'creates a delete content job' do
-      expect(Search.client).to have_received(:delete_by_query).with('druid:druid:123', params: { commit: true })
+      expect(Search.client).to have_received(:delete_by_query).with('druid:123', params: { commit: true })
     end
   end
 end
