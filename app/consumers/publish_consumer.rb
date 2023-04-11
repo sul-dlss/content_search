@@ -9,6 +9,6 @@ class PublishConsumer < Racecar::Consumer
   def process(message)
     data = JSON.parse(message.value)
 
-    Search.client.delete_by_query("druid:#{data['druid']}", params: { commit: true })
+    Search.client.delete_by_query("druid:#{data['druid'].delete_prefix('druid:')}", params: { commit: true })
   end
 end
