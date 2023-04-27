@@ -10,5 +10,8 @@ class PublishConsumer < Racecar::Consumer
     data = JSON.parse(message.value)
 
     Search.client.delete_by_query("druid:#{data['druid'].delete_prefix('druid:')}", params: { commit: true })
+  rescue StandardError => e
+    Honeybadger.notify(e)
+    raise e
   end
 end
