@@ -7,7 +7,13 @@ class PublishConsumer < Racecar::Consumer
   self.group_id = Settings.kafka.group_id
 
   def process(message)
-    Honeybadger.notify('Blank message received', context: { message: message }) && return if message.value.nil?
+    if message.value.nil?
+      Honeybadger.notify('Blank message received',
+                         context: { message_offset: message.offset,
+                                    message_headers: message.headers,
+                                    message_timestamp: message.create_time })
+      return
+    end
 
     data = JSON.parse(message.value)
 
