@@ -7,6 +7,8 @@ class PublishConsumer < Racecar::Consumer
   self.group_id = Settings.kafka.group_id
 
   def process(message)
+    Honeybadger.notify('Blank message received', context: { message: message }) && return if message.value.nil?
+
     data = JSON.parse(message.value)
 
     Search.client.delete_by_query("druid:#{data['druid'].delete_prefix('druid:')}", params: { commit: true })
