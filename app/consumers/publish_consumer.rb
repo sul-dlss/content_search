@@ -11,6 +11,7 @@ class PublishConsumer < Racecar::Consumer
       Honeybadger.notify('Blank message received',
                          context: { message_offset: message.offset,
                                     message_headers: message.headers,
+                                    message_key: message.key,
                                     message_timestamp: message.create_time })
       return
     end
