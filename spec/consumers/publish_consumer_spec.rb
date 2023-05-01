@@ -29,7 +29,9 @@ RSpec.describe PublishConsumer do
       let(:headers) { { foo: 'bar' } }
       let(:timestamp) { '19990404' }
       let(:offset) { '101010' }
-      let(:message) { instance_double(Racecar::Message, value: nil, offset: offset, create_time: timestamp, headers: headers) }
+      let(:key) { 'dr712bb2404' }
+
+      let(:message) { instance_double(Racecar::Message, value: nil, key: key, offset: offset, create_time: timestamp, headers: headers) }
 
       before do
         allow(Honeybadger).to receive(:notify)
@@ -40,6 +42,7 @@ RSpec.describe PublishConsumer do
         expect(Honeybadger).to have_received(:notify).with('Blank message received',
                                                            context: { message_headers: headers,
                                                                       message_timestamp: timestamp,
+                                                                      message_key: key,
                                                                       message_offset: offset })
       end
     end
