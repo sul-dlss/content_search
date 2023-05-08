@@ -6,19 +6,15 @@ class PublishConsumer < Racecar::Consumer
   # Set group_id differently in prod and uat, so they can both receive the message
   self.group_id = Settings.kafka.group_id
 
+  # Remove the solr document based on the message key.  The solr index is just acting as a cache
+  # which is cleared when we receive a message. The cache is rebuild when someone tries to access
+  # a document that doesn't exist in solr.
+  #
+  # The message key contains the prefixed druid.
+  # If the message.value is nil, then a publish event happend with dark access.
   def process(message)
-    if message.value.nil?
-      Honeybadger.notify('Blank message received',
-                         context: { message_offset: message.offset,
-                                    message_headers: message.headers,
-                                    message_key: message.key,
-                                    message_timestamp: message.create_time })
-      return
-    end
-
-    data = JSON.parse(message.value)
-
-    Search.client.delete_by_query("druid:#{data['druid'].delete_prefix('druid:')}", params: { commit: true })
+    druid = message.key.delete_prefix('druid:')
+    Search.client.delete_by_query("druid:#{druid}", params: { commit: true })
   rescue StandardError => e
     Honeybadger.notify(e)
     raise e
