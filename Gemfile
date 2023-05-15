@@ -62,4 +62,4 @@ gem 'redis', '~> 5.0'
 gem 'redlock'
 gem 'rsolr'
 gem 'sidekiq', '~> 7.0'
-gem 'whenever'
+gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
