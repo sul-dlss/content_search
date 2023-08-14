@@ -57,7 +57,7 @@ class Search
     rebuild_suggester if rebuild
     get(Settings.solr.suggest_path, params: suggest_request_params)
   rescue RSolr::Error::Http => e
-    raise(e) unless e&.response&.dig(:body)&.match(/suggester was not built/)
+    raise(e) unless e&.response&.dig(:body)&.include?('suggester was not built')
 
     nil
   end
