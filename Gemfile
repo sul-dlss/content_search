@@ -63,3 +63,5 @@ gem 'redlock'
 gem 'rsolr'
 gem 'sidekiq', '~> 7.0'
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
+
+gem 'ffi', '~> 1.15.5' # Prevent segfault running rubocop on GH actions
