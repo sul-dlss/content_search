@@ -198,7 +198,7 @@ GEM
     minitar (0.9)
     minitest (5.20.0)
     msgpack (1.7.2)
-    net-imap (0.4.2)
+    net-imap (0.4.4)
       date
       net-protocol
     net-pop (0.1.2)
@@ -210,7 +210,8 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     net-ssh (7.2.0)
-    newrelic_rpm (9.5.0)
+    newrelic_rpm (9.6.0)
+      base64
     nio4r (2.5.9)
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
@@ -226,7 +227,7 @@ GEM
     public_suffix (5.0.3)
     puma (5.6.7)
       nio4r (~> 2.0)
-    racc (1.7.1)
+    racc (1.7.3)
     racecar (2.9.0)
       king_konf (~> 1.0.0)
       rdkafka (~> 0.12.0)
@@ -267,13 +268,13 @@ GEM
       ffi (~> 1.15)
       mini_portile2 (~> 2.6)
       rake (> 12)
-    rdoc (6.5.0)
+    rdoc (6.6.0)
       psych (>= 4.0.0)
     redis (5.0.8)
       redis-client (>= 0.17.0)
     redis-client (0.18.0)
       connection_pool
-    redlock (2.0.5)
+    redlock (2.0.6)
       redis-client (>= 0.14.1, < 1.0.0)
     regexp_parser (2.8.2)
     reline (0.3.9)
@@ -330,7 +331,7 @@ GEM
       rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
-    sidekiq (7.1.6)
+    sidekiq (7.2.0)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
