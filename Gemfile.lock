@@ -99,13 +99,13 @@ GEM
     capistrano-shared_configs (0.2.2)
     chronic (0.10.2)
     concurrent-ruby (1.2.2)
-    config (5.0.0)
+    config (5.1.0)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
-    debug (1.9.0)
+    debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
     deep_merge (1.2.2)
@@ -150,7 +150,7 @@ GEM
       dry-schema (>= 1.12, < 2)
       zeitwerk (~> 2.6)
     erubi (1.12.0)
-    faraday (2.7.12)
+    faraday (2.8.1)
       base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -161,7 +161,7 @@ GEM
       rake
     globalid (1.2.1)
       activesupport (>= 6.1)
-    honeybadger (5.4.0)
+    honeybadger (5.4.1)
     http (5.1.1)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
@@ -173,7 +173,7 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.7.1)
-    irb (1.10.1)
+    irb (1.11.0)
       rdoc
       reline (>= 0.3.8)
     json (2.7.1)
@@ -197,7 +197,7 @@ GEM
     minitar (0.9)
     minitest (5.20.0)
     msgpack (1.7.2)
-    net-imap (0.4.8)
+    net-imap (0.4.9)
       date
       net-protocol
     net-pop (0.1.2)
@@ -208,7 +208,7 @@ GEM
       net-ssh (>= 2.6.5, < 8.0.0)
     net-smtp (0.4.0)
       net-protocol
-    net-ssh (7.2.0)
+    net-ssh (7.2.1)
     newrelic_rpm (9.6.0)
       base64
     nio4r (2.7.0)
@@ -221,7 +221,7 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
-    psych (5.1.1.1)
+    psych (5.1.2)
       stringio
     public_suffix (5.0.4)
     puma (5.6.7)
@@ -271,7 +271,7 @@ GEM
       psych (>= 4.0.0)
     redis (5.0.8)
       redis-client (>= 0.17.0)
-    redis-client (0.19.0)
+    redis-client (0.19.1)
       connection_pool
     redlock (2.0.6)
       redis-client (>= 0.14.1, < 1.0.0)
@@ -317,10 +317,10 @@ GEM
       rubocop (~> 1.41)
     rubocop-factory_bot (2.24.0)
       rubocop (~> 1.33)
-    rubocop-performance (1.20.0)
+    rubocop-performance (1.20.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.30.0, < 2.0)
-    rubocop-rails (2.23.0)
+    rubocop-rails (2.23.1)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
