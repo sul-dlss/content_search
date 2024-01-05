@@ -197,6 +197,7 @@ GEM
     minitar (0.9)
     minitest (5.20.0)
     msgpack (1.7.2)
+    mutex_m (0.2.0)
     net-imap (0.4.9)
       date
       net-protocol
@@ -212,9 +213,9 @@ GEM
     newrelic_rpm (9.6.0)
       base64
     nio4r (2.7.0)
-    nokogiri (1.15.5-x86_64-darwin)
+    nokogiri (1.16.0-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-linux)
+    nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
     okcomputer (1.18.5)
     parallel (1.24.0)
@@ -313,7 +314,7 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.30.0)
       parser (>= 3.2.1.0)
-    rubocop-capybara (2.19.0)
+    rubocop-capybara (2.20.0)
       rubocop (~> 1.41)
     rubocop-factory_bot (2.24.0)
       rubocop (~> 1.33)
@@ -347,7 +348,8 @@ GEM
       minitar
       retriable
       ruby-progressbar
-    sshkit (1.21.6)
+    sshkit (1.21.7)
+      mutex_m
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     stringio (3.1.0)
