@@ -16,9 +16,9 @@ RSpec.describe HocrPayloadDelimitedTransformer do
       it 'includes line breaks where appropriate' do
         words_only = transformer.output.map { |block| block.gsub(/☞[\d,.]+/, '') }
         expect(words_only).to include "Reintfelter Jacob, tailor, 133 Goerck 1 ,\n" \
-          "Reinwald Augustus, shoemaker, 23 Spruce\n" \
-          "Reirdon Robert, porterhouse, 443 Washington\n" \
-          'Reis Anton, painter, 642714 Monroe'
+                                      "Reinwald Augustus, shoemaker, 23 Spruce\n" \
+                                      "Reirdon Robert, porterhouse, 443 Washington\n" \
+                                      'Reis Anton, painter, 642714 Monroe'
       end
     end
   end

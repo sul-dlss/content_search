@@ -13,14 +13,14 @@ class IiifContentSearchResponse
 
   def as_json(*_args)
     {
-      "@context": [
+      '@context': [
         'http://iiif.io/api/presentation/2/context.json',
         'http://iiif.io/api/search/1/context.json'
       ],
-      "@id": request.original_url,
-      "@type": 'sc:AnnotationList',
-      "resources": resources.flat_map(&:annotations).uniq { |a| a[:'@id'] },
-      "hits": hits
+      '@id': request.original_url,
+      '@type': 'sc:AnnotationList',
+      resources: resources.flat_map(&:annotations).uniq { |a| a[:@id] },
+      hits: hits
     }.merge(pagination_as_json)
   end
 
@@ -82,10 +82,10 @@ class IiifContentSearchResponse
     resources.uniq(&:annotation_urls).map do |hit|
       {
         '@type': 'search:Hit',
-        'annotations': hit.annotation_urls,
-        'before': hit.before,
-        'after': hit.after,
-        'match': hit.match
+        annotations: hit.annotation_urls,
+        before: hit.before,
+        after: hit.after,
+        match: hit.match
       }
     end
   end
@@ -104,14 +104,14 @@ class IiifContentSearchResponse
     def annotations
       tokens.map do |(chars, xywh)|
         {
-          "@id": annotation_url([chars, xywh]),
-          "@type": 'oa:Annotation',
-          "motivation": 'sc:painting',
-          "resource": {
-            "@type": 'cnt:ContentAsText',
-            "chars": chars
+          '@id': annotation_url([chars, xywh]),
+          '@type': 'oa:Annotation',
+          motivation: 'sc:painting',
+          resource: {
+            '@type': 'cnt:ContentAsText',
+            chars: chars
           },
-          "on": canvas_fragment_url(xywh)
+          on: canvas_fragment_url(xywh)
         }
       end
     end

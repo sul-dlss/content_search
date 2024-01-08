@@ -27,7 +27,7 @@ RSpec.describe FullTextIndexer do
 
   describe '#alto?' do
     it 'checks if the content looks like ALTO xml' do
-      expect(indexer.alto?).to eq true
+      expect(indexer.alto?).to be true
     end
   end
 
@@ -52,7 +52,7 @@ RSpec.describe FullTextIndexer do
 
     describe '#alto?' do
       it 'checks if the content looks like ALTO xml' do
-        expect(indexer.alto?).to eq false
+        expect(indexer.alto?).to be false
       end
     end
   end

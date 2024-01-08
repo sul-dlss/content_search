@@ -52,41 +52,41 @@ Endcap☞632,789,84,291'],
 
   describe '#as_json' do
     it 'has the expected json-ld properties' do
-      expect(response.as_json).to include "@context": ['http://iiif.io/api/presentation/2/context.json',
+      expect(response.as_json).to include '@context': ['http://iiif.io/api/presentation/2/context.json',
                                                        'http://iiif.io/api/search/1/context.json'],
-                                          "@id": 'http://test.host',
-                                          "@type": 'sc:AnnotationList'
+                                          '@id': 'http://test.host',
+                                          '@type': 'sc:AnnotationList'
     end
 
     it 'has resources for each word in the alto highlight' do
-      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/639,129,79,243',
-                                                             "@type": 'oa:Annotation',
-                                                             "motivation": 'sc:painting',
-                                                             "resource": {
-                                                               "@type": 'cnt:ContentAsText',
-                                                               "chars": 'George'
+      expect(response.as_json).to include resources: include('@id': 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/639,129,79,243',
+                                                             '@type': 'oa:Annotation',
+                                                             motivation: 'sc:painting',
+                                                             resource: {
+                                                               '@type': 'cnt:ContentAsText',
+                                                               chars: 'George'
                                                              },
-                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=639,129,79,243')
+                                                             on: 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=639,129,79,243')
 
-      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,426,84,300',
-                                                             "@type": 'oa:Annotation',
-                                                             "motivation": 'sc:painting',
-                                                             "resource": {
-                                                               "@type": 'cnt:ContentAsText',
-                                                               "chars": 'Stirling’s'
+      expect(response.as_json).to include resources: include('@id': 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,426,84,300',
+                                                             '@type': 'oa:Annotation',
+                                                             motivation: 'sc:painting',
+                                                             resource: {
+                                                               '@type': 'cnt:ContentAsText',
+                                                               chars: 'Stirling’s'
                                                              },
-                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=633,426,84,300')
+                                                             on: 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=633,426,84,300')
     end
 
     it 'has a resource for the plain text highlight' do
-      expect(response.as_json).to include resources: include("@id": 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/0,0,0,0',
-                                                             "@type": 'oa:Annotation',
-                                                             "motivation": 'sc:painting',
-                                                             "resource": {
-                                                               "@type": 'cnt:ContentAsText',
-                                                               "chars": 'MEMBERS'
+      expect(response.as_json).to include resources: include('@id': 'https://purl.stanford.edu/x/iiif/canvas/y/text/at/0,0,0,0',
+                                                             '@type': 'oa:Annotation',
+                                                             motivation: 'sc:painting',
+                                                             resource: {
+                                                               '@type': 'cnt:ContentAsText',
+                                                               chars: 'MEMBERS'
                                                              },
-                                                             "on": 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=0,0,0,0')
+                                                             on: 'https://purl.stanford.edu/x/iiif/canvas/y#xywh=0,0,0,0')
     end
 
     describe '#resources' do
@@ -137,9 +137,9 @@ thursday☞632,789,84,291']
       let(:highlights) do
         {
           '' => [
-            'as☞1590.12,1094.11,46.81,33.89 <em>crimes☞1660.33,1094.11,140.42,3'\
-            '3.89</em> <em>against☞1824.15,1094.11,163.82,33.89</em> <em>humani'\
-            'ty,☞2011.38,1094.11,210.62,33.89</em> contrary☞674.90,1140.00,179.'\
+            'as☞1590.12,1094.11,46.81,33.89 <em>crimes☞1660.33,1094.11,140.42,3' \
+            '3.89</em> <em>against☞1824.15,1094.11,163.82,33.89</em> <em>humani' \
+            'ty,☞2011.38,1094.11,210.62,33.89</em> contrary☞674.90,1140.00,179.' \
             '61,32.48 to☞899.41,1140.00,44.90,32.48'
           ]
         }
@@ -151,24 +151,24 @@ thursday☞632,789,84,291']
     end
 
     it 'has hits with additional context for an ALTO resource' do
-      expect(response.as_json).to include hits: include("@type": 'search:Hit',
-                                                        "annotations": [
+      expect(response.as_json).to include hits: include('@type': 'search:Hit',
+                                                        annotations: [
                                                           'https://purl.stanford.edu/x/iiif/canvas/y/text/at/639,129,79,243',
                                                           'https://purl.stanford.edu/x/iiif/canvas/y/text/at/633,426,84,300'
                                                         ],
-                                                        "before": '',
-                                                        "after": 'Heritage',
-                                                        "match": 'George Stirling’s')
+                                                        before: '',
+                                                        after: 'Heritage',
+                                                        match: 'George Stirling’s')
     end
 
     it 'has hits with additional context for a plain text resource' do
-      expect(response.as_json).to include hits: include("@type": 'search:Hit',
-                                                        "annotations": [
+      expect(response.as_json).to include hits: include('@type': 'search:Hit',
+                                                        annotations: [
                                                           'https://purl.stanford.edu/x/iiif/canvas/y/text/at/0,0,0,0'
                                                         ],
-                                                        "before": '',
-                                                        "after": 'OF THE COUNCIL',
-                                                        "match": 'MEMBERS')
+                                                        before: '',
+                                                        after: 'OF THE COUNCIL',
+                                                        match: 'MEMBERS')
     end
 
     it 'has basic pagination context' do
