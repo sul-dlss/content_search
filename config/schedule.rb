@@ -2,5 +2,5 @@ job_type :runner,  "cd :path && :environment_variable=:environment bin/rails run
 
 # Garbage collect the index
 every '15 * * * *' do
-  runner 'GarbageCollectJob.perform_now'
+  runner 'GarbageCollectIndex.run'
 end

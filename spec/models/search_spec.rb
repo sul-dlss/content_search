@@ -30,9 +30,9 @@ RSpec.describe Search do
     it 'kicks off indexing if no results were found' do
       client = instance_double(RSolr::Client, get: { 'response' => { 'numFound' => 0 }, 'highlighting' => {} })
       allow(described_class).to receive(:client).and_return(client)
-      allow(IndexFullTextContentJob).to receive(:perform_now)
+      allow(IndexFullTextContent).to receive(:run)
       search.highlights
-      expect(IndexFullTextContentJob).to have_received(:perform_now).with('x', commit: true)
+      expect(IndexFullTextContent).to have_received(:run).with('x', commit: true)
     end
   end
 

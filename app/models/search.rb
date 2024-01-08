@@ -80,7 +80,7 @@ class Search
     with_lock("indexing_lock_#{id.parameterize}") do |locked_on_first_try|
       next if !locked_on_first_try || any_results_for_document?
 
-      IndexFullTextContentJob.perform_now(id, commit: true)
+      IndexFullTextContent.run(id, commit: true)
     end
   end
 

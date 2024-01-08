@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 # Index full text content into the solr index
-class IndexFullTextContentJob < ApplicationJob
-  def perform(druid, options = { commitWithin: 5000 })
+class IndexFullTextContent
+  def self.run(druid, options = { commitWithin: 5000 })
     Search.client.update(
       data: {
         delete: { query: "druid:#{RSolr.solr_escape(druid)}" },

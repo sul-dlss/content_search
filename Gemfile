@@ -58,8 +58,5 @@ gem 'nokogiri'
 gem 'okcomputer'
 gem 'parallel'
 gem 'racecar', '~> 2.8'
-gem 'redis', '~> 5.0'
-gem 'redlock'
 gem 'rsolr'
-gem 'sidekiq', '~> 7.0'
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
