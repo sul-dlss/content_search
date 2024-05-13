@@ -131,7 +131,7 @@ GEM
       rake
     globalid (1.2.1)
       activesupport (>= 6.1)
-    honeybadger (5.8.0)
+    honeybadger (5.10.0)
     http (5.2.0)
       addressable (~> 2.8)
       base64 (~> 0.1)
@@ -141,7 +141,7 @@ GEM
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    i18n (1.14.4)
+    i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
     irb (1.13.1)
@@ -171,7 +171,7 @@ GEM
     mutex_m (0.2.0)
     net-http (0.4.1)
       uri
-    net-imap (0.4.10)
+    net-imap (0.4.11)
       date
       net-protocol
     net-pop (0.1.2)
@@ -186,7 +186,7 @@ GEM
       net-protocol
     net-ssh (7.2.3)
     newrelic_rpm (9.9.0)
-    nio4r (2.7.1)
+    nio4r (2.7.3)
     nokogiri (1.16.4-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.4-x86_64-linux)
@@ -250,8 +250,8 @@ GEM
       connection_pool
     redlock (2.0.6)
       redis-client (>= 0.14.1, < 1.0.0)
-    regexp_parser (2.9.0)
-    reline (0.5.5)
+    regexp_parser (2.9.1)
+    reline (0.5.6)
       io-console (~> 0.5)
     retriable (3.1.2)
     rexml (3.2.6)
@@ -263,7 +263,7 @@ GEM
     rspec-expectations (3.13.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.0)
+    rspec-mocks (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-rails (6.1.2)
@@ -275,7 +275,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.1)
-    rubocop (1.63.4)
+    rubocop (1.63.5)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
