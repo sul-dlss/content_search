@@ -12,7 +12,7 @@ class AltoPayloadDelimitedTransformer
 
   def namespaces
     @namespaces ||= begin
-      alto_ns = document.namespaces.values.first { |ns| ns.include? 'standards/alto/ns' }
+      alto_ns = document.namespaces.values.find { |ns| ns.include? 'standards/alto/ns' }
       { alto: alto_ns || 'http://www.loc.gov/standards/alto/ns-v3#' }
     end
   end
