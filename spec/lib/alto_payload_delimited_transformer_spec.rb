@@ -14,6 +14,16 @@ RSpec.describe AltoPayloadDelimitedTransformer do
     end
   end
 
+  context 'with an ALTO v2 document with ns-v3 namespace not first' do
+    subject(:transformer) { described_class.new(File.read('spec/fixtures/bb018zb8894_04_0009_namespace_order.xml')) }
+
+    describe '#output' do
+      it 'returns a payload-delimited string' do
+        expect(transformer.output.first).to start_with 'George☞129,639,243,79 Stirling’s☞426,633,300,84 Heritage☞789,632,291,84'
+      end
+    end
+  end
+
   context 'with an ALTO v3 document' do
     subject(:transformer) { described_class.new(File.read('spec/fixtures/EastTimor_Report_of_the_UNSG_2006_0001.xml')) }
 
