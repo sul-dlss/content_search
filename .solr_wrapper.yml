@@ -1,6 +1,8 @@
 # Place any default configuration for solr_wrapper here
 # port: 8983
 
+version: 9.6.1
+
 collection:
   dir: solr/config/
   name: content_search
