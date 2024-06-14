@@ -4,7 +4,7 @@
 class GarbageCollectJob < ApplicationJob
   def perform
     response['response']['docs'].each do |doc|
-      Search.client.delete_by_query("druid:#{doc['druid']}", params: { commit: true })
+      Search.client.delete_by_query("druid:#{RSolr.solr_escape(doc['druid'])}", params: { commit: true })
     end
   end
 
