@@ -16,7 +16,7 @@ class GarbageCollectJob < ApplicationJob
       params: {
         q: 'resource_id:druid',
         fl: 'druid,timestamp',
-        fq: "timestamp:[* TO #{(Time.zone.now - 3.days).utc.iso8601}]",
+        fq: "timestamp:[* TO #{3.days.ago.utc.iso8601}]",
         rows: 100
       }
     )

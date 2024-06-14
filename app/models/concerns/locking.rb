@@ -36,7 +36,7 @@ module Locking
       yield(true)
     end
 
-    File.delete(lock_file) if File.exist?(lock_file)
+    FileUtils.rm_f(lock_file)
 
     resp
   end
