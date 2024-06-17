@@ -11,7 +11,7 @@ RSpec.describe Search do
 
   describe '.client' do
     it 'returns an RSolr client' do
-      expect(described_class.client).to be_a_kind_of RSolr::Client
+      expect(described_class.client).to be_a RSolr::Client
     end
 
     it 'uses settings to configure the solr url' do
