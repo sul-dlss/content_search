@@ -32,9 +32,11 @@ group :development, :test do
   gem 'simplecov'
 
   gem 'rubocop'
+  gem 'rubocop-factory_bot'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'rubocop-rspec_rails'
 
   gem 'solr_wrapper'
 end
