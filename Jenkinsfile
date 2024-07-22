@@ -94,13 +94,13 @@ pipeline {
       }
     }
 
-    stage('Prod deploy (on release)') {
+    stage('Prod deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'prod'
       }
 
       when {
-        tag "v*"
+        branch 'main'
       }
 
       steps {
