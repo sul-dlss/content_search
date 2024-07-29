@@ -3,27 +3,28 @@
 class PurlObject
   # File object within a PURL document
   class File
-    attr_reader :druid, :file_xml_fragment
+    attr_reader :druid, :file_metadata, :fileset_metadata
 
     def self.client
       Thread.current[:client] ||= HTTP.persistent(Settings.stacks.host)
     end
 
-    def initialize(druid, file_xml_fragment)
+    def initialize(druid, file_metadata, fileset_metadata = {})
       @druid = druid
-      @file_xml_fragment = file_xml_fragment
+      @file_metadata = file_metadata
+      @fileset_metadata = fileset_metadata
     end
 
     def resource_id
-      file_xml_fragment.xpath('..').first.attr('id')
+      fileset_metadata['externalIdentifier']&.sub('https://cocina.sul.stanford.edu/fileSet/', 'cocina-fileSet-')
     end
 
     def filename
-      file_xml_fragment.attr('id')
+      file_metadata['filename']
     end
 
     def mimetype
-      file_xml_fragment.attr('mimetype')
+      file_metadata['hasMimeType']
     end
 
     def file_url

@@ -17,17 +17,15 @@ class PurlObject
     @druid = druid
   end
 
-  def resources
-    public_xml.xpath('//contentMetadata/resource')
-  end
-
   def ocr_files
     return to_enum(:ocr_files) unless block_given?
 
-    resources.each do |r|
-      r.xpath('file[@role="transcription"][@mimetype="application/xml" or @mimetype="application/alto+xml" or @mimetype="text/plain"]').each do |file|
-        yield file unless file['size'].to_i > Settings.maximum_ocr_filesize_to_consider
-      end
+    resource_files.each do |file, file_set|
+      next unless file['use'] == 'transcription'
+      next unless file['hasMimeType'].in?(['application/xml', 'application/alto+xml', 'text/plain'])
+      next unless file['size'].to_i <= Settings.maximum_ocr_filesize_to_consider
+
+      yield PurlObject::File.new(druid, file, file_set.except('structural'))
     end
   end
 
@@ -37,16 +35,14 @@ class PurlObject
     # Inject "bookkeeping" document into index first to record last published date
     yield({ id: druid, druid: druid, published: published, resource_id: 'druid' })
 
-    results = Parallel.map(ocr_files, options) do |file|
-      PurlObject::File.new(druid, file).to_solr
-    end
+    results = Parallel.map(ocr_files, options, &:to_solr)
 
     # preserving the stream-like API for now..
     results.each { |r| yield r unless r.nil? }
   end
 
   def published
-    public_xml.root['published']
+    public_cocina['modified']
   end
 
   private
@@ -55,11 +51,23 @@ class PurlObject
     self.class.client.get(url).body.to_s
   end
 
-  def public_xml
-    @public_xml ||= Nokogiri::XML.parse(public_xml_body)
+  def public_cocina
+    @public_cocina ||= JSON.parse(public_cocina_body)
   end
 
-  def public_xml_body
-    fetch(format(Settings.purl.public_xml_url, druid: druid))
+  def public_cocina_body
+    fetch(format(Settings.purl.public_cocina_url, druid: druid))
+  end
+
+  def resource_files
+    return to_enum(:resource_files) unless block_given?
+
+    public_cocina.dig('structural', 'contains')&.each do |file_set|
+      file_set.dig('structural', 'contains').each do |file|
+        next unless file.dig('administrative', 'shelve')
+
+        yield file, file_set
+      end
+    end
   end
 end
