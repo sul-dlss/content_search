@@ -6,7 +6,6 @@ maximum_ocr_filesize_to_consider: 10000000 # 10MB
 purl:
   canvas_url: 'https://purl.stanford.edu/%{druid}/iiif/canvas/%{resource}'
   public_xml_url: 'https://purl.stanford.edu/%{druid}.xml'
-  public_cocina_url: 'https://purl.stanford.edu/%{druid}.json'
 
 stacks:
   host: 'https://stacks.stanford.edu'
