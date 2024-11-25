@@ -149,7 +149,7 @@ GEM
       rake
     globalid (1.2.1)
       activesupport (>= 6.1)
-    honeybadger (5.22.0)
+    honeybadger (5.24.0)
       logger
     http (5.2.0)
       addressable (~> 2.8)
@@ -185,7 +185,7 @@ GEM
     mini_mime (1.1.5)
     mini_portile2 (2.8.8)
     minitar (1.0.2)
-    minitest (5.25.1)
+    minitest (5.25.2)
     msgpack (1.7.5)
     net-http (0.5.0)
       uri
@@ -203,7 +203,7 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     net-ssh (7.3.0)
-    newrelic_rpm (9.15.0)
+    newrelic_rpm (9.16.0)
     nio4r (2.7.4)
     nokogiri (1.16.7-arm64-darwin)
       racc (~> 1.4)
@@ -220,7 +220,7 @@ GEM
     psych (5.2.0)
       stringio
     public_suffix (6.0.1)
-    puma (6.4.3)
+    puma (6.5.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     racecar (2.11.0)
@@ -268,7 +268,7 @@ GEM
       ffi (~> 1.15)
       mini_portile2 (~> 2.6)
       rake (> 12)
-    rdoc (6.7.0)
+    rdoc (6.8.1)
       psych (>= 4.0.0)
     redis (5.3.0)
       redis-client (>= 0.22.0)
@@ -329,7 +329,7 @@ GEM
       rubocop-rspec (~> 3, >= 3.0.1)
     ruby-progressbar (1.13.0)
     securerandom (0.3.2)
-    sidekiq (7.3.5)
+    sidekiq (7.3.6)
       connection_pool (>= 2.3.0)
       logger
       rack (>= 2.2.4)
