@@ -230,9 +230,9 @@ GEM
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
-    racecar (2.11.0)
+    racecar (2.12.0)
       king_konf (~> 1.0.0)
-      rdkafka (~> 0.15.0)
+      rdkafka (>= 0.15.0)
     rack (3.1.10)
     rack-session (2.1.0)
       base64 (>= 0.1.0)
@@ -272,7 +272,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.2.1)
-    rdkafka (0.15.2)
+    rdkafka (0.21.0)
       ffi (~> 1.15)
       mini_portile2 (~> 2.6)
       rake (> 12)
@@ -308,7 +308,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
-    rubocop (1.72.2)
+    rubocop (1.73.1)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -319,7 +319,7 @@ GEM
       rubocop-ast (>= 1.38.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.38.0)
+    rubocop-ast (1.38.1)
       parser (>= 3.3.1.0)
     rubocop-factory_bot (2.26.1)
       rubocop (~> 1.61)
@@ -327,7 +327,7 @@ GEM
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1, < 2.0)
       rubocop-ast (>= 1.38.0, < 2.0)
-    rubocop-rails (2.30.2)
+    rubocop-rails (2.30.3)
       activesupport (>= 4.2.0)
       lint_roller (~> 1.1)
       rack (>= 1.1)
@@ -375,7 +375,7 @@ GEM
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
-    uri (1.0.2)
+    uri (1.0.3)
     useragent (0.16.11)
     websocket-driver (0.7.7)
       base64
@@ -428,4 +428,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.5.14
+   2.6.5
