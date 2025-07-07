@@ -134,7 +134,7 @@ GEM
     ed25519 (1.4.0)
     erb (5.0.1)
     erubi (1.13.1)
-    faraday (2.13.1)
+    faraday (2.13.2)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
@@ -150,7 +150,7 @@ GEM
       rake
     globalid (1.2.1)
       activesupport (>= 6.1)
-    honeybadger (5.28.0)
+    honeybadger (5.29.1)
       logger
       ostruct
     http (5.3.1)
@@ -277,7 +277,7 @@ GEM
       ffi (~> 1.15)
       mini_portile2 (~> 2.6)
       rake (> 12)
-    rdoc (6.14.1)
+    rdoc (6.14.2)
       erb
       psych (>= 4.0.0)
     redis (5.4.0)
