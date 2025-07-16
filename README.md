@@ -6,6 +6,8 @@
 
 Content Search provides a IIIF Content Search 0.9 API endpoint for "search-within" or "highlights-in-context" for digital object OCR.
 
+Content Search will index an item when someone runs a search in sul-embed/Mirador.  Content Search listens to Kafka to invalidate it's cache when an object changes.
+
 ## Requirements
 
 1. Ruby (2.3.0 or greater)
