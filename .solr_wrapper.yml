@@ -5,3 +5,4 @@ env:
 collection:
   dir: solr/config/
   name: content_search
+version: 9.9.0
