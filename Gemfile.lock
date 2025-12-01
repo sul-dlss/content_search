@@ -89,6 +89,9 @@ GEM
     bootsnap (1.19.0)
       msgpack (~> 1.2)
     builder (3.3.0)
+    bundler-audit (0.9.3)
+      bundler (>= 1.2.0)
+      thor (~> 1.0)
     capistrano (3.19.2)
       airbrussh (>= 1.0.0)
       i18n
@@ -414,6 +417,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
+  bundler-audit
   capistrano
   capistrano-bundler
   capistrano-passenger
