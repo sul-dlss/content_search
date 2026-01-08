@@ -9,7 +9,7 @@
   <fields>
     <field name="id" type="string" stored="true" indexed="true" multiValued="false" required="true"/>
     <field name="_version_" type="long"     indexed="true"  stored="true"/>
-    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW" multiValued="false"/>
+    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW" multiValued="false" docValues="true" />
 
     <field name="druid" type="string" stored="true" indexed="true" multiValued="false"/>
     <field name="published" type="string" stored="true" indexed="true" multiValued="false"/>
@@ -38,11 +38,11 @@
     <fieldType name="rand" class="solr.RandomSortField" omitNorms="true"/>
 
     <!-- Default numeric field types.  -->
-    <fieldType name="int" class="solr.TrieIntField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="float" class="solr.TrieFloatField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="long" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" positionIncrementGap="0"/>
-    <fieldType name="date" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0"/>
+    <fieldType name="int" class="solr.IntPointField" />
+    <fieldType name="float" class="solr.FloatPointField" />
+    <fieldType name="long" class="solr.LongPointField" />
+    <fieldType name="double" class="solr.DoublePointField" />
+    <fieldType name="date" class="solr.DatePointField" />
 
     <fieldType name="text_with_delimited_ocr_position" class="solr.TextField" positionIncrementGap="100">
       <analyzer type="index">
