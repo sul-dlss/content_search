@@ -84,7 +84,7 @@ GEM
     bcrypt_pbkdf (1.1.2)
     benchmark (0.5.0)
     bigdecimal (4.0.1)
-    bootsnap (1.20.1)
+    bootsnap (1.21.1)
       msgpack (~> 1.2)
     builder (3.3.0)
     bundler-audit (0.9.3)
@@ -204,7 +204,8 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     net-ssh (7.3.0)
-    newrelic_rpm (9.24.0)
+    newrelic_rpm (10.0.0)
+      logger
     nio4r (2.7.5)
     nokogiri (1.19.0-arm64-darwin)
       racc (~> 1.4)
@@ -216,13 +217,13 @@ GEM
       benchmark
     ostruct (0.6.3)
     parallel (1.27.0)
-    parser (3.3.10.0)
+    parser (3.3.10.1)
       ast (~> 2.4.1)
       racc
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.7.0)
+    prism (1.8.0)
     psych (5.3.1)
       date
       stringio
@@ -291,7 +292,7 @@ GEM
       logger
       mini_portile2 (~> 2.6)
       rake (> 12)
-    rdoc (7.0.3)
+    rdoc (7.1.0)
       erb
       psych (>= 4.0.0)
       tsort
@@ -402,7 +403,7 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    whenever (1.1.1)
+    whenever (1.1.2)
       chronic (>= 0.6.3)
     zeitwerk (2.7.4)
 
@@ -450,4 +451,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-  4.0.3
+  4.0.4
