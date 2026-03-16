@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    action_text-trix (2.1.16)
+    action_text-trix (2.1.17)
       railties
     actioncable (8.1.2)
       actionpack (= 8.1.2)
@@ -77,7 +77,7 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.9)
       public_suffix (>= 2.0.2, < 8.0)
-    airbrussh (1.6.0)
+    airbrussh (1.6.1)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.3)
     base64 (0.3.0)
@@ -146,7 +146,7 @@ GEM
       rake
     globalid (1.3.0)
       activesupport (>= 6.1)
-    honeybadger (6.5.0)
+    honeybadger (6.5.2)
       logger
       ostruct
     http (5.3.1)
@@ -165,8 +165,8 @@ GEM
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.18.1)
-    json-schema (6.1.0)
+    json (2.19.1)
+    json-schema (6.2.0)
       addressable (~> 2.8)
       bigdecimal (>= 3.1, < 5)
     king_konf (1.0.1)
@@ -186,7 +186,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.1.0)
-    mcp (0.7.1)
+    mcp (0.8.0)
       json-schema (>= 4.1)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
@@ -210,7 +210,7 @@ GEM
       net-ssh (>= 5.0.0, < 8.0.0)
     net-smtp (0.5.1)
       net-protocol
-    net-ssh (7.3.0)
+    net-ssh (7.3.1)
     newrelic_rpm (10.2.0)
       logger
     nio4r (2.7.5)
@@ -234,7 +234,7 @@ GEM
     psych (5.3.1)
       date
       stringio
-    public_suffix (7.0.2)
+    public_suffix (7.0.5)
     puma (7.2.0)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -305,14 +305,14 @@ GEM
       tsort
     redis (5.4.1)
       redis-client (>= 0.22.0)
-    redis-client (0.26.4)
+    redis-client (0.27.0)
       connection_pool
     redlock (2.1.0)
       redis-client (>= 0.14.1, < 1.0.0)
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
-    retriable (3.2.1)
+    retriable (3.4.1)
     rsolr (2.6.0)
       builder (>= 2.1.2)
       faraday (>= 0.9, < 3, != 2.0.0)
@@ -324,16 +324,16 @@ GEM
     rspec-mocks (3.13.8)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (8.0.3)
+    rspec-rails (8.0.4)
       actionpack (>= 7.2)
       activesupport (>= 7.2)
       railties (>= 7.2)
-      rspec-core (~> 3.13)
-      rspec-expectations (~> 3.13)
-      rspec-mocks (~> 3.13)
-      rspec-support (~> 3.13)
+      rspec-core (>= 3.13.0, < 5.0.0)
+      rspec-expectations (>= 3.13.0, < 5.0.0)
+      rspec-mocks (>= 3.13.0, < 5.0.0)
+      rspec-support (>= 3.13.0, < 5.0.0)
     rspec-support (3.13.7)
-    rubocop (1.85.0)
+    rubocop (1.85.1)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -345,7 +345,7 @@ GEM
       rubocop-ast (>= 1.49.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.49.0)
+    rubocop-ast (1.49.1)
       parser (>= 3.3.7.2)
       prism (~> 1.7)
     rubocop-factory_bot (2.28.0)
@@ -382,8 +382,8 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.13.2)
     simplecov_json_formatter (0.1.4)
-    solr_wrapper (4.3.0)
-      faraday (>= 1.0, < 3)
+    solr_wrapper (4.4.0)
+      faraday (~> 2.0)
       faraday-follow_redirects
       minitar
       ostruct
@@ -398,7 +398,7 @@ GEM
       ostruct
     stringio (3.2.0)
     thor (1.5.0)
-    timeout (0.6.0)
+    timeout (0.6.1)
     tsort (0.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -459,4 +459,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-  4.0.7
+  4.0.8
