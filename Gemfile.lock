@@ -82,7 +82,7 @@ GEM
     bcrypt_pbkdf (1.1.2)
     benchmark (0.5.0)
     bigdecimal (4.1.2)
-    bootsnap (1.25.0)
+    bootsnap (1.26.0)
       msgpack (~> 1.5)
     builder (3.3.0)
     bundler-audit (0.9.3)
@@ -122,7 +122,7 @@ GEM
       capistrano-one_time_key (>= 0.2.0)
       capistrano-shared_configs
       ed25519
-    domain_name (0.6.20260829)
+    domain_name (0.6.20260902)
     drb (2.2.3)
     ed25519 (1.4.0)
     erb (6.0.7)
@@ -156,7 +156,7 @@ GEM
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.21.2)
+    json (3.0.0)
     king_konf (1.0.1)
     language_server-protocol (3.17.0.6)
     lint_roller (1.1.0)
@@ -207,7 +207,7 @@ GEM
     okcomputer (1.19.2)
       benchmark
     ostruct (0.6.3)
-    parallel (2.1.0)
+    parallel (2.2.0)
     parser (3.3.12.0)
       ast (~> 2.4.1)
       racc
@@ -265,19 +265,19 @@ GEM
       logger
       prism (>= 1.6.0)
       tsort
-    rdkafka (0.29.0)
+    rdkafka (0.29.1)
       ffi (~> 1.17.1)
       json (> 2.0)
       logger
       mini_portile2 (~> 2.6)
       rake (> 12)
-    rdkafka (0.29.0-arm64-darwin)
+    rdkafka (0.29.1-arm64-darwin)
       ffi (~> 1.17.1)
       json (> 2.0)
       logger
       mini_portile2 (~> 2.6)
       rake (> 12)
-    rdkafka (0.29.0-x86_64-linux-gnu)
+    rdkafka (0.29.1-x86_64-linux-gnu)
       ffi (~> 1.17.1)
       json (> 2.0)
       logger
@@ -361,7 +361,7 @@ GEM
       logger (>= 1.7.0)
       rack (>= 3.2.0)
       redis-client (>= 0.29.0)
-    simplecov (1.1.1)
+    simplecov (1.2.0)
     solr_wrapper (4.4.0)
       faraday (~> 2.0)
       faraday-follow_redirects
@@ -438,4 +438,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-  4.0.19
+  4.0.20
